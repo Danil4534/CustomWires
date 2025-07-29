@@ -27,5 +27,6 @@
         </section>
     </main>
 </body>
+@include('components.footer')
 
 </html>
