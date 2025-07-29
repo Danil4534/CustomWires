@@ -1,4 +1,4 @@
-<div class="bannerContainer">
+<div class="banner_container">
     <h1>
         МЕНЬШЕ БРАКУ <span>—</span>
         БІЛЬШЕ ШВИДКОСТІ.

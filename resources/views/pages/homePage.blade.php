@@ -16,6 +16,15 @@
         <section>
             @include('components.banner')
         </section>
+        <section>
+            @include('components.benefits')
+        </section>
+        <section>
+            @include('components.ourMission')
+        </section>
+        <section>
+            @include('components.questions')
+        </section>
     </main>
 </body>
 
