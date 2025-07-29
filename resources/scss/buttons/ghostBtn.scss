@@ -1,0 +1,32 @@
+.ghostBtn {
+    width: fit-content;
+
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--secondary-dark-soft);
+    background: transparent;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    i {
+        font-size: 20px;
+    }
+    :disabled {
+        color: var(--gray);
+        background: var(--primary-soft);
+    }
+    &:hover {
+        cursor: pointer;
+        transition: background 0.3s ease;
+        color: var(--secondary-dark);
+    }
+}

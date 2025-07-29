@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\NavController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/", [NavController::class, 'getHomePage'])->name("page.Home");

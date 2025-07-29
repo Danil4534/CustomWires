@@ -1,0 +1,33 @@
+.secondaryBtn {
+    width: fit-content;
+    padding: 8px 12px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--primary-main-orange);
+    background: transparent;
+    border: 1.5px solid var(--primary-main-orange);
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    i {
+        font-size: 20px;
+    }
+    :disabled {
+        color: var(--gray);
+        background: var(--primary-soft);
+    }
+    &:hover {
+        cursor: pointer;
+        transition: background 0.3s ease;
+        background: var(--primary-main-orange-hover);
+        color: var(--primary-soft);
+    }
+}

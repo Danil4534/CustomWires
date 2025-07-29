@@ -1,0 +1,247 @@
+header {
+    display: flex;
+    height: 56px;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(243, 243, 243, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header_leftSide_wrapper {
+        .header_leftSide {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            flex-direction: row;
+            .ghostBtn {
+                width: 40px;
+                height: 40px;
+                .btn-text {
+                    display: none;
+                }
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+        .header_nav {
+            display: none;
+        }
+    }
+    .header_rightSide {
+        display: flex;
+        gap: 4px;
+        .header_r_link {
+            display: none !important;
+        }
+        .secondaryBtn {
+            height: 40px;
+            padding: 12px;
+        }
+        .primaryBtn {
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            .btn-text {
+                display: none;
+            }
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        height: 72px;
+        padding: 12px 32px;
+        border-bottom: 1px solid rgba(243, 243, 243, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header_leftSide_wrapper {
+            .header_leftSide {
+                display: flex;
+                gap: 24px;
+                align-items: center;
+                flex-direction: row-reverse;
+                .ghostBtn {
+                    width: 98px;
+                    height: 40px;
+                    .btn-text {
+                        display: block;
+                    }
+                    i {
+                        font-size: 20px;
+                    }
+                }
+                img {
+                    width: 112px;
+                    height: 48px;
+                }
+            }
+        }
+        .header_rightSide {
+            display: flex;
+            gap: 4px;
+            .secondaryBtn {
+                width: 139px;
+                height: 48px;
+                padding: 12px 24px;
+                display: flex;
+                gap: 4px;
+                justify-content: center;
+                align-items: center;
+                i {
+                    font-size: 24px;
+                }
+            }
+            .primaryBtn {
+                width: 145px;
+                height: 48px;
+                padding: 12px 24px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                .counterWrapper {
+                    position: static;
+                    width: 20px;
+                    height: 20px;
+                    p {
+                        font-size: 12px !important;
+                        span {
+                            font-size: 8px;
+                        }
+                    }
+                }
+                .btn-text {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    vertical-align: bottom;
+                }
+                i {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        display: flex;
+        height: 80px;
+        padding: 12px 96px;
+        border-bottom: 1px solid rgba(243, 243, 243, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header_leftSide_wrapper {
+            display: flex;
+            .header_leftSide {
+                display: flex;
+                gap: 24px;
+                align-items: center;
+                flex-direction: row-reverse;
+                .ghostBtn {
+                    display: none;
+                    width: 98px;
+                    height: 40px;
+                    .btn-text {
+                        display: block;
+                    }
+                    i {
+                        font-size: 20px;
+                    }
+                }
+                img {
+                    width: 119px;
+                    height: 56px;
+                }
+            }
+            .header_nav {
+                display: flex !important;
+                margin-left: 124px;
+                nav {
+                    display: flex;
+                    align-items: center;
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 8px;
+                        li {
+                            list-style: none;
+                            padding: 8px 20px;
+                            a {
+                                text-decoration: none;
+                                font-family: var(--font-family-Rubik);
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 150%;
+                                letter-spacing: 0%;
+                                color: rgba(28, 30, 34, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .header_rightSide {
+            display: flex;
+            gap: 4px;
+            .header_r_link {
+                width: 40px !important;
+                height: 40px !important;
+                display: flex !important;
+                padding: 0 !important;
+                i {
+                    font-size: 20px;
+                }
+            }
+            .secondaryBtn:not(.header_r_link) {
+                display: none !important;
+                width: 139px;
+                height: 48px;
+                padding: 12px 24px;
+                display: flex;
+                gap: 4px;
+                justify-content: center;
+                align-items: center;
+                i {
+                    font-size: 24px;
+                }
+            }
+            .primaryBtn {
+                width: 117px;
+                height: 40px;
+                padding: 10px 12px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 14px;
+                .counterWrapper {
+                    position: static;
+                    width: 20px;
+                    height: 20px;
+                    p {
+                        font-size: 12px !important;
+                        span {
+                            font-size: 8px;
+                        }
+                    }
+                }
+                .btn-text {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    vertical-align: bottom;
+                }
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
