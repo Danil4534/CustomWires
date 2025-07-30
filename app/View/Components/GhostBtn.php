@@ -8,12 +8,14 @@ use Illuminate\Contracts\View\View;
 
 class GhostBtn extends Component
 {
+    public string $id;
     public string $ghostBtnText;
     public string $ghostBtnIconLeftSide;
     public string $ghostBtnIconRightSide;
     public string $ghostClass;
-    public function __construct(string $ghostBtnText = "", string $ghostBtnIconLeftSide = "", string $ghostBtnIconRightSide = "", string $ghostClass = "")
+    public function __construct(string $id = "", string $ghostBtnText = "", string $ghostBtnIconLeftSide = "", string $ghostBtnIconRightSide = "", string $ghostClass = "")
     {
+        $this->id = $id;
         $this->ghostBtnText = $ghostBtnText;
         $this->ghostBtnIconLeftSide = $ghostBtnIconLeftSide;
         $this->ghostBtnIconRightSide = $ghostBtnIconRightSide;

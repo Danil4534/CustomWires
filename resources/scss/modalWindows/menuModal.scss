@@ -1,0 +1,225 @@
+.menuModal_container {
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.16);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    &.active {
+        visibility: visible;
+        transition: 0.3s ease;
+        opacity: 1;
+    }
+    .menuModal_body {
+        width: 0px;
+        background: var(--neutral-white);
+        position: relative;
+        padding: 16px;
+        height: 100vh;
+        visibility: hidden;
+        transition: 0.3s ease;
+        &.active {
+            width: 285px;
+            transition: 0.3s ease;
+            visibility: visible;
+            opacity: 1;
+        }
+        #closeModalMenu {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 24px;
+            color: rgba(159, 159, 159, 1);
+        }
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: rgba(58, 61, 66, 1);
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px;
+            a {
+                border: 1px solid rgba(243, 243, 243, 1);
+                border-right: none;
+                border-left: none;
+                font-family: var(--font-family-Roboto);
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: rgba(43, 45, 51, 1);
+                padding: 16px 0px;
+                display: flex;
+                justify-content: space-between;
+                text-decoration: none;
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menuModal_container {
+        top: 0;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.16);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        &.active {
+            visibility: visible;
+            transition: 0.3s ease;
+            opacity: 1;
+        }
+        .menuModal_body {
+            width: 0px;
+            background: var(--neutral-white);
+            position: relative;
+            padding: 32px;
+            height: 100vh;
+            visibility: hidden;
+            transition: 0.3s ease;
+            &.active {
+                width: 463px;
+                transition: 0.3s ease;
+                visibility: visible;
+                opacity: 1;
+            }
+            #closeModalMenu {
+                position: absolute;
+                top: 32px;
+                right: 32px;
+                font-size: 24px;
+                color: rgba(159, 159, 159, 1);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            h1 {
+                font-family: var(--font-family-Roboto);
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 18px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: rgba(58, 61, 66, 1);
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                margin-top: 16px;
+                a {
+                    border: 1px solid rgba(243, 243, 243, 1);
+                    border-right: none;
+                    border-left: none;
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 18px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color: rgba(43, 45, 51, 1);
+                    padding: 16px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    text-decoration: none;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menuModal_container {
+        top: 0;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.16);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        &.active {
+            visibility: visible;
+            transition: 0.3s ease;
+            opacity: 1;
+        }
+        .menuModal_body {
+            width: 0px;
+            background: var(--neutral-white);
+            position: relative;
+            padding: 32px;
+            height: 100vh;
+            visibility: hidden;
+            transition: 0.3s ease;
+            &.active {
+                width: 463px;
+                transition: 0.3s ease;
+                visibility: visible;
+                opacity: 1;
+            }
+            #closeModalMenu {
+                position: absolute;
+                top: 32px;
+                right: 32px;
+                font-size: 24px;
+                color: rgba(159, 159, 159, 1);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            h1 {
+                font-family: var(--font-family-Roboto);
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 18px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: rgba(58, 61, 66, 1);
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                margin-top: 16px;
+                a {
+                    border: 1px solid rgba(243, 243, 243, 1);
+                    border-right: none;
+                    border-left: none;
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 18px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color: rgba(43, 45, 51, 1);
+                    padding: 16px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    text-decoration: none;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

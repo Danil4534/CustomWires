@@ -43,9 +43,10 @@
     .howWorks_tabs {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
 
         .tabs {
+            height: 56px;
             display: flex;
             background: var(--neutral-white);
             padding: 8px;
@@ -56,7 +57,6 @@
                 cursor: pointer;
 
                 .tab {
-                    height: 56px;
                     display: flex;
                     align-items: center;
                     justify-content: center;

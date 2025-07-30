@@ -7,7 +7,7 @@ $links = [['text'=>'Головна', 'anchor'=>'']
 <header>
     <div class="header_leftSide_wrapper">
         <div class="header_leftSide">
-            <x-ghost-btn ghostBtnText="Меню" ghostBtnIconLeftSide="ph ph-list"></x-ghost-btn>
+            <x-ghost-btn ghostBtnText="Меню" ghostBtnIconLeftSide="ph ph-list" id="menuBtn"></x-ghost-btn>
             <x-picture-tag src="{{asset('assets/logo_375.svg')  }}" alt="logo375" lazy="true" />
         </div>
         <div class="header_nav">

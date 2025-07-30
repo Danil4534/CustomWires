@@ -1,4 +1,4 @@
-<button class="ghostBtn {{ $ghostClass }}">
+<button class="ghostBtn {{ $ghostClass }}" id="{{ $id }}">
     @if(!empty($ghostBtnIconLeftSide))
     <i class="{{ $ghostBtnIconLeftSide }}"></i>
     @endif
