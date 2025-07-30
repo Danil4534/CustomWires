@@ -47,9 +47,80 @@ footer {
                 color: var(--neutral-white);
             }
             i {
-                font-size: 25px;
+                font-size: 32px;
                 color: var(--neutral-white);
             }
+        }
+    }
+    .footer_navLinks {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+        .navLinks_Box {
+            display: flex;
+            flex-direction: column;
+            padding: 24px 0px;
+            gap: 24px;
+            h3 {
+                font-family: var(--font-family-Rubik);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                letter-spacing: 0%;
+                vertical-align: middle;
+                color: var(--neutral-white);
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                gap: 16px;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: var(--neutral-white);
+                        font-family: var(--font-family-Rubik);
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 145%;
+                        letter-spacing: 0%;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    .footer_methods_payment {
+        margin-top: 32px;
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            li {
+                width: 35px;
+                height: 24px;
+                background: var(--neutral-white);
+                border: 1px solid var(--gray);
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .footer_bottom {
+        hr {
+            margin: 32px 0px;
+        }
+        p {
+            margin: 0;
+            font-family: var(--font-family-Rubik);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 145%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: rgba(243, 243, 243, 1);
         }
     }
 }

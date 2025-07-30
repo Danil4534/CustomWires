@@ -27,4 +27,43 @@ $socialLinks =[
             </div>
         </div>
     </div>
+    <div class="footer_navLinks">
+        <div class="navLinks_Box">
+            <h3>Магазин</h3>
+            <ul>
+                <li><a href="">Головна</a></li>
+                <li><a href="">Підібрати кабель</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Калькулятор</a></li>
+
+            </ul>
+        </div>
+        <div class="navLinks_Box">
+            <h3>Покупцям</h3>
+            <ul>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">Умови доставки</a></li>
+                <li><a href="">Оплата</a></li>
+                <li><a href="">Обмін і повернення товару</a></li>
+                <li><a href="">Правила користування сайтом</a></li>
+                <li><a href="">Політика конфіденційності</a></li>
+                <li><a href="">Умови користування</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_methods_payment">
+        <ul>
+            <li><x-picture-tag src="{{ asset('assets/Visa.svg') }}" /></li>
+            <li><x-picture-tag src="{{ asset('assets/Mastercard.svg') }}" /></li>
+            <li><x-picture-tag src="{{ asset('assets/ApplePay.svg') }}" /></li>
+            <li><x-picture-tag src="{{ asset('assets/GooglePay.svg') }}" /></li>
+            <li><x-picture-tag src="{{ asset('assets/Liqpay.svg') }}" /></li>
+        </ul>
+    </div>
+    <div class="footer_bottom">
+
+
+        <hr>
+        <p>© 2025 СustomWires. Усі права захищені.</p>
+    </div>
 </footer>

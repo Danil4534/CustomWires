@@ -25,6 +25,9 @@
         <section>
             @include('components.questions')
         </section>
+        <section>
+            @include('components.howWorks')
+        </section>
     </main>
 </body>
 @include('components.footer')
