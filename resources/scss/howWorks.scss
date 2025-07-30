@@ -4,39 +4,55 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
     h1 {
         font-family: var(--font-family-Roboto);
         font-weight: 500;
-        font-style: Medium;
         font-size: 28px;
         text-transform: uppercase;
         line-height: 125%;
-        letter-spacing: 0%;
     }
+
     p {
         font-family: var(--font-family-Rubik);
-        font-weight: 400;
         font-size: 14px;
         line-height: 145%;
-        letter-spacing: 0%;
         color: rgba(90, 90, 90, 1);
     }
+
     hr {
         height: 1px;
         border: none;
         background: var(--gray);
     }
+
+    #opt1:checked ~ .howWorks_tabs .tabs label:nth-of-type(1) .tab,
+    #opt2:checked ~ .howWorks_tabs .tabs label:nth-of-type(2) .tab {
+        background: var(--primary-main-orange);
+        color: var(--neutral-white);
+    }
+
+    #opt1:checked ~ .howWorks_tabs .content1 {
+        display: block;
+    }
+
+    #opt2:checked ~ .howWorks_tabs .content2 {
+        display: block;
+    }
+
     .howWorks_tabs {
         display: flex;
         flex-direction: column;
         gap: 8px;
+
         .tabs {
-            width: 100%;
             display: flex;
             background: var(--neutral-white);
             padding: 8px;
+            gap: 8px;
+
             .tabLabel {
-                width: 100%;
+                flex: 1;
                 cursor: pointer;
 
                 .tab {
@@ -54,58 +70,42 @@
                 }
             }
         }
-        input {
-            display: none;
-        }
-
-        input[id="opt1"]:checked .tabs label[for="opt1"] .tab,
-        input[id="opt2"]:checked .tabs label[for="opt2"] .tab {
-            background: var(--primary-main-orange);
-            color: var(--neutral-white);
-        }
 
         .content {
             display: none;
-            width: 100%;
             background: var(--neutral-white);
             border-radius: 2px;
             padding: 24px;
+
             ul {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+
                 li {
                     h1 {
                         color: var(--primary-main-orange);
                         font-family: var(--font-family-Roboto);
-                        font-weight: 500;
-                        font-style: Medium;
                         font-size: 18px;
-                        line-height: 100%;
-                        letter-spacing: 0%;
                     }
+
                     h3 {
                         margin-top: 16px;
                         font-family: var(--font-family-Roboto);
-                        font-weight: 500;
-                        font-style: Medium;
                         font-size: 14px;
-                        line-height: 100%;
-                        letter-spacing: 0%;
                         color: var(--secondary-dark-soft);
                     }
+
                     p {
                         margin-top: 4px;
                         font-family: var(--font-family-Rubik);
-                        font-weight: 400;
                         font-size: 14px;
-                        line-height: 145%;
-                        letter-spacing: 0%;
                         color: rgba(159, 159, 159, 1);
                     }
                 }
             }
+
             .btnCatalog,
             .btnConfigurator {
                 width: 100%;
@@ -117,31 +117,19 @@
                 font-family: var(--font-family-Roboto);
                 border-color: rgba(43, 45, 51, 1);
                 color: rgba(43, 45, 51, 1);
-                font-weight: 500;
-                font-style: Medium;
                 font-size: 18px;
-                padding: 0;
-                line-height: 100%;
-                letter-spacing: 0%;
-                vertical-align: middle;
+
                 i {
                     font-size: 28px;
                 }
+
                 &:hover {
-                    cursor: pointer;
-                    transition: background 0.3s ease;
                     background: rgba(28, 30, 34, 1);
                     color: var(--neutral-white);
+                    cursor: pointer;
+                    transition: background 0.3s ease;
                 }
             }
-        }
-
-        #opt1:checked ~ .content1 {
-            display: block;
-        }
-
-        #opt2:checked ~ .content2 {
-            display: block;
         }
     }
 }
