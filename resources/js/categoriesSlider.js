@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         slidesPerGroup: 1,
         spaceBetween: 0,
         loop: true,
-        centeredSlides: true,
         keyboard: {
             enabled: true
         },

@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     document.querySelector('.responsesSwiper')&&
     new Swiper('.responsesSwiper',{
-        slidesPerView:1,
+        slidesPerView:'auto',
         spaceBetween: 16,
         loop: true,
-        centeredSlides: true,
+        centeredSlides: false,    
+           
         keyboard: {
             enabled: true
         },
