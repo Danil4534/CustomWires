@@ -16,6 +16,11 @@
                 justify-content: center;
                 align-items: center;
                 border-color: rgba(43, 45, 51, 1);
+                color: rgba(43, 45, 51, 1);
+                &:hover {
+                    color: var(--neutral-white);
+                    background: rgba(43, 45, 51, 1);
+                }
             }
         }
     }

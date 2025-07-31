@@ -21,6 +21,9 @@
             @include('components.benefits')
         </section>
         <section>
+            @include('components.popularProducts')
+        </section>
+        <section>
             @include('components.howWorks')
         </section>
         <section>
