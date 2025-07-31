@@ -24,6 +24,9 @@
             @include('components.popularProducts')
         </section>
         <section>
+            @include('components.categories')
+        </section>
+        <section>
             @include('components.howWorks')
         </section>
         <section>
