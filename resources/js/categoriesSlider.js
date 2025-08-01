@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         },
      
         navigation:{
-            nextEl:"#nextBtn",
-            prevEl:"#prevBtn"  
+            nextEl:"#nextBtnCategories",
+            prevEl:"#prevBtnCategories"  
         }
         
     })

@@ -10,7 +10,7 @@ $responses = [
 
 <div class="responses_container">
     <div class="responses_header">
-        <h1>ЩО ПРО НАС КАЖУТЬ</h1>
+        <h1>ЩО ПРО НАС КАЖУТЬ?</h1>
         <div class="slider_nav">
             <div class="prevbtn" id="prevBtn"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-left" /></div>
             <div class="nextbtn" id="nextBtn"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-right" /></i></div>

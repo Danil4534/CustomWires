@@ -4,11 +4,14 @@
         @if($product['popular'])
         <span class="labelPopular">Популярні</span>
         @endif
-        @if($product['inStock'])
-        <p><span></span> В наявності</p>
-        @endif
-        <hr>
     </div>
+    @if($product['inStock'])
+    <div class="card_inStock">
+        <p><span></span> В наявності</p>
+        <p class="art">Арт: {{ $product['art'] }}</p>
+    </div>
+    @endif
+    <hr>
     <div class="card_content">
         <h3>{{ $product['name'] }}</h3>
         <div class="card_content_wrapper">
