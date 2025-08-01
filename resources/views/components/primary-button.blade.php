@@ -1,4 +1,4 @@
-<button class="primaryBtn {{ $primaryClass }}">
+<button class="primaryBtn {{ $primaryClass }}" id="{{ $id ?? '' }}" type="{{ $type ??'' }}">
     @if(!empty($primaryBtnIconLeftSide))
     <i class="{{ $primaryBtnIconLeftSide }}"></i>
     @endif

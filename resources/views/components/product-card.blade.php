@@ -16,7 +16,6 @@
                 @if ($product['discount'] )
                 <div class="discountBlock">
                     <div class="discount_container">
-
                         <span>-{{ $product['discount'] }}%</span>
                     </div>
                     <p>250,00</p>
@@ -27,7 +26,11 @@
                 </div>
                 @endif
             </div>
-            <x-primary-button primaryBtnIconLeftSide="ph ph-basket" primaryClass="chooseProdBtn" />
+            <form action="{{ route('addToCart') }}" method="POST">
+                @csrf
+                <input type="hidden" name="product" value="{{ base64_encode(json_encode($product)) }}">
+                <x-primary-button type="submit" primaryBtnIconLeftSide="ph ph-basket" primaryClass="chooseProdBtn" />
+            </form>
         </div>
 
     </div>

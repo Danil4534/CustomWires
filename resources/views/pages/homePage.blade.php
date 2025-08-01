@@ -45,5 +45,6 @@
 @include('components.footer')
 
 @include('components.modalWindows.menuModal')
+@include('components.modalWindows.cartModal')
 
 </html>

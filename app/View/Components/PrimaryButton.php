@@ -8,14 +8,17 @@ use Illuminate\Contracts\View\View;
 
 class PrimaryButton extends Component
 {
+    public $id;
     public string $primaryBtnText;
     public string $primaryBtnIconLeftSide;
     public string $primaryBtnIconRightSide;
     public string $primaryClass;
+    public string $type;
     public int $counter;
-    public function __construct(string $primaryBtnText = '', string $primaryBtnIconLeftSide = '', string $primaryBtnIconRightSide = '', string $primaryClass = '', int $counter = 0)
+    public function __construct($id = '', $type = '', string $primaryBtnText = '', string $primaryBtnIconLeftSide = '', string $primaryBtnIconRightSide = '', string $primaryClass = '', int $counter = 0)
     {
-
+        $this->id = $id;
+        $this->type = $type;
         $this->primaryBtnText = $primaryBtnText;
         $this->primaryBtnIconLeftSide = $primaryBtnIconLeftSide;
         $this->primaryBtnIconRightSide = $primaryBtnIconRightSide;

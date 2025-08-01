@@ -21,6 +21,7 @@
         height: 100vh;
         visibility: hidden;
         transition: 0.3s ease;
+        opacity: 0;
         &.active {
             width: 285px;
             transition: 0.3s ease;

@@ -1,6 +1,8 @@
 @php
 $links = [['text'=>'Головна', 'anchor'=>'']
-,['text'=>'Каталог', 'anchor'=>''],['text'=>'Підібрати дріт', 'anchor'=>''],['text'=>'Калькулятор', 'anchor'=>'']]
+,['text'=>'Каталог', 'anchor'=>''],['text'=>'Підібрати дріт', 'anchor'=>''],['text'=>'Калькулятор', 'anchor'=>'']];
+
+$chooseProducts = count(session('chooseProducts',[]))
 @endphp
 
 
@@ -25,6 +27,6 @@ $links = [['text'=>'Головна', 'anchor'=>'']
         <x-secondary-button secondaryClass="header_r_link" secondaryBtnIconLeftSide="ph-fill ph-facebook-logo"></x-secondary-button>
         <x-secondary-button secondaryClass="header_r_link" secondaryBtnIconLeftSide="ph-fill ph-youtube-logo"></x-secondary-button>
         <x-secondary-button secondaryBtnText='Каталог' secondaryBtnIconLeftSide="ph-fill ph-shopping-bag"></x-secondary-button>
-        <x-primary-button primaryBtnText="Кошик" primaryBtnIconLeftSide="ph-fill ph-basket" counter={{1}}></x-primary-button>
+        <x-primary-button primaryBtnText="Кошик" primaryBtnIconLeftSide="ph-fill ph-basket" counter={{$chooseProducts}} id="btnToCatalog"></x-primary-button>
     </div>
 </header>
