@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         navigation:{
             nextEl:"#nextBtn",
             prevEl:"#prevBtn"  
+        },
+        breakpoints:{            
+            1024:{
+                 spaceBetween: 24
+            }
         }
         
         

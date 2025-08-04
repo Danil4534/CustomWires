@@ -134,3 +134,143 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) {
+    .howWorks_container {
+        padding: 64px 16px;
+        background: var(--accent-light-oai);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        display: none;
+
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-size: 28px;
+            text-transform: uppercase;
+            line-height: 125%;
+        }
+
+        p {
+            font-family: var(--font-family-Rubik);
+            font-size: 14px;
+            line-height: 145%;
+            color: rgba(90, 90, 90, 1);
+        }
+
+        hr {
+            height: 1px;
+            border: none;
+            background: var(--gray);
+        }
+
+        #opt1:checked ~ .howWorks_tabs .tabs label:nth-of-type(1) .tab,
+        #opt2:checked ~ .howWorks_tabs .tabs label:nth-of-type(2) .tab {
+            background: var(--primary-main-orange);
+            color: var(--neutral-white);
+        }
+
+        #opt1:checked ~ .howWorks_tabs .content1 {
+            display: block;
+        }
+
+        #opt2:checked ~ .howWorks_tabs .content2 {
+            display: block;
+        }
+
+        .howWorks_tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .tabs {
+                height: 56px;
+                display: flex;
+                background: var(--neutral-white);
+                padding: 8px;
+                gap: 8px;
+
+                .tabLabel {
+                    flex: 1;
+                    cursor: pointer;
+
+                    .tab {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 2px;
+                        transition: background 0.3s;
+                        color: var(--primary-main-orange);
+                        font-size: 14px;
+                        font-family: var(--font-family-Roboto);
+                        text-transform: uppercase;
+                        padding: 12px 0px;
+                    }
+                }
+            }
+
+            .content {
+                display: none;
+                background: var(--neutral-white);
+                border-radius: 2px;
+                padding: 24px;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+
+                    li {
+                        h1 {
+                            color: var(--primary-main-orange);
+                            font-family: var(--font-family-Rubik);
+                            font-size: 18px;
+                            font-weight: 400 !important;
+                        }
+
+                        h3 {
+                            margin-top: 16px;
+                            font-family: var(--font-family-Roboto);
+                            font-size: 14px;
+                            color: var(--secondary-dark-soft);
+                        }
+
+                        p {
+                            margin-top: 4px;
+                            font-family: var(--font-family-Rubik);
+                            font-size: 14px;
+                            color: rgba(159, 159, 159, 1);
+                        }
+                    }
+                }
+
+                .btnCatalog,
+                .btnConfigurator {
+                    width: 100%;
+                    height: 56px;
+                    margin-top: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: var(--font-family-Roboto);
+                    border-color: rgba(43, 45, 51, 1);
+                    color: rgba(43, 45, 51, 1);
+                    font-size: 18px;
+
+                    i {
+                        font-size: 28px;
+                    }
+
+                    &:hover {
+                        background: rgba(28, 30, 34, 1);
+                        color: var(--neutral-white);
+                        cursor: pointer;
+                        transition: background 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}

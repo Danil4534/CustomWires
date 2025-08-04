@@ -87,3 +87,46 @@
         }
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .popularProducts_container {
+        width: 100%;
+        padding: 64px 48px;
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 40px;
+            line-height: 125%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            color: rgba(43, 45, 51, 1);
+        }
+        .popularProducts_wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}
+@media screen and (min-width: 1920px) {
+    .popularProducts_container {
+        width: 100%;
+        padding: 64px 48px;
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 40px;
+            line-height: 125%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            color: rgba(43, 45, 51, 1);
+        }
+        .popularProducts_wrapper {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}
