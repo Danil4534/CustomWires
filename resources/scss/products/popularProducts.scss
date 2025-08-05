@@ -91,12 +91,13 @@
 @media screen and (min-width: 1440px) {
     .popularProducts_container {
         width: 100%;
-        padding: 64px 48px;
+        padding: 80px;
+        padding-bottom: 72px;
         h1 {
             font-family: var(--font-family-Roboto);
             font-weight: 500;
             font-style: Medium;
-            font-size: 40px;
+            font-size: 56px;
             line-height: 125%;
             letter-spacing: 0%;
             text-transform: uppercase;
@@ -112,12 +113,13 @@
 @media screen and (min-width: 1920px) {
     .popularProducts_container {
         width: 100%;
-        padding: 64px 48px;
+        padding: 96px;
+        padding-bottom: 80px;
         h1 {
             font-family: var(--font-family-Roboto);
             font-weight: 500;
             font-style: Medium;
-            font-size: 40px;
+            font-size: 56px !important;
             line-height: 125%;
             letter-spacing: 0%;
             text-transform: uppercase;

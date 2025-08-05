@@ -16,45 +16,50 @@ $production = [
 
 <div class="howWorks_container">
     <h1>Як ми працюємо?</h1>
-    <p>Ми зробили процес максимально зручним, зрозумілим і прозорим - незалежно від того, чи ви обираєте з каталогу, чи надсилаєте власне технічне завдання.</p>
-    <hr>
-    <input type="radio" name="option" id="opt1" hidden checked>
-    <input type="radio" name="option" id="opt2" hidden>
-    <div class="howWorks_tabs">
-        <div class="tabs">
-            <label for="opt1" class="tabLabel">
-                <div class="tab">Готовий кабель</div>
-            </label>
-
-            <label for="opt2" class="tabLabel">
-                <div class="tab">Виготовлення під тз</div>
-            </label>
+    <div class="howWorks_wrapper">
+        <div class="howWorks_leftSide">
+            <p>Ми зробили процес максимально зручним, зрозумілим і прозорим - незалежно від того, чи ви обираєте з каталогу, чи надсилаєте власне технічне завдання.</p>
         </div>
+        <div class="howWorks_rightSide">
+            <input type="radio" name="option" id="opt1" hidden checked>
+            <input type="radio" name="option" id="opt2" hidden>
+            <div class="howWorks_tabs">
+                <div class="tabs">
+                    <label for="opt1" class="tabLabel">
+                        <div class="tab">Готовий кабель</div>
+                    </label>
 
-        <div class="content content1">
-            <ul>
-                @foreach ($readyCable as $step)
-                <li>
-                    <h1>{{ $step['id'] }}</h1>
-                    <h3>{{ $step['title'] }}</h3>
-                    <p>{{ $step['subtitle'] }}</p>
-                </li>
-                @endforeach
-            </ul>
-            <x-secondary-button secondaryBtnText="Переглянути Каталог" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnCatalog" />
-        </div>
+                    <label for="opt2" class="tabLabel">
+                        <div class="tab">Виготовлення під тз</div>
+                    </label>
+                </div>
 
-        <div class="content content2">
-            <ul>
-                @foreach ($production as $step)
-                <li>
-                    <h1>{{ $step['id'] }}</h1>
-                    <h3>{{ $step['title'] }}</h3>
-                    <p>{{ $step['subtitle'] }}</p>
-                </li>
-                @endforeach
-            </ul>
-            <x-secondary-button secondaryBtnText="До конфігуратора" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnConfigurator" />
+                <div class="content content1">
+                    <ul>
+                        @foreach ($readyCable as $step)
+                        <li>
+                            <h1>{{ $step['id'] }}</h1>
+                            <h3>{{ $step['title'] }}</h3>
+                            <p>{{ $step['subtitle'] }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                    <x-secondary-button secondaryBtnText="Переглянути Каталог" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnCatalog" />
+                </div>
+
+                <div class="content content2">
+                    <ul>
+                        @foreach ($production as $step)
+                        <li>
+                            <h1>{{ $step['id'] }}</h1>
+                            <h3>{{ $step['title'] }}</h3>
+                            <p>{{ $step['subtitle'] }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                    <x-secondary-button secondaryBtnText="До конфігуратора" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnConfigurator" />
+                </div>
+            </div>
         </div>
     </div>
 </div>

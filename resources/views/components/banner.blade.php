@@ -1,6 +1,6 @@
 <div class="banner_container">
     <h1>
-        МЕНЬШЕ БРАКУ <span>—</span>
+        МЕНЬШЕ БРАКУ <span>—</span> <br>
         БІЛЬШЕ ШВИДКОСТІ.
     </h1>
     <div class="banner_content">

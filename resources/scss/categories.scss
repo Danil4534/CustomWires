@@ -319,6 +319,8 @@
                 padding: 24px;
                 background: rgba(233, 234, 229, 1);
                 .categoryLogo {
+                    width: 145px;
+                    height: 124px;
                     margin-bottom: 32px;
                 }
                 .categories__tz__title,
@@ -512,6 +514,7 @@
                 width: 100%;
                 height: 341px;
                 padding: 24px;
+                position: relative;
                 background: rgba(233, 234, 229, 1);
                 .categoryLogo {
                     margin-bottom: 32px;
@@ -538,10 +541,14 @@
                 .categories__quiz__btn {
                     width: 124px;
                     height: 40px;
+                    position: absolute;
+                    bottom: 24px;
                 }
                 .categories__tz__btn {
                     width: 110px;
                     height: 40px;
+                    bottom: 24px;
+                    position: absolute;
                 }
                 .categories__quiz__btn,
                 .categories__tz__btn {
@@ -578,17 +585,19 @@
                 font-family: var(--font-family-Roboto);
                 font-weight: 500;
                 font-style: Medium;
-                font-size: 40px;
+                font-size: 56px;
                 line-height: 125%;
                 letter-spacing: 0%;
                 text-transform: uppercase;
                 color: rgba(43, 45, 51, 1);
-                margin-bottom: 16px;
+                margin-bottom: 0px;
             }
             .categories__subtitle {
                 font-family: var(--font-family-Rubik);
                 font-weight: 400;
-                font-style: Regular;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-size: 16px;
                 line-height: 145%;
                 letter-spacing: 0%;
@@ -710,18 +719,29 @@
             align-items: center;
             .categoryBox {
                 width: 100%;
-                height: 341px;
-                padding: 24px;
+                height: fit-content;
+                display: flex;
+                padding: 32px;
+                gap: 32px;
                 background: rgba(233, 234, 229, 1);
+                .categories__content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
                 .categoryLogo {
-                    margin-bottom: 32px;
+                    margin-bottom: 0px;
+                    width: 285px;
+                    height: 256px;
+                    display: flex;
+                    justify-content: center;
                 }
                 .categories__tz__title,
                 .categories__quiz__title {
                     font-family: var(--font-family-Roboto);
                     font-weight: 500;
                     font-style: Medium;
-                    font-size: 18px;
+                    font-size: 22px;
                     line-height: 100%;
                     letter-spacing: 0%;
                 }
@@ -733,15 +753,18 @@
                     line-height: 145%;
                     letter-spacing: 0%;
                     margin-top: 10px;
+                    margin-bottom: 26px;
                     color: rgba(90, 90, 90, 1);
                 }
                 .categories__quiz__btn {
                     width: 124px;
                     height: 40px;
+                    position: relative;
                 }
                 .categories__tz__btn {
                     width: 110px;
                     height: 40px;
+                    position: relative;
                 }
                 .categories__quiz__btn,
                 .categories__tz__btn {
@@ -769,7 +792,8 @@
 }
 @media screen and (min-width: 1920px) {
     .categories__container {
-        padding: 80px;
+        padding: 96px;
+        padding-bottom: 92px;
         .categories__header {
             display: flex;
             justify-content: space-between;
@@ -782,7 +806,7 @@
                 letter-spacing: 0%;
                 text-transform: uppercase;
                 color: rgba(43, 45, 51, 1);
-                margin-bottom: 16px;
+                margin-bottom: 0px;
             }
             .categories__subtitle {
                 font-family: var(--font-family-Rubik);
@@ -866,8 +890,7 @@
                     }
                 }
                 .categories__nav {
-                    margin-top: 32px;
-                    margin-bottom: 64px;
+                    margin: 64px 0px;
                     display: flex;
                     gap: 9px;
                     .btnToCatalog {
@@ -890,6 +913,7 @@
                     .prevBtnCategories,
                     .nextBtnCategories {
                         button {
+                            display: none;
                             width: 48px;
                             height: 48px;
                             border-color: rgba(43, 45, 51, 1);
@@ -910,18 +934,21 @@
             align-items: center;
             .categoryBox {
                 width: 100%;
-                height: 341px;
-                padding: 24px;
+                height: fit-content;
+                padding: 32px;
                 background: rgba(233, 234, 229, 1);
                 .categoryLogo {
-                    margin-bottom: 32px;
+                    margin-bottom: 0px;
+                    width: 376px;
+                    height: 256px;
+                    padding: 0px 60px;
                 }
                 .categories__tz__title,
                 .categories__quiz__title {
                     font-family: var(--font-family-Roboto);
                     font-weight: 500;
                     font-style: Medium;
-                    font-size: 18px;
+                    font-size: 22px;
                     line-height: 100%;
                     letter-spacing: 0%;
                 }

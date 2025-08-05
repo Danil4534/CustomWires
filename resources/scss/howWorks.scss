@@ -274,3 +274,320 @@
         }
     }
 }
+@media screen and (min-width: 1440px) {
+    .howWorks_container {
+        padding: 80px;
+        padding-bottom: 63px;
+        background: var(--accent-light-oai);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-image: url("/public/assets/bg.svg");
+        background-blend-mode: luminosity;
+
+        .howWorks_wrapper {
+            display: flex;
+            border-top: 1px solid rgba(196, 196, 196, 1);
+            .howWorks_leftSide {
+                padding: 48px 24px;
+                padding-left: 0;
+                p {
+                    font-family: var(--font-family-Rubik);
+                    font-size: 16px;
+                    line-height: 145%;
+                    color: rgba(90, 90, 90, 1);
+                }
+            }
+            .howWorks_rightSide {
+                min-width: 954px;
+                border-left: 1px solid rgba(196, 196, 196, 1);
+                padding: 32px 0 32px 24px;
+            }
+        }
+
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-size: 56px;
+            text-transform: uppercase;
+            line-height: 125%;
+        }
+
+        hr {
+            height: 1px;
+            border: none;
+            background: var(--gray);
+        }
+
+        #opt1:checked ~ .howWorks_tabs .tabs label:nth-of-type(1) .tab,
+        #opt2:checked ~ .howWorks_tabs .tabs label:nth-of-type(2) .tab {
+            width: 162px;
+            background: var(--primary-main-orange);
+            color: var(--neutral-white);
+        }
+
+        #opt1:checked ~ .howWorks_tabs .content1 {
+            display: block;
+        }
+
+        #opt2:checked ~ .howWorks_tabs .content2 {
+            display: block;
+        }
+
+        .howWorks_tabs {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .tabs {
+                width: fit-content;
+                height: 48px;
+                display: flex;
+                background: var(--neutral-white);
+                padding: 8px;
+                gap: 8px;
+
+                .tabLabel {
+                    flex: 1;
+                    cursor: pointer;
+                    .tab {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 2px;
+                        transition: background 0.3s;
+                        color: var(--primary-main-orange);
+                        font-size: 14px;
+                        font-family: var(--font-family-Roboto);
+                        text-transform: uppercase;
+                        padding: 8px 12px;
+                    }
+                }
+            }
+
+            .content {
+                display: none;
+                background: var(--neutral-white);
+                border-radius: 2px;
+                padding: 24px;
+                padding-top: 48px;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 24px;
+
+                    li {
+                        width: 202px;
+                        h1 {
+                            color: var(--primary-main-orange);
+                            font-family: var(--font-family-Rubik);
+                            font-size: 22px;
+                            font-weight: 400 !important;
+                        }
+
+                        h3 {
+                            margin-top: 24px;
+                            font-family: var(--font-family-Roboto);
+                            font-size: 14px;
+                            color: var(--secondary-dark-soft);
+                        }
+
+                        p {
+                            margin-top: 4px;
+                            font-family: var(--font-family-Rubik);
+                            font-size: 14px;
+                            color: rgba(159, 159, 159, 1);
+                        }
+                    }
+                }
+
+                .btnCatalog,
+                .btnConfigurator {
+                    width: 100%;
+                    height: 56px;
+                    margin-top: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: var(--font-family-Roboto);
+                    border-color: rgba(43, 45, 51, 1);
+                    color: rgba(43, 45, 51, 1);
+                    font-size: 18px;
+
+                    i {
+                        font-size: 28px;
+                    }
+
+                    &:hover {
+                        background: rgba(28, 30, 34, 1);
+                        color: var(--neutral-white);
+                        cursor: pointer;
+                        transition: background 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .howWorks_container {
+        padding: 96px;
+        padding-bottom: 92px;
+        background: var(--accent-light-oai);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-image: url("/public/assets/bg.svg");
+        background-blend-mode: luminosity;
+
+        .howWorks_wrapper {
+            display: flex;
+            border-top: 1px solid rgba(196, 196, 196, 1);
+            .howWorks_leftSide {
+                padding: 48px 24px;
+                padding-left: 0;
+                p {
+                    font-family: var(--font-family-Rubik);
+                    font-size: 16px;
+                    line-height: 145%;
+                    color: rgba(90, 90, 90, 1);
+                }
+            }
+            .howWorks_rightSide {
+                min-width: 954px;
+                border-left: 1px solid rgba(196, 196, 196, 1);
+                padding: 32px 0 32px 24px;
+            }
+        }
+
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-size: 56px;
+            text-transform: uppercase;
+            line-height: 125%;
+        }
+
+        hr {
+            height: 1px;
+            border: none;
+            background: var(--gray);
+        }
+
+        #opt1:checked ~ .howWorks_tabs .tabs label:nth-of-type(1) .tab,
+        #opt2:checked ~ .howWorks_tabs .tabs label:nth-of-type(2) .tab {
+            width: 162px;
+            background: var(--primary-main-orange);
+            color: var(--neutral-white);
+        }
+
+        #opt1:checked ~ .howWorks_tabs .content1 {
+            display: block;
+        }
+
+        #opt2:checked ~ .howWorks_tabs .content2 {
+            display: block;
+        }
+
+        .howWorks_tabs {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .tabs {
+                width: fit-content;
+                height: 48px;
+                display: flex;
+                background: var(--neutral-white);
+                padding: 8px;
+                gap: 8px;
+
+                .tabLabel {
+                    flex: 1;
+                    cursor: pointer;
+                    .tab {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 2px;
+                        transition: background 0.3s;
+                        color: var(--primary-main-orange);
+                        font-size: 14px;
+                        font-family: var(--font-family-Roboto);
+                        text-transform: uppercase;
+                        padding: 8px 12px;
+                    }
+                }
+            }
+
+            .content {
+                display: none;
+                background: var(--neutral-white);
+                border-radius: 2px;
+                padding: 24px;
+                padding-top: 48px;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 24px;
+
+                    li {
+                        width: 202px;
+                        h1 {
+                            color: var(--primary-main-orange);
+                            font-family: var(--font-family-Rubik);
+                            font-size: 22px;
+                            font-weight: 400 !important;
+                        }
+
+                        h3 {
+                            margin-top: 24px;
+                            font-family: var(--font-family-Roboto);
+                            font-size: 14px;
+                            color: var(--secondary-dark-soft);
+                        }
+
+                        p {
+                            margin-top: 4px;
+                            font-family: var(--font-family-Rubik);
+                            font-size: 14px;
+                            color: rgba(159, 159, 159, 1);
+                        }
+                    }
+                }
+
+                .btnCatalog,
+                .btnConfigurator {
+                    width: 100%;
+                    height: 56px;
+                    margin-top: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: var(--font-family-Roboto);
+                    border-color: rgba(43, 45, 51, 1);
+                    color: rgba(43, 45, 51, 1);
+                    font-size: 18px;
+
+                    i {
+                        font-size: 28px;
+                    }
+
+                    &:hover {
+                        background: rgba(28, 30, 34, 1);
+                        color: var(--neutral-white);
+                        cursor: pointer;
+                        transition: background 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -124,6 +124,147 @@
         grid-template-rows: repeat(1, 1fr);
         gap: 1px;
         background: rgba(159, 159, 159, 1);
+        .benefit_card:first-child {
+            padding-left: 48px;
+        }
+        .benefit_card:last-child {
+            padding-right: 48px;
+        }
+        .benefit_card {
+            width: 100%;
+            height: 100%;
+            padding: 48px 32px;
+            border: none !important;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 72px;
+                height: 72px;
+                font-size: 32px;
+                padding: 16px;
+                color: var(--accent-oai);
+                background: var(--accent-light-oai);
+                border-radius: 4px;
+            }
+            &:last-child {
+                border: none;
+            }
+            .benefit_card_content {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                h3 {
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 22px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-transform: uppercase;
+                    color: var(--neutral-white);
+                }
+                p {
+                    font-family: var(--font-family-Rubik);
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 145%;
+                    letter-spacing: 0%;
+                    color: var(--gray);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .benefits_container {
+        width: 100%;
+        height: fit-content;
+        background: var(--accent-oai);
+        padding: 0px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1px;
+        background: rgba(159, 159, 159, 1);
+        .benefit_card:first-child {
+            padding-left: 80px;
+        }
+        .benefit_card:last-child {
+            padding-right: 80px;
+        }
+        .benefit_card {
+            width: 100%;
+            height: 100%;
+            padding: 48px 32px;
+            border: none !important;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 72px;
+                height: 72px;
+                font-size: 32px;
+                padding: 16px;
+                color: var(--accent-oai);
+                background: var(--accent-light-oai);
+                border-radius: 4px;
+            }
+            &:last-child {
+                border: none;
+            }
+            .benefit_card_content {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                h3 {
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 22px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-transform: uppercase;
+                    color: var(--neutral-white);
+                }
+                p {
+                    font-family: var(--font-family-Rubik);
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 145%;
+                    letter-spacing: 0%;
+                    color: var(--gray);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .benefits_container {
+        width: 100%;
+        height: fit-content;
+        background: var(--accent-oai);
+        padding: 0px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1px;
+        background: rgba(159, 159, 159, 1);
+        .benefit_card:first-child {
+            padding-left: 96px;
+        }
+        .benefit_card:last-child {
+            padding-right: 96px;
+        }
         .benefit_card {
             width: 100%;
             height: 100%;
