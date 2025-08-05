@@ -12,9 +12,11 @@ class SecondaryButton extends Component
     public string $secondaryBtnIconLeftSide;
     public string $secondaryBtnIconRightSide;
     public string $secondaryClass;
+    public string $type;
 
-    public function __construct(string $secondaryBtnText = "", string $secondaryBtnIconLeftSide = "", string $secondaryBtnIconRightSide = "", string $secondaryClass = "")
+    public function __construct(string $secondaryBtnText = "", string $secondaryBtnIconLeftSide = "", string $secondaryBtnIconRightSide = "", string $secondaryClass = "", string $type = "")
     {
+        $this->type = $type;
         $this->secondaryBtnText = $secondaryBtnText;
         $this->secondaryBtnIconLeftSide = $secondaryBtnIconLeftSide;
         $this->secondaryBtnIconRightSide = $secondaryBtnIconRightSide;
