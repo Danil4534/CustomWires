@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     document.querySelector('.popularProductSlider')&&
     new Swiper('.popularProductSlider',{
-        slidesPerView: 5,
+        slidesPerView: 'auto',
         spaceBetween: 0,
-        slidesGroup:1,
+        // slidesGroup:1,
         loop: true,
-        centeredSlides: true,    
+        centeredSlides: false,    
            
         keyboard: {
             enabled: true
         },
        
         navigation:{
-            nextEl:"#bannerSlide__next",
-            prevEl:"#bannerSlide__prev"  
+            nextEl:"#popularProductSlider__next",
+            prevEl:"#popularProductSlider__prev"  
         },
         pagination:{
             el: '.popularProductSlider_pagination',
@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         breakpoints:{
             1920:{
                 slidesPerView: 6,
+            },
+            1440:{
+              slidesPerView: 5,
             }
         }
         
