@@ -108,6 +108,9 @@ footer {
             }
         }
     }
+    .footer_contactInfo1024 {
+        display: none;
+    }
     .footer_bottom {
         hr {
             margin: 32px 0px;
@@ -121,6 +124,11 @@ footer {
             letter-spacing: 0%;
             vertical-align: middle;
             color: rgba(243, 243, 243, 1);
+        }
+        .footer_bottom_content {
+            :first-child {
+                display: none;
+            }
         }
     }
 }

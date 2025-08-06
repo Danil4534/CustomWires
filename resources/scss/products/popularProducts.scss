@@ -43,6 +43,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .popularProductSlider {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -85,6 +88,9 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
         }
+        .popularProductSlider {
+            display: none;
+        }
     }
 }
 
@@ -105,8 +111,11 @@
             color: rgba(43, 45, 51, 1);
         }
         .popularProducts_wrapper {
-            display: grid;
+            display: none;
             grid-template-columns: repeat(5, 1fr);
+        }
+        .popularProductSlider {
+            display: flex;
         }
     }
 }
@@ -127,7 +136,7 @@
             color: rgba(43, 45, 51, 1);
         }
         .popularProducts_wrapper {
-            display: grid;
+            display: none;
             grid-template-columns: repeat(6, 1fr);
         }
     }

@@ -3,3 +3,5 @@ import './menuModal';
 import './responsesSlider';
 import './categoriesSlider';
 import './cartModal';
+import './bannerSlider';
+import './popularProductSlider'

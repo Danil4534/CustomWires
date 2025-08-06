@@ -118,6 +118,54 @@
             margin-top: 16px;
             display: flex;
             gap: 24px;
+            .bannerSlider {
+                width: 611px;
+                position: relative;
+                .swiper-wrapper {
+                    height: 382px;
+                    border-radius: 4px;
+                    .swiper-slide {
+                        width: 100%;
+                        border-radius: 4px;
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .bannerSlider__nav {
+                    display: flex;
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                    z-index: 90;
+                    gap: 8px;
+                    .bannerSlide__prev,
+                    .bannerSlide__next {
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-color: rgba(43, 45, 51, 1);
+                            color: rgba(43, 45, 51, 1);
+                            &:hover {
+                                background: rgba(43, 45, 51, 1);
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .bannerSlide__next {
+                        button {
+                            background: rgba(43, 45, 51, 1);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
             .cable {
                 width: 431px;
             }
@@ -227,24 +275,69 @@
             margin-top: 16px;
             display: flex;
             gap: 24px;
-            .cable {
-                width: 100%;
+            .bannerSlider {
+                width: 611px;
+                position: relative;
+                .swiper-wrapper {
+                    height: 382px;
+                    border-radius: 4px;
+                    .swiper-slide {
+                        width: 100%;
+                        border-radius: 4px;
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+                .bannerSlider__nav {
+                    display: flex;
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                    z-index: 90;
+                    gap: 8px;
+                    .bannerSlide__prev,
+                    .bannerSlide__next {
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-color: rgba(43, 45, 51, 1);
+                            color: rgba(43, 45, 51, 1);
+                            &:hover {
+                                background: rgba(43, 45, 51, 1);
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .bannerSlide__next {
+                        button {
+                            background: rgba(43, 45, 51, 1);
+                            color: #fff;
+                        }
+                    }
+                }
             }
             .banner_content_prodCard {
-                margin-top: 16px;
+                margin-top: 0px;
                 height: 176px;
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
                 .cablePicture {
-                    width: 249px;
+                    width: 293px;
+                    height: 249px;
                 }
                 .prodCard_content {
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
-                    width: 249px;
-
+                    width: 100%;
                     h2 {
                         font-family: var(--font-family-Roboto);
                         font-weight: 500;
@@ -263,6 +356,7 @@
                     .prodCard_content_bottomBox {
                         display: flex;
                         align-items: center;
+                        justify-content: space-between;
 
                         p {
                             font-family: var(--font-family-Roboto);
@@ -298,6 +392,317 @@
                             gap: 4px;
                             margin-top: 0;
                             padding: 0px 10px;
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1440px) {
+    .banner_container {
+        width: 100%;
+        height: fit-content;
+        padding: 80px;
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 112px;
+            color: rgba(43, 45, 51, 1);
+            line-height: 114.99999999999999%;
+            letter-spacing: 0%;
+            span {
+                font-family: var(--font-family-Roboto);
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 112px;
+                line-height: 114.99999999999999%;
+                letter-spacing: 0%;
+                color: var(--primary-main-orange);
+            }
+        }
+        .banner_content {
+            margin-top: 24px;
+            display: flex;
+            gap: 24px;
+            .bannerSlider {
+                width: 100%;
+                position: relative;
+                .swiper-wrapper {
+                    height: 382px;
+                    border-radius: 4px;
+                    .swiper-slide {
+                        width: 100%;
+                        border-radius: 4px;
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .bannerSlider__nav {
+                    display: flex;
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                    z-index: 90;
+                    gap: 8px;
+                    .bannerSlide__prev,
+                    .bannerSlide__next {
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-color: rgba(43, 45, 51, 1);
+                            color: rgba(43, 45, 51, 1);
+                            &:hover {
+                                background: rgba(43, 45, 51, 1);
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .bannerSlide__next {
+                        button {
+                            background: rgba(43, 45, 51, 1);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .banner_content_prodCard {
+                margin-top: 0px;
+                height: 176px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .cablePicture {
+                    width: 383px;
+                    height: 224px;
+                }
+                .prodCard_content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    width: 100%;
+                    h2 {
+                        font-family: var(--font-family-Roboto);
+                        font-weight: 500;
+                        font-style: Medium;
+                        font-size: 18px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        height: 78px;
+                        color: rgba(43, 45, 51, 1);
+                    }
+                    hr {
+                        border: none;
+                        height: 1px;
+                        background: var(--gray);
+                    }
+                    .prodCard_content_bottomBox {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        p {
+                            font-family: var(--font-family-Roboto);
+                            font-weight: 500;
+                            font-style: Medium;
+                            font-size: 14px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            span {
+                                font-family: var(--font-family-Roboto);
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 100%;
+                                letter-spacing: 0%;
+                                color: rgba(159, 159, 159, 1);
+                            }
+                        }
+                        a {
+                            width: 114px;
+                            height: 32px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-family: var(--font-family-Roboto);
+                            font-weight: 500;
+                            font-style: Medium;
+                            font-size: 14px;
+                            color: rgba(255, 111, 57, 1);
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            vertical-align: middle;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            gap: 4px;
+                            margin-top: 0;
+                            padding: 0px 0px;
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .banner_container {
+        width: 100%;
+        height: fit-content;
+        padding: 96px;
+        h1 {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 112px;
+            color: rgba(43, 45, 51, 1);
+            line-height: 114.99999999999999%;
+            letter-spacing: 0%;
+            span {
+                font-family: var(--font-family-Roboto);
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 112px;
+                line-height: 114.99999999999999%;
+                letter-spacing: 0%;
+                color: var(--primary-main-orange);
+            }
+        }
+        .banner_content {
+            margin-top: 24px;
+            display: flex;
+            gap: 24px;
+            .bannerSlider {
+                width: 100%;
+                position: relative;
+                .swiper-wrapper {
+                    height: 515px;
+                    border-radius: 4px;
+                    .swiper-slide {
+                        width: 100%;
+                        border-radius: 4px;
+                        img {
+                            border-radius: 4px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .bannerSlider__nav {
+                    display: flex;
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                    z-index: 90;
+                    gap: 8px;
+                    .bannerSlide__prev,
+                    .bannerSlide__next {
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-color: rgba(43, 45, 51, 1);
+                            color: rgba(43, 45, 51, 1);
+                            &:hover {
+                                background: rgba(43, 45, 51, 1);
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .bannerSlide__next {
+                        button {
+                            background: rgba(43, 45, 51, 1);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .banner_content_prodCard {
+                margin-top: 0px;
+                height: 176px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .cablePicture {
+                    width: 526px;
+                    height: 370px;
+                }
+                .prodCard_content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    width: 100%;
+                    h2 {
+                        font-family: var(--font-family-Roboto);
+                        font-weight: 500;
+                        font-style: Medium;
+                        font-size: 18px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        height: fit-content;
+                        color: rgba(43, 45, 51, 1);
+                    }
+                    hr {
+                        border: none;
+                        height: 1px;
+                        background: var(--gray);
+                    }
+                    .prodCard_content_bottomBox {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        p {
+                            font-family: var(--font-family-Roboto);
+                            font-weight: 500;
+                            font-style: Medium;
+                            font-size: 18px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            span {
+                                font-family: var(--font-family-Roboto);
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 100%;
+                                letter-spacing: 0%;
+                                color: rgba(159, 159, 159, 1);
+                            }
+                        }
+                        a {
+                            width: 114px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-family: var(--font-family-Roboto);
+                            font-weight: 500;
+                            font-style: Medium;
+                            font-size: 14px;
+                            color: rgba(255, 111, 57, 1);
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            vertical-align: middle;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            gap: 4px;
+                            margin-top: 0;
+                            padding: 0px 0px;
                             i {
                                 font-size: 16px;
                             }
