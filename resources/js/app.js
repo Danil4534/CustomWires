@@ -4,4 +4,5 @@ import './responsesSlider';
 import './categoriesSlider';
 import './cartModal';
 import './bannerSlider';
-import './popularProductSlider'
+import './popularProductSlider';
+import './productPreviewSlider'

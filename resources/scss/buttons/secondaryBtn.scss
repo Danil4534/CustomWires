@@ -7,16 +7,18 @@
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
-    vertical-align: middle;
     color: var(--primary-main-orange);
     background: transparent;
     border: 1.5px solid var(--primary-main-orange);
     text-transform: uppercase;
     transition: background 0.3s ease;
     border-radius: 2px;
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 4px;
+
     i {
         font-size: 20px;
     }

@@ -13,7 +13,7 @@
     @endif
     <hr>
     <div class="card_content">
-        <h3>{{ $product['name'] }}</h3>
+        <a href="{{route('page.productPage',['productId'=> $product['id']])  }}">{{ $product['name'] }}</a>
         <div class="card_content_wrapper">
             <div class="card_content_price">
                 @if ($product['discount'] )
@@ -24,7 +24,7 @@
                     <p>250,00</p>
                 </div>
                 <div class="priceBlock">
-                    <h2>000{{ $product['price'] }},00 <span>грн</span></h2>
+                    <h2>000{{ $product['price'] }},00 <span>грн</span><span class="priceBlock_package">/ {{ $product['countInPackage'] }}шт</span></h2>
                     <p>{{ $product['countInPackage'] }}шт</p>
                 </div>
                 @endif

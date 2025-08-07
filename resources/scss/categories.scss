@@ -1,28 +1,37 @@
 .categories__container {
     padding: 64px 16px;
-    .categories__title {
-        font-family: var(--font-family-Roboto);
-        font-weight: 500;
-        font-style: Medium;
-        font-size: 28px;
-        line-height: 125%;
-        letter-spacing: 0%;
-        text-transform: uppercase;
-        color: rgba(43, 45, 51, 1);
-        margin-bottom: 16px;
-    }
-    .categories__subtitle {
-        font-family: var(--font-family-Rubik);
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 14px;
-        line-height: 145%;
-        letter-spacing: 0%;
-        color: rgba(43, 45, 51, 1);
+    .categories__header {
+        &.hidden {
+            display: none;
+        }
+
+        .categories__title {
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 28px;
+            line-height: 125%;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+            color: rgba(43, 45, 51, 1);
+            margin-bottom: 16px;
+        }
+        .categories__subtitle {
+            font-family: var(--font-family-Rubik);
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 145%;
+            letter-spacing: 0%;
+            color: rgba(43, 45, 51, 1);
+        }
     }
     .categories__slider {
         width: 100%;
         margin-top: 32px;
+        &.hidden {
+            display: none;
+        }
         .swiper {
             width: 100%;
             .swiper-wrapper {

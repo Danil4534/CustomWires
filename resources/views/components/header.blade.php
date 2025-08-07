@@ -10,7 +10,7 @@ $chooseProducts = count(session('chooseProducts',[]))
     <div class="header_leftSide_wrapper">
         <div class="header_leftSide">
             <x-ghost-btn ghostBtnText="Меню" ghostBtnIconLeftSide="ph ph-list" id="menuBtn"></x-ghost-btn>
-            <x-picture-tag src="{{asset('assets/logo_375.svg')  }}" alt="logo375" lazy="true" />
+            <a href="{{ route('page.Home') }}"><x-picture-tag src="{{asset('assets/logo_375.svg')  }}" alt="logo375" lazy="true" /></a>
         </div>
         <div class="header_nav">
             <nav>

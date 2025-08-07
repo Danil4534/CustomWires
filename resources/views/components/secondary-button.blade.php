@@ -2,7 +2,7 @@
     @if(!empty($secondaryBtnIconLeftSide))
     <i class="{{ $secondaryBtnIconLeftSide }}"></i>
     @endif
-    {{ $secondaryBtnText}}
+    <span>{{ $secondaryBtnText}}</span>
     @if(!empty($secondaryBtnIconRightSide))
     <i class="{{ $secondaryBtnIconRightSide }}"></i>
     @endif

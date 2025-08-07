@@ -84,6 +84,7 @@
         width: 100%;
         padding: 64px 48px;
         .popularProducts_header {
+            margin-bottom: 32px;
             .popularProductSlider__nav {
                 display: none;
             }
@@ -118,10 +119,33 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 48px;
             .popularProductSlider__nav {
                 display: flex;
                 flex-direction: row;
                 gap: 9px;
+                div:first-child {
+                    button {
+                        background: transparent;
+                        color: rgba(43, 45, 51, 1);
+                        border-color: rgba(43, 45, 51, 1);
+                        &:hover {
+                            background: rgba(43, 45, 51, 1);
+                            color: #fff;
+                        }
+                    }
+                }
+                div:last-child {
+                    button {
+                        background: rgba(43, 45, 51, 1);
+                        color: #fff;
+                        border-color: rgba(43, 45, 51, 1);
+                        &:hover {
+                            background: rgba(28, 30, 34, 1);
+                            color: #fff;
+                        }
+                    }
+                }
                 button {
                     width: 56px;
                     height: 56px;
@@ -148,10 +172,12 @@
         }
         .popularProductSlider {
             display: block;
+
             .popularProductSlider_pagination {
                 display: flex;
                 justify-content: center;
                 margin-top: 24px;
+
                 .swiper-pagination-bullet {
                     border-radius: 1px;
                 }
@@ -160,6 +186,9 @@
                 }
             }
         }
+        .showMore {
+            display: none;
+        }
     }
 }
 @media screen and (min-width: 1920px) {
@@ -167,6 +196,46 @@
         width: 100%;
         padding: 96px;
         padding-bottom: 80px;
+        .popularProducts_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+            .popularProductSlider__nav {
+                display: flex;
+                flex-direction: row;
+                gap: 9px;
+                div:first-child {
+                    button {
+                        background: transparent;
+                        color: rgba(43, 45, 51, 1);
+                        border-color: rgba(43, 45, 51, 1);
+                        &:hover {
+                            background: rgba(43, 45, 51, 1);
+                            color: #fff;
+                        }
+                    }
+                }
+                div:last-child {
+                    button {
+                        background: rgba(43, 45, 51, 1);
+                        color: #fff;
+                        border-color: rgba(43, 45, 51, 1);
+                        &:hover {
+                            background: rgba(28, 30, 34, 1);
+                            color: #fff;
+                        }
+                    }
+                }
+                button {
+                    width: 56px;
+                    height: 56px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
         h1 {
             font-family: var(--font-family-Roboto);
             font-weight: 500;
