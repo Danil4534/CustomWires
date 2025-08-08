@@ -12,6 +12,11 @@ footer {
         vertical-align: middle;
         color: var(--gray);
     }
+    .footer_slogan {
+        .footer_methods_payment {
+            display: none;
+        }
+    }
     .footer_contactInfo {
         margin-top: 24px;
         .contactInfo_socialLinks {
@@ -105,6 +110,14 @@ footer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                picture {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        height: 100%;
+                    }
+                }
             }
         }
     }

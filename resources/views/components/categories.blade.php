@@ -37,5 +37,5 @@ $categories =[
             </div>
         </div>
     </div>
-    <x-methodsOfChoosing></x-methodsOfChoosing>
+    @include('components.methods_of_choosing')
 </div>

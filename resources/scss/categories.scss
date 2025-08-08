@@ -1,5 +1,5 @@
 .categories__container {
-    padding: 64px 16px;
+    padding: 80px 16px;
     .categories__header {
         &.hidden {
             display: none;
@@ -86,6 +86,9 @@
                         gap: 2px;
                         align-items: center;
                         background: rgba(255, 111, 57, 1);
+                        span {
+                            display: block;
+                        }
                         i {
                             font-size: 20px;
                         }
@@ -109,6 +112,9 @@
                         color: rgba(255, 255, 255, 1);
                         background: rgba(43, 45, 51, 1);
                     }
+                    span {
+                        display: block;
+                    }
                     i {
                         font-size: 24px;
                     }
@@ -120,9 +126,24 @@
                         height: 48px;
                         border-color: rgba(43, 45, 51, 1);
                         color: rgba(43, 45, 51, 1);
+                        span {
+                            display: none;
+                        }
                         &:hover {
                             color: rgba(255, 255, 255, 1);
                             background: rgba(43, 45, 51, 1);
+                        }
+                    }
+                }
+                .nextBtnCategories {
+                    button {
+                        &:hover {
+                            color: rgba(255, 255, 255, 1);
+                            background: rgb(28, 30, 34);
+                        }
+                        background: rgba(43, 45, 51, 1);
+                        i {
+                            color: #fff;
                         }
                     }
                 }
@@ -275,6 +296,9 @@
                             gap: 2px;
                             align-items: center;
                             background: rgba(255, 111, 57, 1);
+                            span {
+                                display: block;
+                            }
                             i {
                                 font-size: 20px;
                             }
@@ -297,6 +321,9 @@
                         &:hover {
                             color: rgba(255, 255, 255, 1);
                             background: rgba(43, 45, 51, 1);
+                        }
+                        span {
+                            display: block;
                         }
                         i {
                             font-size: 24px;
@@ -494,6 +521,9 @@
                         &:hover {
                             color: rgba(255, 255, 255, 1);
                             background: rgba(43, 45, 51, 1);
+                        }
+                        span {
+                            display: block;
                         }
                         i {
                             font-size: 24px;
@@ -702,6 +732,9 @@
                             color: rgba(255, 255, 255, 1);
                             background: rgba(43, 45, 51, 1);
                         }
+                        span {
+                            display: block;
+                        }
                         i {
                             font-size: 24px;
                         }
@@ -896,6 +929,9 @@
                             i {
                                 font-size: 20px;
                             }
+                            span {
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -915,6 +951,9 @@
                         &:hover {
                             color: rgba(255, 255, 255, 1);
                             background: rgba(43, 45, 51, 1);
+                        }
+                        span {
+                            display: block;
                         }
                         i {
                             font-size: 24px;

@@ -16,6 +16,9 @@ $sliderContent = [
         БІЛЬШЕ ШВИДКОСТІ.
     </h1>
     <div class="banner_content">
+        <div class="banner">
+            <x-picture-tag src="{{ asset('assets/banner375.svg') }}"></x-picture-tag>
+        </div>
         <div class="swiper bannerSlider">
             <div class="swiper-wrapper">
                 @foreach ($sliderContent as $slide )
@@ -25,7 +28,6 @@ $sliderContent = [
                 @endforeach
             </div>
             <div class="bannerSlider__nav">
-
                 <div class="bannerSlide__prev" id="bannerSlide__prev"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-left" /></div>
                 <div class="bannerSlide__next" id="bannerSlide__next"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-right" /></div>
             </div>

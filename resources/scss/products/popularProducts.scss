@@ -37,6 +37,9 @@
         letter-spacing: 0%;
         transition: background 0.3s ease;
         text-transform: uppercase;
+        span {
+            display: inline;
+        }
         &:hover {
             transition: background 0.3s ease;
             cursor: pointer;

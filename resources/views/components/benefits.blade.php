@@ -7,7 +7,7 @@ $benefitsDefault = $benefits ?? [
 ];
 @endphp
 
-<div class="benefits_container">
+<div class="{{ Route::currentRouteName() == 'page.Home' ? "benefits_container" : " benefits_container benefits_container_product" }}">
     @foreach ($benefitsDefault as $item)
     <div class="benefit_card">
         <i class="{{ $item['icon'] }}"></i>

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.productPreview__Slider') &&
-        new Swiper('.productPreview__Slider', {
+    if (document.querySelector('.productPreview__slider')) {
+        new Swiper('.productPreview__slider', {
             slidesPerView: 'auto',
             spaceBetween: 0,
             loop: true,
@@ -19,16 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 type: 'bullets',
                 clickable: true
             },
+
             breakpoints: {
                 1920: {
                     slidesPerView: 6,
                 },
                 1440: {
                     slidesPerView: 5,
+                    pagination: {  
+                        el: '.productPreview__pagination',
+                        type: 'fraction',
+                        clickable: true
+                    }
                 }
             }
-
-
-        })
-
-})
+        });
+    }
+});

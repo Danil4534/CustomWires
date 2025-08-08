@@ -41,11 +41,23 @@ header {
         .secondaryBtn {
             height: 40px;
             padding: 12px;
+            span {
+                display: block;
+            }
         }
         .primaryBtn {
             width: 40px;
             height: 40px;
             padding: 10px;
+            .counterWrapper {
+                p {
+                    display: flex;
+                    align-items: end;
+                }
+            }
+            span {
+                display: flex;
+            }
             .btn-text {
                 display: none;
             }
@@ -277,7 +289,11 @@ header {
                 width: 40px !important;
                 height: 40px !important;
                 display: flex !important;
+
                 padding: 0 !important;
+                span {
+                    display: none;
+                }
                 i {
                     font-size: 20px;
                 }

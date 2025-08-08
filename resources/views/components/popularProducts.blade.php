@@ -6,7 +6,7 @@ return $product['popular']===true;
 
 <div class="popularProducts_container">
     <div class="popularProducts_header">
-        <h1>Популярні</h1>
+        <h1> {{ Route::currentRouteName() !="page.Home" ?"схожі дроти":"популярні" }}</h1>
         <div class="popularProductSlider__nav">
             <div class="popularProductSlider__prev" id="popularProductSlider__prev"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-left" /></div>
             <div class="popularProductSlider__next" id="popularProductSlider__next"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-right" /></div>

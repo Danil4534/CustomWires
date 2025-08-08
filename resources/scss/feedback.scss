@@ -146,6 +146,9 @@
             .chooseBtn {
                 width: 71px;
                 height: 32px;
+                span {
+                    display: block;
+                }
             }
         }
         .feedback__drop__chooseFile {
@@ -459,6 +462,9 @@
                 .chooseBtn {
                     width: 71px;
                     height: 32px;
+                    span {
+                        display: block;
+                    }
                 }
             }
             .feedback__drop__chooseFile {

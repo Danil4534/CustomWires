@@ -8,6 +8,16 @@
         .slider_nav {
             display: flex;
             gap: 8px;
+            .nextbtn {
+                button {
+                    background: rgba(43, 45, 51, 1);
+                    color: #fff;
+                    &:hover {
+                        color: var(--neutral-white);
+                        background: rgba(28, 30, 34, 1);
+                    }
+                }
+            }
             .secondaryBtn {
                 width: 40px;
                 height: 40px;
@@ -17,6 +27,9 @@
                 align-items: center;
                 border-color: rgba(43, 45, 51, 1);
                 color: rgba(43, 45, 51, 1);
+                span {
+                    display: none;
+                }
                 &:hover {
                     color: var(--neutral-white);
                     background: rgba(43, 45, 51, 1);

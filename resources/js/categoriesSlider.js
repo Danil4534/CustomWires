@@ -12,8 +12,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         navigation:{
             nextEl:"#nextBtnCategories",
             prevEl:"#prevBtnCategories"  
-        }
-        
+        },
+          breakpoints: {
+                1920: {
+                    enabled: false 
+                }
+            }
     })
 
 })

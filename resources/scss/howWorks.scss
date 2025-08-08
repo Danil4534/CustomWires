@@ -418,7 +418,9 @@
                     border-color: rgba(43, 45, 51, 1);
                     color: rgba(43, 45, 51, 1);
                     font-size: 18px;
-
+                    span {
+                        display: block;
+                    }
                     i {
                         font-size: 28px;
                     }
@@ -582,7 +584,9 @@
                     border-color: rgba(43, 45, 51, 1);
                     color: rgba(43, 45, 51, 1);
                     font-size: 18px;
-
+                    span {
+                        display: block;
+                    }
                     i {
                         font-size: 28px;
                     }

@@ -112,6 +112,25 @@
             }
         }
     }
+    .benefits_container_product {
+        display: flex;
+        flex-direction: row;
+        height: 357px;
+        .benefit_card {
+            height: 100%;
+            padding: 48px 32px;
+            p {
+                width: 176px;
+                height: 100%;
+            }
+        }
+        .benefit_card:first-child {
+            padding-left: 48px;
+        }
+        .benefit_card:last-child {
+            padding-right: 48px;
+        }
+    }
 }
 @media screen and (min-width: 1024px) {
     .benefits_container {
@@ -177,6 +196,25 @@
                     color: var(--gray);
                 }
             }
+        }
+    }
+    .benefits_container_product {
+        display: flex;
+        flex-direction: row;
+        height: 337px;
+        .benefit_card {
+            height: 100%;
+            padding: 48px 32px;
+            p {
+                width: 261px;
+                height: 100%;
+            }
+        }
+        .benefit_card:first-child {
+            padding-left: 48px;
+        }
+        .benefit_card:last-child {
+            padding-right: 48px;
         }
     }
 }
@@ -246,6 +284,25 @@
             }
         }
     }
+    .benefits_container_product {
+        display: flex;
+        flex-direction: row;
+        height: 297px;
+        .benefit_card {
+            height: 100%;
+            padding: 48px 32px;
+            p {
+                width: fit-content;
+                height: 100%;
+            }
+        }
+        .benefit_card:first-child {
+            padding-left: 112px;
+        }
+        .benefit_card:last-child {
+            padding-right: 112px;
+        }
+    }
 }
 
 @media screen and (min-width: 1920px) {
@@ -311,6 +368,27 @@
                     color: var(--gray);
                 }
             }
+        }
+    }
+    .benefits_container_product {
+        display: flex;
+        flex-direction: row;
+        height: 277px;
+        .benefit_card {
+            height: 100%;
+            padding: 48px 32px;
+
+            p {
+                width: fit-content;
+                height: 100%;
+                text-wrap: nowrap;
+            }
+        }
+        .benefit_card:first-child {
+            padding-left: 128px;
+        }
+        .benefit_card:last-child {
+            padding-right: 128px;
         }
     }
 }
