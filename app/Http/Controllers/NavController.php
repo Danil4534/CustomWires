@@ -42,4 +42,9 @@ class NavController extends Controller
         $product = $chooseProduct->first();
         return view('pages.productPage', compact('chooseProduct', 'products'));
     }
+    public function getCatalogPage()
+    {
+        $products = $this->products;
+        return view('pages.catalogPage', compact('products'));
+    }
 }

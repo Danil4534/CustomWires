@@ -10,9 +10,10 @@
 @use "howWorks.scss";
 @use "products/productCard.scss";
 @use "products/popularProducts.scss";
-@use "modalWindows/menuModal.scss";
+@use "modalWindows/menuModal/menuModal.scss";
 @use "responses.scss";
 @use "feedback.scss";
+@use "catalogPage/catalogPage.scss";
 @use "modalWindows/cartModal/cartModal.scss";
 @use "modalWindows/cartModal/cartProductCard.scss";
 @use "modalWindows/oneClickModal/oneClickModal.scss";

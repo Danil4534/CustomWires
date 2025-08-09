@@ -1,4 +1,5 @@
-<button class="secondaryBtn {{ $secondaryClass }}" type="{{ $type }}">
+<button class="secondaryBtn {{ $secondaryClass }}" type="{{ $type }}" @if(!empty($route))
+    onclick="window.location.href='{{ route($route) }}'" @endif>
     @if(!empty($secondaryBtnIconLeftSide))
     <i class="{{ $secondaryBtnIconLeftSide }}"></i>
     @endif

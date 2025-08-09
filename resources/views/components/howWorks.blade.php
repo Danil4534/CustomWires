@@ -20,6 +20,7 @@ $production = [
         <div class="howWorks_leftSide">
             <p>Ми зробили процес максимально зручним, зрозумілим і прозорим - незалежно від того, чи ви обираєте з каталогу, чи надсилаєте власне технічне завдання.</p>
         </div>
+        <hr />
         <div class="howWorks_rightSide">
             <input type="radio" name="option" id="opt1" hidden checked>
             <input type="radio" name="option" id="opt2" hidden>
@@ -44,7 +45,7 @@ $production = [
                         </li>
                         @endforeach
                     </ul>
-                    <x-secondary-button secondaryBtnText="Переглянути Каталог" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnCatalog" />
+                    <x-secondary-button secondaryBtnText="Переглянути Каталог" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnCatalog" route="page.catalog" />
                 </div>
 
                 <div class="content content2">
