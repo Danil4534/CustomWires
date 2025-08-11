@@ -15,7 +15,8 @@ class PrimaryButton extends Component
     public string $primaryClass;
     public string $type;
     public int $counter;
-    public function __construct($id = '', $type = '', string $primaryBtnText = '', string $primaryBtnIconLeftSide = '', string $primaryBtnIconRightSide = '', string $primaryClass = '', int $counter = 0)
+    public string $route;
+    public function __construct(string $route = '', $id = '', $type = '', string $primaryBtnText = '', string $primaryBtnIconLeftSide = '', string $primaryBtnIconRightSide = '', string $primaryClass = '', int $counter = 0)
     {
         $this->id = $id;
         $this->type = $type;
@@ -24,6 +25,7 @@ class PrimaryButton extends Component
         $this->primaryBtnIconRightSide = $primaryBtnIconRightSide;
         $this->primaryClass = $primaryClass;
         $this->counter = $counter;
+        $this->route = $route;
     }
 
     /**

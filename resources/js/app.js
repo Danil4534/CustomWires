@@ -5,4 +5,5 @@ import './categoriesSlider';
 import './cartModal';
 import './bannerSlider';
 import './popularProductSlider';
-import './productPreviewSlider'
+import './productPreviewSlider';
+import './filterModal';

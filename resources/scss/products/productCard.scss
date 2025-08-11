@@ -357,8 +357,8 @@
 }
 @media screen and (min-width: 1024px) {
     .card_container {
-        width: 232px;
-        height: 409px;
+        width: 100% !important;
+        height: fit-content !important;
         padding: 8px;
         border: 1px solid rgba(243, 243, 243, 1);
         .card_header {
@@ -367,8 +367,8 @@
             flex-direction: column;
             justify-content: center;
             picture {
-                width: 218px;
-                height: 218px;
+                width: 216px;
+                height: 216px;
                 img {
                     width: 216px;
                     height: 216px;
@@ -456,6 +456,7 @@
                 display: flex;
                 align-items: end;
                 gap: 4.5px;
+                padding: 0 !important;
                 .card_content_price {
                     width: 100%;
                     display: flex;
@@ -728,11 +729,11 @@
             flex-direction: column;
             justify-content: center;
             picture {
-                width: 272px;
-                height: 272px;
+                width: 241px;
+                height: 241px;
                 img {
-                    width: 272px;
-                    height: 272px;
+                    width: 241px;
+                    height: 241px;
                 }
             }
             .labelPopular {

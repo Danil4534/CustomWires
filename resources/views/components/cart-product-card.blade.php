@@ -40,8 +40,6 @@
         </div>
     </div>
     <hr class="card__separator" />
-    <div class="card__footer">
 
-    </div>
 
 </div>

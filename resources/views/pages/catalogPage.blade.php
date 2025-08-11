@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <x-header></x-header>
+    @include('components.header')
     <main>
         <section>
-            @include('components.catalogPage.catalogPage')
+            @include('components.catalogPage.catalog')
         </section>
 
         <section>
@@ -31,5 +31,6 @@
 @include('components.footer')
 @include('components.modalWindows.menuModal')
 @include('components.modalWindows.cartModal')
+@include('components.modalWindows.filterModal')
 
 </html>

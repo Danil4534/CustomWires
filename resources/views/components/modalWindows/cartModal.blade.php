@@ -9,7 +9,7 @@ $chooseProducts = session()->get('chooseProducts');
         <div class="cartModal__empty">
             <h1 class="cartModal__empty__title">Кошик порожній :(</h1>
             <p class="cartModal__empty__subtitle">Нічого страшного - завжди можна щось додати 😉</p>
-            <x-primary-button primaryBtnText="До каталогу" id="btnToCatalog" primaryClass="btnToCatalog" />
+            <x-primary-button primaryBtnText="До каталогу" id="btnToCatalog" primaryClass="btnToCatalog" route="page.catalog" />
         </div>
         @else
         <div class="cartModal__full">
