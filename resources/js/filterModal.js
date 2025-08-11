@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const filterModalOpenBtn = document.querySelector('.catalog__FilterBtn')
-    console.log(filterModalOpenBtn)
     const filterModalContainer = document.querySelector('#filterModalContainer')
     const filterModalBody = document.querySelector('.filterModal__body')
     const filterModalCloseBtn =  document.querySelector('#closeModalFilter')

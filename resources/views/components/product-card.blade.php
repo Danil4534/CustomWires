@@ -1,6 +1,10 @@
 <div class="card_container">
-    <div class="card_header">
-        <x-picture-tag :src="asset('assets/' . $product['img'][0])" alt="productImg" lazy={{ true }} class="productImg" />
+    <div class="card_header ">
+        <x-picture-tag
+            :src="asset('assets/' . $product['img'][0])"
+            alt="productImg"
+            lazy="true"
+            class="productImg {{ Route::currentRouteName() === 'page.Home' ? 'productImgHome' : '' }}" />
         @if($product['popular'])
         <span class="labelPopular">Популярні</span>
         @endif
@@ -24,7 +28,7 @@
                     <p>250,00</p>
                 </div>
                 <div class="priceBlock">
-                    <h2>000{{ $product['price'] }},00 <span>грн</span><span class="priceBlock_package">/ {{ $product['countInPackage'] }}шт</span></h2>
+                    <h2>{{ number_format($product['price'],2,",") }} <span>грн</span><span class="priceBlock_package">/ {{ $product['countInPackage'] }}шт</span></h2>
                     <p>{{ $product['countInPackage'] }}шт</p>
                 </div>
                 @endif

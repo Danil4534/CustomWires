@@ -7,3 +7,4 @@ import './bannerSlider';
 import './popularProductSlider';
 import './productPreviewSlider';
 import './filterModal';
+import './oneClickModal';

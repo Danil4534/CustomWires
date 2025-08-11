@@ -1,5 +1,6 @@
+@props(['name','value'])
 <button class="secondaryBtn {{ $secondaryClass }}" type="{{ $type }}" @if(!empty($route))
-    onclick="window.location.href='{{ route($route) }}'" @endif>
+    onclick="window.location.href='{{ route($route) }}'" @endif id="{{ $id }}" name="{{ $name ?? ''}}" value="{{ $value ?? ''}}">
     @if(!empty($secondaryBtnIconLeftSide))
     <i class="{{ $secondaryBtnIconLeftSide }}"></i>
     @endif

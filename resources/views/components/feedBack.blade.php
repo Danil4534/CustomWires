@@ -18,7 +18,6 @@ $socialLinks = [
             </div>
         </div>
         <div class="form__phoneNumber">
-
             <label for="phoneNumber">Номер телефону</label>
             <div class="input__wrapper">
                 <input type="text" placeholder="+380 -- --- -- --" name="phoneNumber">

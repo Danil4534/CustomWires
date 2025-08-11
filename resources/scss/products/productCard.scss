@@ -728,12 +728,21 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+
             picture {
                 width: 241px;
                 height: 241px;
                 img {
                     width: 241px;
                     height: 241px;
+                }
+            }
+            .productImgHome {
+                width: 272px;
+                height: 272px;
+                img {
+                    width: 272px;
+                    height: 272px;
                 }
             }
             .labelPopular {
@@ -755,6 +764,18 @@
                 align-items: center;
                 justify-content: center;
                 color: rgba(255, 255, 255, 1);
+            }
+        }
+        .productImgHome {
+            .productImg {
+                picture {
+                    min-width: 272px;
+                    height: 272px;
+                    img {
+                        min-width: 272px;
+                        height: 272px;
+                    }
+                }
             }
         }
         .card_inStock {

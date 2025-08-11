@@ -8,6 +8,7 @@ use Illuminate\Contracts\View\View;
 
 class SecondaryButton extends Component
 {
+    public $id;
     public string $secondaryBtnText;
     public string $secondaryBtnIconLeftSide;
     public string $secondaryBtnIconRightSide;
@@ -15,8 +16,10 @@ class SecondaryButton extends Component
     public string $type;
     public string $route;
 
-    public function __construct(string $route = '', string $secondaryBtnText = "", string $secondaryBtnIconLeftSide = "", string $secondaryBtnIconRightSide = "", string $secondaryClass = "", string $type = "")
+
+    public function __construct(string $id = '', string $route = '', string $secondaryBtnText = "", string $secondaryBtnIconLeftSide = "", string $secondaryBtnIconRightSide = "", string $secondaryClass = "", string $type = "")
     {
+        $this->id = $id;
         $this->type = $type;
         $this->secondaryBtnText = $secondaryBtnText;
         $this->secondaryBtnIconLeftSide = $secondaryBtnIconLeftSide;

@@ -1,5 +1,7 @@
 @php
-$chooseProduct = $chooseProduct->first()
+$chooseProduct = $chooseProduct->first();
+
+
 @endphp
 
 <div class="productPreview__container">
@@ -7,7 +9,6 @@ $chooseProduct = $chooseProduct->first()
         <h1><a href="{{ route('page.Home') }}">Головна</a>/<a href="{{ route('page.catalog') }}">Каталог</a>/<span>{{ $chooseProduct['name'] }}</span></h1>
     </div>
     <div class="productPreview__wrapper">
-
         <div class="swiper productPreview__slider">
             <div class="swiper-wrapper">
                 @foreach ((array) $chooseProduct['img'] as $chooseProductImg )
@@ -56,7 +57,6 @@ $chooseProduct = $chooseProduct->first()
                         <p>{{ $chooseProduct['countInPackage'] }}шт</p>
                     </div>
                     @endif
-
                     <div class="productPrice__actions">
                         <div class="actions__up">
                             <div class="product__quantity">
@@ -76,14 +76,17 @@ $chooseProduct = $chooseProduct->first()
                             <x-primary-button primaryBtnIconLeftSide="ph ph-plus" primaryBtnText="Додати" />
                         </form>
                     </div>
-                    <x-secondary-button secondaryBtnIconLeftSide="ph ph-plus" secondaryBtnText="Замовити в один клік" secondaryClass="btnOneClick" />
+                    <form action="{{ route('addProductForOneClickModal') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="product" value="{{ base64_encode(json_encode($chooseProduct)) }}">
+                        <x-secondary-button secondaryBtnIconLeftSide="ph ph-plus" secondaryBtnText="Замовити в один клік" secondaryClass="btnOneClick" id="oneClickBtn" name="action" value="oneClickOrder" />
+                    </form>
                 </div>
                 <div class="product_methodsOfpayment">
                     @include('components.methods_of_payment')
                 </div>
             </div>
             <hr>
-
             <div class="product__description">
                 <h2>опис</h2>
                 <p>{{ $chooseProduct['description'] }}</p>

@@ -45,5 +45,21 @@ $productBenefits = [
 @include('components.footer')
 @include('components.modalWindows.menuModal')
 @include('components.modalWindows.cartModal')
+@include('components.modalWindows.oneClickModal')
 
 </html>
+
+@if (session('oneClickModalProduct'))
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalContainer = document.querySelector('.oneClickModal__container');
+        const modalBody = document.querySelector('.oneClickModal__body');
+
+        if (modalContainer && modalBody) {
+            document.body.style.overflowY = 'hidden';
+            modalContainer.classList.add('active');
+            modalBody.classList.add('active');
+        }
+    });
+</script>
+@endif
