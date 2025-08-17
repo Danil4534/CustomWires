@@ -1,7 +1,5 @@
 @php
 $chooseProduct = $chooseProduct->first();
-
-
 @endphp
 
 <div class="productPreview__container">
@@ -63,6 +61,7 @@ $chooseProduct = $chooseProduct->first();
                                 <button type="button" class="quantity-btn minus"><i class="ph ph-minus"></i></button>
                                 <input
                                     type="number"
+                                    name="count"
                                     class="quantity-input"
                                     value="{{ $chooseProduct['countInPackage'] }}"
                                     min="{{ $chooseProduct['countInPackage'] }}"

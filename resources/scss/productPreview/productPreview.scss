@@ -1,4 +1,6 @@
 .productPreview__container {
+    max-width: 1728px;
+    margin: 0 auto;
     padding: 32px 16px;
     padding-bottom: 52px;
     .breadcrumbs {
@@ -1326,7 +1328,7 @@
                     position: relative;
 
                     .swiper-slide {
-                        width: 528px;
+                        width: 528px !important;
                         height: 528px;
                         display: flex;
                         align-items: center;
@@ -1344,7 +1346,8 @@
                     bottom: 0;
                     right: 64px;
                     transform: translateY(-50%);
-                    z-index: 90;
+                    z-index: 999;
+                    display: block;
                     button {
                         width: 40px;
                         height: 40px;
@@ -1373,7 +1376,8 @@
                     bottom: 0;
                     right: 16px;
                     transform: translateY(-50%);
-                    z-index: 90;
+                    z-index: 999;
+                    display: block;
                     button {
                         width: 40px;
                         height: 40px;
@@ -1389,6 +1393,7 @@
                         }
                     }
                 }
+
                 .productPreview__pagination {
                     position: absolute;
                     display: flex;
@@ -1403,6 +1408,26 @@
                     }
                     .swiper-pagination-bullet-active {
                         background: rgba(28, 30, 34, 1);
+                    }
+                }
+                .swiper-pagination-fraction {
+                    width: 65px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border: 1px solid #c4c4c4;
+                    border-radius: 2px;
+                    font-family: var(--font-family-Rubik);
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    leading-trim: NONE;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    .swiper-pagination-current {
+                        color: #ff6f39;
                     }
                 }
             }
@@ -1733,7 +1758,7 @@
 
 @media screen and (min-width: 1920px) {
     .productPreview__container {
-        padding: 40px 96px;
+        padding: 40px 0px;
         padding-bottom: 40px;
 
         .productPreview__wrapper {
@@ -1744,11 +1769,11 @@
                 border: 1px solid rgba(243, 243, 243, 1);
                 .swiper-wrapper {
                     height: 528px;
-                    width: 528px;
+                    min-width: 528px !important;
                     position: relative;
 
                     .swiper-slide {
-                        width: 528px;
+                        width: 528px !important;
                         height: 528px;
                         display: flex;
                         align-items: center;
@@ -1789,6 +1814,7 @@
                         }
                     }
                 }
+
                 .productPreview__next {
                     position: absolute;
                     top: auto;
@@ -1825,6 +1851,26 @@
                     }
                     .swiper-pagination-bullet-active {
                         background: rgba(28, 30, 34, 1);
+                    }
+                }
+                .swiper-pagination-fraction {
+                    width: 65px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border: 1px solid #c4c4c4;
+                    border-radius: 2px;
+                    font-family: var(--font-family-Rubik);
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    leading-trim: NONE;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    .swiper-pagination-current {
+                        color: #ff6f39;
                     }
                 }
             }

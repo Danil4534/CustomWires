@@ -1,5 +1,7 @@
 .popularProducts_container {
     width: 100%;
+    max-width: 1728px;
+    margin: 0 auto;
     padding: 96px 16px 80px;
     .popularProducts_header {
         .popularProductSlider__nav {
@@ -59,6 +61,7 @@
 @media screen and (min-width: 768px) {
     .popularProducts_container {
         width: 100%;
+        margin: 0 auto;
         padding: 64px 32px;
         .popularProducts_header {
             .popularProductSlider__nav {
@@ -73,7 +76,7 @@
             line-height: 125%;
             letter-spacing: 0%;
             text-transform: uppercase;
-            margin-bottom: 0px;
+            margin-bottom: 32px;
             color: rgba(43, 45, 51, 1);
         }
         .popularProducts_wrapper {
@@ -198,6 +201,8 @@
     .popularProducts_container {
         width: 100%;
         padding: 96px;
+        padding-left: 0px;
+        padding-right: 0px;
         padding-bottom: 80px;
         .popularProducts_header {
             display: flex;

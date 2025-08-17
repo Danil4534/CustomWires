@@ -7,14 +7,16 @@ $benefitsDefault = $benefits ?? [
 ];
 @endphp
 
-<div class="{{ Route::currentRouteName() == 'page.Home' ? "benefits_container" : " benefits_container benefits_container_product" }}">
-    @foreach ($benefitsDefault as $item)
-    <div class="benefit_card">
-        <i class="{{ $item['icon'] }}"></i>
-        <div class="benefit_card_content">
-            <h3>{{ $item['title'] }}</h3>
-            <p>{!! preg_replace('/([.!?])\s/', '$1<br>', $item['subtitle'], 1) !!}</p>
+<div class="benefits">
+    <div class="container {{ Route::currentRouteName() == 'page.Home' ? "" : " benefits_product" }}">
+        @foreach ($benefitsDefault as $item)
+        <div class="benefit_card">
+            <i class="{{ $item['icon'] }}"></i>
+            <div class="benefit_card_content">
+                <h3>{{ $item['title'] }}</h3>
+                <p>{!! preg_replace('/([.!?])\s/', '$1<br>', $item['subtitle'], 1) !!}</p>
+            </div>
         </div>
+        @endforeach
     </div>
-    @endforeach
 </div>

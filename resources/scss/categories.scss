@@ -835,8 +835,10 @@
 }
 @media screen and (min-width: 1920px) {
     .categories__container {
-        padding: 96px;
-        padding-bottom: 92px;
+        max-width: 1728px;
+        margin: 0 auto;
+        padding: 96px 0px 92px;
+
         .categories__header {
             display: flex;
             justify-content: space-between;

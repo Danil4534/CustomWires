@@ -13,7 +13,7 @@ $count=1
     <div class="catalog__wrapper">
         <div class="catalog__filter">
             <div class="catalog__filter-content">
-                @include('components.filter.filterContent')
+                @include('components.filter.filterContent' ,['products'=>$products])
             </div>
             <x-primary-button primaryBtnText="Показати ({{ $count }})" primaryClass="showProducts" />
         </div>

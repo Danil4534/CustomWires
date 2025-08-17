@@ -7,7 +7,7 @@
             <p class="categories__quiz__subtitle">
                 Відповідай на 4 запитання, щоб знайти потрібний варіант
             </p>
-            <x-primary-button primaryBtnText="Підібрати" primaryBtnIconLeftSide="ph-fill ph-arrow-right" primaryClass="categories__quiz__btn" />
+            <x-primary-button primaryBtnText="Підібрати" primaryBtnIconLeftSide="ph-fill ph-arrow-right" primaryClass="categories__quiz__btn" route="page.Quiz" />
         </div>
     </div>
     <div class="categories__tz categoryBox">

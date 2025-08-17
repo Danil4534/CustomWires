@@ -25,9 +25,10 @@
     i {
         font-size: 20px;
     }
-    :disabled {
+    &:disabled {
         color: var(--gray);
         background: var(--primary-soft);
+        border-color: transparent;
     }
     &:hover {
         cursor: pointer;

@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
             spaceBetween: 0,
             loop: true,
             centeredSlides: false,
-
             keyboard: {
                 enabled: true
             },
@@ -21,12 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
             },
 
             breakpoints: {
-                1920: {
-                    slidesPerView: 6,
-                },
                 1440: {
-                    slidesPerView: 5,
-                    pagination: {  
+                    slidesPerView: 'auto',
+                    pagination: {
+                        el: '.productPreview__pagination',
+                        type: 'fraction',
+                        clickable: true
+                    }
+                },
+                1920: {
+                    slidesPerView: 'auto',
+                    centeredSlides: true,  pagination: {
                         el: '.productPreview__pagination',
                         type: 'fraction',
                         clickable: true

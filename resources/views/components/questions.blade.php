@@ -7,20 +7,23 @@ $questions =[
 ]
 @endphp
 
-<div class="questions_container">
-    <h1>часті питання</h1>
-    <div class="questions_content">
-        @foreach ($questions as $question )
-        <details>
-            <summary>
-                <i class="icon ph ph-plus"></i>
-                <i class="icon ph ph-minus"></i>
-                {{ $question['question'] }}
-            </summary>
-            <div class="details-content">
-                <p>{{ $question['answer'] }}</p>
-            </div>
-        </details>
-        @endforeach
+<div class="questions_container_wrapper">
+    <div class="questions_container">
+
+        <h1>часті питання</h1>
+        <div class="questions_content">
+            @foreach ($questions as $question )
+            <details>
+                <summary>
+                    <i class="icon ph ph-plus"></i>
+                    <i class="icon ph ph-minus"></i>
+                    {{ $question['question'] }}
+                </summary>
+                <div class="details-content">
+                    <p>{{ $question['answer'] }}</p>
+                </div>
+            </details>
+            @endforeach
+        </div>
     </div>
 </div>

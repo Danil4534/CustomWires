@@ -1,5 +1,5 @@
 @php
-$chooseProductOneClick = session()->get('oneClickModalProduct');
+$chooseProduct = $chooseProduct->first();
 @endphp
 
 <div class="oneClickModal__container">
@@ -27,19 +27,19 @@ $chooseProductOneClick = session()->get('oneClickModalProduct');
                     </div>
                 </div>
             </div>
+            @if($chooseProduct)
             <div class="form__product">
                 <div class="from__product__header">
-
-                    <x-picture-tag src="{{  asset('assets/'. $chooseProductOneClick['img'][0]) }}" class="productImg" />
+                    <x-picture-tag src="{{  asset('assets/'. $chooseProduct['img'][0]) }}" class="productImg" />
                     <div class="product__content">
-                        <h1 class="product__name">{{ $chooseProductOneClick['name'] }}</h1>
+                        <h1 class="product__name">{{ $chooseProduct['name'] }}</h1>
                         <div class="product__discount">
-                            <span>-{{ $chooseProductOneClick['discount'] }}%</span>
+                            <span>-{{ $chooseProduct['discount'] }}%</span>
                             <p>250,00</p>
                         </div>
                         <div class="priceBlock">
-                            <h2>000{{ $chooseProductOneClick['price'] }},00 <span>грн</span></h2>
-                            <p>{{ $chooseProductOneClick['countInPackage'] }}шт</p>
+                            <h2>000{{ $chooseProduct['price'] }},00 <span>грн</span></h2>
+                            <p>{{ $chooseProduct['countInPackage'] }}шт</p>
                         </div>
                     </div>
                 </div>
@@ -50,11 +50,11 @@ $chooseProductOneClick = session()->get('oneClickModalProduct');
                     </h3>
                     <h3>
                         Вартість
-                        <p>200 <span>грн</span></p>
+                        <p>200,00 <span>грн</span></p>
                     </h3>
                 </div>
             </div>
-
+            @endif
 
 
             <div class="form__bottom">

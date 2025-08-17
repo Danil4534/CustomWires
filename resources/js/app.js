@@ -8,3 +8,6 @@ import './popularProductSlider';
 import './productPreviewSlider';
 import './filterModal';
 import './oneClickModal';
+import './successModal';
+import "./quiz.js";
+import "./filter.js";

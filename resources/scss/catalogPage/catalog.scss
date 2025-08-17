@@ -1,6 +1,10 @@
 .catalog__container {
+    max-width: 1728px;
+    margin: 0 auto;
     padding: 32px 16px;
     padding-bottom: 16px;
+    max-width: 1728px;
+    margin: 0 auto;
     .catalog__breadcrumbs {
         width: 100%;
         margin-bottom: 16px;
@@ -112,6 +116,8 @@
 
 @media screen and (min-width: 768px) {
     .catalog__container {
+        max-width: 1728px;
+        margin: 0 auto;
         padding: 32px 32px;
         padding-bottom: 16px;
         .catalog__filter {
@@ -217,6 +223,8 @@
 
 @media screen and (min-width: 1024px) {
     .catalog__container {
+        max-width: 1728px;
+        margin: 0 auto;
         padding: 32px 48px;
         padding-bottom: 16px;
         .catalog__breadcrumbs {
@@ -323,7 +331,9 @@
 
 @media screen and (min-width: 1440px) {
     .catalog__container {
-        padding: 32px 48px;
+        max-width: 1728px;
+        margin: 0 auto;
+        padding: 32px 80px;
         padding-bottom: 16px;
         .catalog__breadcrumbs {
             width: 100%;
@@ -391,7 +401,7 @@
                 display: flex;
                 flex-direction: column;
                 position: sticky;
-                top: 100px;
+                top: 88px;
                 .catalog__filter-content {
                     max-height: calc(100% - 80px);
                     overflow-y: scroll;
@@ -425,13 +435,6 @@
                         list-style: initial;
                     }
 
-                    summary::-webkit-details-marker {
-                        display: initial;
-                    }
-
-                    summary::marker {
-                        display: initial;
-                    }
                     .details-content {
                         display: flex;
                         flex-direction: column;
@@ -722,7 +725,9 @@
 }
 @media screen and (min-width: 1920px) {
     .catalog__container {
-        padding: 32px 96px;
+        max-width: 1728px;
+        margin: 0 auto;
+        padding: 32px 0px;
         padding-bottom: 16px;
         .catalog__breadcrumbs {
             width: 100%;
@@ -786,11 +791,11 @@
                 padding: 16px;
                 padding-bottom: 0px;
                 border: 1px solid rgba(243, 243, 243, 1);
-                height: calc(100vh - 110px);
+                height: calc(100vh - 160px);
                 display: flex;
                 flex-direction: column;
                 position: sticky;
-                top: 100px;
+                top: 88px;
                 .catalog__filter-content {
                     height: 100%;
                     overflow-y: auto;
@@ -818,16 +823,8 @@
                         display: flex;
                         align-items: center;
                         cursor: pointer;
-                        list-style: initial;
                     }
 
-                    summary::-webkit-details-marker {
-                        display: initial;
-                    }
-
-                    summary::marker {
-                        display: initial;
-                    }
                     .details-content {
                         display: flex;
                         flex-direction: column;

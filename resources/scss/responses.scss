@@ -1,6 +1,8 @@
 .responses_container {
+    max-width: 1728px;
+    margin: 0 auto;
     padding: 60px 16px;
-    background: #f9f9f9;
+
     .responses_header {
         display: flex;
         justify-content: space-between;
@@ -187,7 +189,7 @@
 @media screen and (min-width: 768px) {
     .responses_container {
         padding: 65px 32px;
-        background: #f9f9f9;
+
         .responses_header {
             display: flex;
             justify-content: space-between;
@@ -364,7 +366,7 @@
 @media screen and (min-width: 1024px) {
     .responses_container {
         padding: 65px 48px;
-        background: #f9f9f9;
+
         .responses_header {
             display: flex;
             justify-content: space-between;
@@ -540,7 +542,7 @@
 @media screen and (min-width: 1440px) {
     .responses_container {
         padding: 80px 80px;
-        background: #f9f9f9;
+
         .responses_header {
             display: flex;
             justify-content: space-between;
@@ -715,8 +717,8 @@
 }
 @media screen and (min-width: 1920px) {
     .responses_container {
-        padding: 96px;
-        background: #f9f9f9;
+        padding: 96px 0px;
+
         .responses_header {
             display: flex;
             justify-content: space-between;

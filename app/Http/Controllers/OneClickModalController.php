@@ -20,4 +20,24 @@ class OneClickModalController extends Controller
         session(['oneClickModalProduct' => []]);
         return redirect()->back()->with('success');
     }
+
+
+    public function orderProduct(Request $request)
+    {
+        $request->validate(
+            [
+                'username' => 'required|string',
+                "phoneNumber" => 'required|regex:/^\+380\d{9}$/',
+            ],
+            [
+                'username.required' => 'Ім’я обов’язкове',
+                'phoneNumber.required' => 'Номер телефону обов’язковий',
+                'phoneNumber.regex' => 'Неправильний формат телефону'
+            ]
+        );
+        $data = [
+            'userName' => $request->username,
+            'phoneNumber' => $request->phoneNum,
+        ];
+    }
 }
