@@ -52,4 +52,8 @@ class NavController extends Controller
         $products = $this->products;
         return view('pages.quizPage', compact('products'));
     }
+    public function getCheckoutPage()
+    {
+        return view('pages.checkoutPage');
+    }
 }

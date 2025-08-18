@@ -70,7 +70,3 @@ $productsForFilter = $products
     </div>
 </details>
 @endforeach
-
-<script>
-
-</script>

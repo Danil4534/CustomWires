@@ -12,3 +12,4 @@ Route::get('/catalog', [NavController::class, 'getCatalogPage'])->name('page.cat
 Route::get('/product/{productId?}', [NavController::class, 'getProductPage'])->name('page.productPage');
 Route::post('/oneClickModal', [OneClickModalController::class, 'addProduct'])->name('addProductForOneClickModal');
 Route::get('/quiz', [NavController::class, 'getQuizPage'])->name('page.Quiz');
+Route::get('/checkout', [NavController::class, 'getCheckoutPage'])->name('page.checkout');
