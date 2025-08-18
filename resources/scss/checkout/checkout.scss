@@ -266,9 +266,21 @@
                     border: none;
                 }
                 .form__delivery__methodsOfDelivery__info {
-                    .form__delivery__checkAnotherCustomer__hidden.hidden {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    .form__delivery__courier.hidden {
                         display: none;
                     }
+                    .form__delivery__checkAnotherCustomer__hidden {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        &.hidden {
+                            display: none;
+                        }
+                    }
+
                     label {
                         display: flex;
                         align-items: center;

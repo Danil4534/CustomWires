@@ -8,7 +8,16 @@ $chooseProducts = session()->get('chooseProducts');
             <x-secondary-button secondaryBtnText="Редагувати" secondaryBtnIconLeftSide="ph-fill ph-pencil"></x-secondary-button>
         </div>
         <div class="form__order__content">
-            @foreach ($chooseProducts as $product )
+            @foreach ($chooseProducts as $product)
+            <div class="productCard">
+                <div class="productCard__header">
+                    <x-picture-tag src="{{asset($product['img'][0]) }}" />
+                    <div>
+                        <h3>{{ $product['name'] }}</h3>
+                    </div>
+                </div>
+
+            </div>
 
             @endforeach
         </div>
@@ -37,7 +46,7 @@ $chooseProducts = session()->get('chooseProducts');
                 </div>
                 <div class="novaPost__methods">
                     <div class="method__department">
-                        <label for="novaPost__method">
+                        <label for="novaPost__department">
                             <div class="label__content">
                                 <i class="ph ph-garage"></i>
                                 <p>Відділення Нової пошти</p>
@@ -45,12 +54,12 @@ $chooseProducts = session()->get('chooseProducts');
                             <span>Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти.</span>
                         </label>
                         <input type="radio"
-                            id=""
-                            name="novaPost__method"
+                            id="novaPost__department"
+                            name="novaPost_method"
                             value="department">
                     </div>
                     <div class="method__courier">
-                        <label for="novaPost__method">
+                        <label for="novaPost__courier">
                             <div class="label__content">
                                 <i class="ph ph-truck"></i>
                                 <p>Кур’єром Нової пошти на адресу</p>
@@ -58,8 +67,8 @@ $chooseProducts = session()->get('chooseProducts');
                             <span>Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти.</span>
                         </label>
                         <input type="radio"
-                            id=""
-                            name="novaPost__method"
+                            id="novaPost__courier"
+                            name="novaPost_method"
                             value="courier">
                     </div>
                 </div>
@@ -67,7 +76,7 @@ $chooseProducts = session()->get('chooseProducts');
                 <div class="form__delivery__methodsOfDelivery__info">
                     <x-inputField.input-field label="Місто" name="city" placeholder="Вкажіть місто доставки"></x-inputField.input-field>
                     <x-inputField.input-field label="Відділення" name="post__department" placeholder="Вкажіть відділення НП"></x-inputField.input-field>
-                    <div class="form__delivery__courier">
+                    <div class="form__delivery__courier hidden">
                         <x-inputField.input-field label="Дім" name="post__home" placeholder="Вкажіть дім"></x-inputField.input-field>
                         <x-inputField.input-field label="Корпус" name="post__frame" placeholder="Вкажіть корпус"></x-inputField.input-field>
                         <x-inputField.input-field label="Квартира" name="post__apartment" placeholder="Вкажіть номер квартири"></x-inputField.input-field>

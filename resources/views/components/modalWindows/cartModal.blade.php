@@ -41,7 +41,7 @@ $chooseProducts = session()->get('chooseProducts');
                         </div>
                     </div>
                     <x-secondary-button secondaryBtnText="Продовжити покупки" />
-                    <x-primary-button primaryBtnText="Підтвердити замовлення" />
+                    <x-primary-button primaryBtnText="Підтвердити замовлення" route="page.checkout" />
                 </div>
             </div>
         </div>
