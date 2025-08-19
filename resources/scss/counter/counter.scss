@@ -1,0 +1,52 @@
+.counter__container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    p {
+        font-family: var(--font-family-Rubik);
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        leading-trim: NONE;
+        line-height: 145%;
+        letter-spacing: 0%;
+        color: #3a3d42;
+    }
+    .counter {
+        width: 127px;
+        height: 40px;
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            font-family: var(--font-family-Rubik);
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 145%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #5a5a5a;
+            border-radius: 2px;
+            background: #f3f3f3;
+            border: 1px solid #c4c4c4;
+        }
+        .ph-minus {
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #2b2d33;
+        }
+        .ph-plus {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #2b2d33;
+        }
+    }
+}

@@ -58,7 +58,7 @@ $chooseProduct = $chooseProduct->first();
                     <div class="productPrice__actions">
                         <div class="actions__up">
                             <div class="product__quantity">
-                                <button type="button" class="quantity-btn minus"><i class="ph ph-minus"></i></button>
+                                <i class="ph ph-minus"></i>
                                 <input
                                     type="number"
                                     name="count"
@@ -66,7 +66,7 @@ $chooseProduct = $chooseProduct->first();
                                     value="{{ $chooseProduct['countInPackage'] }}"
                                     min="{{ $chooseProduct['countInPackage'] }}"
                                     readonly>
-                                <button type="button" class="quantity-btn plus"><i class="ph ph-plus"></i></button>
+                                <i class="ph ph-plus"></i>
                             </div>
                         </div>
                         <form action="{{ route('addToCart') }}" method="POST">

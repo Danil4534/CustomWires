@@ -5,10 +5,10 @@
     <div class="calculator__content">
         <div class="calculator__test__cables">
             @foreach ($testProducts as $index => $product)
-            <div class="test__cable">
-                <div class="test__cable__header">
+            <div class="test__cable" data-index="{{ $index }}">
+                <div class=" test__cable__header">
                     <h1>Дріт №{{ $index + 1 }}</h1>
-                    <x-ghost-btn ghostBtnText="Редагувати" ghostBtnIconLeftSide="ph-fill ph-pencil"></x-ghost-btn>
+                    <x-ghost-btn ghostClass="editBtn" ghostBtnText="Редагувати" ghostBtnIconLeftSide="ph-fill ph-pencil" index="{{ $index }}"></x-ghost-btn>
                 </div>
                 <div class="test__cable__characteristics">
                     <ul class="product-characteristics">
@@ -18,6 +18,41 @@
                     </ul>
                 </div>
             </div>
+            <div class="test__calculator editCalc" data-index="{{ $index }}">
+                <div class="test__calculator__header">
+                    <h1>
+                        Дріт
+                    </h1>
+                </div>
+                <div class="test__calculator__preview"></div>
+                <div class="test__calculator__charact">
+                    <div class="left__side">
+                        <h1>Сторона А</h1>
+                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                        <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
+                        <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                    </div>
+                    <div class="right__side">
+                        <h1>Сторона B</h1>
+                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                        <x-counter.counter title="Зазор B (мм)" value="0"></x-counter.counter>
+                        <x-switch.switch title="Закручування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Залудження B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Клімпування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                    </div>
+                </div>
+                <div class="test__calculator__info">
+                    <p><i class="ph-fill ph-info"></i>Інструкція:</p>
+                    <ol>
+                        <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
+                        <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
+                    </ol>
+
+                </div>
+            </div>
+            @endforeach
             <div class="test__calculator">
                 <div class="test__calculator__header">
                     <h1>
@@ -25,8 +60,33 @@
                     </h1>
                 </div>
                 <div class="test__calculator__preview"></div>
+                <div class="test__calculator__charact">
+                    <div class="left__side">
+                        <h1>Сторона А</h1>
+                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                        <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
+                        <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                    </div>
+                    <div class="right__side">
+                        <h1>Сторона B</h1>
+                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                        <x-counter.counter title="Зазор B (мм)" value="0"></x-counter.counter>
+                        <x-switch.switch title="Закручування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Залудження B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <x-switch.switch title="Клімпування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                    </div>
+                </div>
+                <div class="test__calculator__info">
+                    <p><i class="ph-fill ph-info"></i>Інструкція:</p>
+                    <ol>
+                        <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
+                        <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
+                    </ol>
+
+                </div>
             </div>
-            @endforeach
         </div>
 
     </div>
@@ -47,3 +107,32 @@
         <x-primary-button primaryBtnText="Розрахувати" />
     </form>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const editButtons = document.querySelectorAll('.editBtn');
+
+        editButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const index = btn.dataset.index;
+                console.log(index)
+                const targetCalc = document.querySelector(`.editCalc[data-index="${index}"]`);
+                console.log(targetCalc)
+                if (targetCalc) {
+                    targetCalc.classList.add('active');
+                }
+                const productCard = document.querySelector(`.test__cable[data-index="${String(index)}"]`);
+                if (productCard && targetCalc) {
+                    const chars = productCard.querySelectorAll('.product-characteristics li');
+                    const inputs = targetCalc.querySelectorAll('input[type="number"]');
+
+                    chars.forEach((li, i) => {
+                        if (inputs[i]) {
+                            inputs[i].value = li.querySelector('.value').textContent.trim();
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
