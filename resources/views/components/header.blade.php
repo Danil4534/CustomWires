@@ -1,6 +1,6 @@
 @php
 $links = [['text'=>'Головна', 'anchor'=>'/']
-,['text'=>'Каталог', 'anchor'=>'/catalog'],['text'=>'Підібрати дріт', 'anchor'=>'/quiz'],['text'=>'Калькулятор', 'anchor'=>'']];
+,['text'=>'Каталог', 'anchor'=>'/catalog'],['text'=>'Підібрати дріт', 'anchor'=>'/quiz'],['text'=>'Калькулятор', 'anchor'=>'/calculator']];
 
 $chooseProducts = count(session('chooseProducts',[]))
 @endphp

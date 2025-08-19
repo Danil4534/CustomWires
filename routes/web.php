@@ -13,3 +13,4 @@ Route::get('/product/{productId?}', [NavController::class, 'getProductPage'])->n
 Route::post('/oneClickModal', [OneClickModalController::class, 'addProduct'])->name('addProductForOneClickModal');
 Route::get('/quiz', [NavController::class, 'getQuizPage'])->name('page.Quiz');
 Route::get('/checkout', [NavController::class, 'getCheckoutPage'])->name('page.checkout');
+Route::get('/calculator', [NavController::class, 'getCalculatorPage'])->name('page.calculator');
