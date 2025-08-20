@@ -20,6 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
             },
 
             breakpoints: {
+                375:{
+                    slidesPerView:'auto',
+                      pagination: {
+                        el: '.productPreview__pagination',
+                        type: 'bullets',
+                        clickable: true
+                    }
+                },
+
+
                 1440: {
                     slidesPerView: 'auto',
                     pagination: {

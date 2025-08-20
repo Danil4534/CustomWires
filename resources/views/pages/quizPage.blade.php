@@ -21,7 +21,7 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
-@include('components.footer')
+
 @include('components.modalWindows.menuModal')
 @include('components.modalWindows.cartModal')
 

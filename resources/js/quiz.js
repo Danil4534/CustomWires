@@ -8,9 +8,9 @@ function showQuestion(index) {
         const q = questions[index];
         if (!q) return;
         const backBtn = q.querySelector('.backBtn');
-        
+        const editBtn = q.querySelector('.ph-pencil')
         quizList.insertBefore(q, quizList.firstChild);
-
+        editBtn.style.display='none'
         if (backBtn) backBtn.disabled = (index === 0);
 
         q.style.display = 'block';
@@ -47,6 +47,7 @@ function showQuestion(index) {
 
         function goNext() {
             if (idx + 1 < questions.length) {
+                editBtn.style.display='block'
                 q.classList.remove('active')
                 q.querySelector("details").open=false
                 showQuestion(idx + 1);

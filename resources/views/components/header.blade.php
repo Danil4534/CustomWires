@@ -28,7 +28,7 @@ $chooseProducts = count(session('chooseProducts',[]))
             <x-secondary-button secondaryClass="header_r_link" secondaryBtnIconLeftSide="ph-fill ph-facebook-logo"></x-secondary-button>
             <x-secondary-button secondaryClass="header_r_link" secondaryBtnIconLeftSide="ph-fill ph-youtube-logo"></x-secondary-button>
             <x-secondary-button secondaryBtnText='Каталог' secondaryBtnIconLeftSide="ph-fill ph-shopping-bag" route="page.catalog"></x-secondary-button>
-            <x-primary-button primaryBtnText="Кошик" primaryBtnIconLeftSide="ph-fill ph-basket" counter={{$chooseProducts}} id="btnToCatalog"></x-primary-button>
+            <x-primary-button primaryBtnText="Кошик" primaryBtnIconLeftSide="ph-fill ph-basket" counter={{$chooseProducts}} id="cartBtn"></x-primary-button>
         </div>
     </div>
 

@@ -3,7 +3,9 @@
     @if(!empty($primaryBtnIconLeftSide))
     <i class="{{ $primaryBtnIconLeftSide }}"></i>
     @endif
+    @if(!empty($primaryBtnText))
     <span class="btn-text">{{ $primaryBtnText }}</span>
+    @endif
     @if(!empty($primaryBtnIconRightSide))
     <i class="{{ $primaryBtnIconRightSide }}"></i>
     @endif
