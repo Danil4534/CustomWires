@@ -23,24 +23,46 @@
                     <h1>
                         Дріт
                     </h1>
+                    <div class="test__calculator__preview"></div>
                 </div>
-                <div class="test__calculator__preview"></div>
                 <div class="test__calculator__charact">
                     <div class="left__side">
                         <h1>Сторона А</h1>
-                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
-                        <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
-                        <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <div class="counters">
+                            <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                            <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
+                        </div>
+                        <div class="swithers">
+                            <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        </div>
+                        <div class="test__calculator__info">
+                            <p><i class="ph-fill ph-info"></i>Інструкція:</p>
+                            <ol>
+                                <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
+                                <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
+                            </ol>
+                        </div>
                     </div>
                     <div class="right__side">
                         <h1>Сторона B</h1>
-                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
-                        <x-counter.counter title="Зазор B (мм)" value="0"></x-counter.counter>
-                        <x-switch.switch title="Закручування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Залудження B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Клімпування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <div class="counters">
+                            <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                            <x-counter.counter title="Зазор B (мм)" value="0"></x-counter.counter>
+                        </div>
+                        <div class="swithers">
+                            <x-switch.switch title="Закручування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Залудження B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Клімпування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        </div>
+                        <div class="test__calculator__info">
+                            <p><i class="ph-fill ph-info"></i>Інструкція:</p>
+                            <ol>
+                                <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
+                                <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
                 <div class="test__calculator__info">
@@ -49,33 +71,73 @@
                         <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
                         <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
                     </ol>
+                </div>
+                <div class="test__calculator__params">
+                    <div class="leftSide">
+                        <h1>Загальні параметри</h1>
+                        <div class="leftSide__data">
 
+                            <x-counter.counter title="Довжина (мм)" value="800"></x-counter.counter>
+                            <x-inputField.input-field label="Матеріал дроту" name="name" placeholder="Обрати"></x-inputField.input-field>
+                            <x-inputField.input-field label="Колір" name="name" placeholder="Обрати"></x-inputField.input-field>
+                        </div>
+                    </div>
+                    <div class="rightSide">
+                        <h1>Упакування</h1>
+                        <div class="rightSide__data">
+                            <x-counter.counter title="Кількість (шт)" value="500"></x-counter.counter>
+                            <x-counter.counter title="Фасування(шт/уп" value="100"></x-counter.counter>
+                        </div>
+                    </div>
                 </div>
             </div>
             @endforeach
+
             <div class="test__calculator">
                 <div class="test__calculator__header">
                     <h1>
                         Дріт
                     </h1>
+                    <div class="test__calculator__preview"></div>
                 </div>
-                <div class="test__calculator__preview"></div>
                 <div class="test__calculator__charact">
                     <div class="left__side">
                         <h1>Сторона А</h1>
-                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
-                        <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
-                        <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <div class="counters">
+                            <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                            <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
+                        </div>
+                        <div class="swithers">
+                            <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        </div>
+                        <div class="test__calculator__info">
+                            <p><i class="ph-fill ph-info"></i>Інструкція:</p>
+                            <ol>
+                                <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
+                                <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
+                            </ol>
+                        </div>
                     </div>
                     <div class="right__side">
                         <h1>Сторона B</h1>
-                        <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
-                        <x-counter.counter title="Зазор B (мм)" value="0"></x-counter.counter>
-                        <x-switch.switch title="Закручування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Залудження B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                        <x-switch.switch title="Клімпування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        <div class="counters">
+                            <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
+                            <x-counter.counter title="Зазор B (мм)" value="0"></x-counter.counter>
+                        </div>
+                        <div class="swithers">
+                            <x-switch.switch title="Закручування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Залудження B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Клімпування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                        </div>
+                        <div class="test__calculator__info">
+                            <p><i class="ph-fill ph-info"></i>Інструкція:</p>
+                            <ol>
+                                <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
+                                <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
                 <div class="test__calculator__info">
@@ -84,11 +146,31 @@
                         <li>Параметри «Зазор» не можуть перевищувати значення відповідної зачистки</li>
                         <li>Якщо зачистка дорівнює нулю або відсутній інструмент, функції закручування будуть недоступними або автоматично деактивовані</li>
                     </ol>
-
                 </div>
+                <div class="test__calculator__params">
+                    <div class="leftSide">
+                        <h1>Загальні параметри</h1>
+                        <div class="leftSide__data">
+
+                            <x-counter.counter title="Довжина (мм)" value="800"></x-counter.counter>
+                            <x-inputField.input-field label="Матеріал дроту" name="name" placeholder="Обрати"></x-inputField.input-field>
+                            <x-inputField.input-field label="Колір" name="name" placeholder="Обрати"></x-inputField.input-field>
+                        </div>
+                    </div>
+                    <div class="rightSide">
+                        <h1>Упакування</h1>
+                        <div class="rightSide__data">
+                            <x-counter.counter title="Кількість (шт)" value="500"></x-counter.counter>
+                            <x-counter.counter title="Фасування(шт/уп" value="100"></x-counter.counter>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
+    </div>
+    <div class="calculator__btn">
+        <x-secondary-button secondaryBtnText="Додати новий дріт" />
     </div>
     <form class="calculator__form">
         <h1 class="calculator__form__header">
@@ -106,28 +188,24 @@
             <span><i class="ph ph-check"></i></span>
             Даю згоду на обробку персональної інформації
         </label>
-        <x-primary-button primaryBtnText="Розрахувати" primaryClass="calculator__btn" />
+        <x-primary-button primaryBtnText="Розрахувати" primaryClass="calculator__btn_calc" />
     </form>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const editButtons = document.querySelectorAll('.editBtn');
-
         editButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const index = btn.dataset.index;
-                console.log(index)
                 const targetCalc = document.querySelector(`.editCalc[data-index="${index}"]`);
-                console.log(targetCalc)
                 if (targetCalc) {
-                    targetCalc.classList.add('active');
+                    targetCalc.classList.toggle('active');
                 }
-                const productCard = document.querySelector(`.test__cable[data-index="${String(index)}"]`);
+                const productCard = document.querySelector(`.test__cable[data-index="${index}"]`);
                 if (productCard && targetCalc) {
                     const chars = productCard.querySelectorAll('.product-characteristics li');
                     const inputs = targetCalc.querySelectorAll('input[type="number"]');
-
                     chars.forEach((li, i) => {
                         if (inputs[i]) {
                             inputs[i].value = li.querySelector('.value').textContent.trim();

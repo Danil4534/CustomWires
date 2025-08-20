@@ -1,6 +1,6 @@
 @props(['index'])
 
-<button class="ghostBtn {{ $ghostClass }}" id="{{ $id }}" data-index=" {{ $index??'' }}">
+<button class="ghostBtn {{ $ghostClass }}" id="{{ $id }}" data-index="{{ $index ??'' }}">
     @if(!empty($ghostBtnIconLeftSide))
     <i class="{{ $ghostBtnIconLeftSide }}"></i>
     @endif

@@ -23,16 +23,7 @@
         </div>
 
         <div class="actions__up">
-            <div class="product__quantity">
-                <button type="button" class="quantity-btn minus"><i class="ph ph-minus"></i></button>
-                <input
-                    type="number"
-                    class="quantity-input"
-                    value="{{ $product['countInPackage'] }}"
-                    min="{{ $product['countInPackage'] }}"
-                    readonly>
-                <button type="button" class="quantity-btn plus"><i class="ph ph-plus"></i></button>
-            </div>
+            <x-counter.counter value="100" step="100" />
             <div class="product__totalPrice">
                 <h1>Всього:</h1>
                 <p>190,00<span>грн</span></p>

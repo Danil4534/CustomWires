@@ -1,7 +1,6 @@
 .calculator__container {
     max-width: 1728px;
     margin: 0 auto;
-    padding: 0 16px;
 
     .calculator__breadcrumbs {
         margin-top: 32px;
@@ -24,11 +23,24 @@
             }
         }
     }
+    .calculator__btn {
+        width: 100%;
+        border: 1px solid #f3f3f3;
+        padding: 32px 16px;
+        button {
+            width: 100%;
+            height: 48px;
+            span {
+                display: block;
+            }
+        }
+    }
     .calculator__content {
         .calculator__test__cables {
             display: flex;
             flex-direction: column;
             gap: 24px;
+            padding: 0 16px;
             margin-top: 16px;
             .test__cable {
                 width: 100%;
@@ -100,6 +112,153 @@
                 &.active {
                     display: block;
                 }
+                .test__calculator__params {
+                    padding-top: 40px;
+                    border-top: 1px solid #f3f3f3;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    h1 {
+                        font-family: var(--font-family-Roboto);
+                        font-weight: 500;
+                        font-style: Medium;
+                        font-size: 18px;
+                        leading-trim: NONE;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                    }
+
+                    .leftSide__data {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+                        margin-top: 32px;
+                        .counter__container {
+                            width: 100%;
+                            .counter {
+                                width: 100%;
+                            }
+                        }
+                        label {
+                            font-family: var(--font-family-Rubik);
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 145%;
+                            letter-spacing: 0%;
+                            margin-bottom: 4px;
+                            color: #3a3d42;
+                        }
+                        .input__wrapper {
+                            width: 100%;
+                            position: relative;
+                            input[type="text"] {
+                                width: 100%;
+                                height: 40px;
+                                border: 1px solid rgba(196, 196, 196, 1);
+                                border-radius: 2px;
+                                padding: 0 16px;
+                                background: rgba(243, 243, 243, 1);
+                                font-family: var(--font-family-Rubik);
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 145%;
+                                letter-spacing: 0%;
+                                color: rgba(90, 90, 90, 1);
+                                outline: none;
+
+                                &:hover {
+                                    border-color: rgba(255, 111, 57, 1);
+                                }
+                                &:focus::placeholder {
+                                    opacity: 0;
+                                }
+                                &:active {
+                                    border-color: rgba(255, 111, 57, 1);
+                                }
+                                &:focus ~ i.ph-x {
+                                    opacity: 1;
+                                }
+                                &::placeholder {
+                                    color: rgba(159, 159, 159, 1);
+                                }
+                            }
+                            i.ph-x {
+                                opacity: 0;
+                                font-size: 20px;
+                                position: absolute;
+                                right: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    .rightSide__data {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 32px;
+                        margin-top: 32px;
+                        .counter__container {
+                            width: 100%;
+                            .counter {
+                                width: 100%;
+                            }
+                        }
+                        label {
+                            font-family: var(--font-family-Rubik);
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 145%;
+                            letter-spacing: 0%;
+                            margin-bottom: 4px;
+                            color: #3a3d42;
+                        }
+                        .input__wrapper {
+                            width: 100%;
+                            position: relative;
+                            input[type="text"] {
+                                width: 100%;
+                                height: 40px;
+                                border: 1px solid rgba(196, 196, 196, 1);
+                                border-radius: 2px;
+                                padding: 0 16px;
+                                background: rgba(243, 243, 243, 1);
+                                font-family: var(--font-family-Rubik);
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 145%;
+                                letter-spacing: 0%;
+                                color: rgba(90, 90, 90, 1);
+                                outline: none;
+
+                                &:hover {
+                                    border-color: rgba(255, 111, 57, 1);
+                                }
+                                &:focus::placeholder {
+                                    opacity: 0;
+                                }
+                                &:active {
+                                    border-color: rgba(255, 111, 57, 1);
+                                }
+                                &:focus ~ i.ph-x {
+                                    opacity: 1;
+                                }
+                                &::placeholder {
+                                    color: rgba(159, 159, 159, 1);
+                                }
+                            }
+                            i.ph-x {
+                                opacity: 0;
+                                font-size: 20px;
+                                position: absolute;
+                                right: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
                 .test__calculator__header {
                     margin-bottom: 32px;
                     h1 {
@@ -114,9 +273,10 @@
                     }
                 }
                 .test__calculator__preview {
+                    margin-top: 32px;
                     width: 100%;
                     height: 220px;
-                    background-image: url("/public/assets/calculatorCable_375.svg");
+                    background-image: url("/public/assets/calculator_375.png");
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -126,7 +286,7 @@
                     grid-template-columns: repeat(2, 1fr);
                     justify-items: center;
                     gap: 24px;
-                    margin-top: 32px;
+
                     row-gap: 32px;
 
                     .left__side,
@@ -135,7 +295,6 @@
                         display: flex;
                         flex-direction: column;
                         padding: 16px;
-
                         gap: 32px;
                         h1 {
                             font-family: var(--font-family-Roboto);
@@ -147,10 +306,24 @@
                             letter-spacing: 0%;
                             color: #2b2d33;
                         }
+                        .counters {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 32px;
+                        }
+                        .swithers {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 32px;
+                        }
+                        .test__calculator__info {
+                            display: none;
+                        }
                     }
                 }
                 .test__calculator__info {
                     padding: 0 24px;
+                    margin-bottom: 32px;
                     p {
                         font-family: var(--font-family-Rubik);
                         font-weight: 500;
@@ -192,7 +365,7 @@
         flex-direction: column;
         gap: 32px;
         border: 1px solid #f3f3f3;
-        margin-top: 8px;
+
         .calculator__form__header {
             font-family: var(--font-family-Roboto);
             font-weight: 500;
@@ -203,7 +376,11 @@
             letter-spacing: 0%;
             color: #2b2d33;
         }
-
+        .form__data {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
         .form__field {
             label {
                 font-family: var(--font-family-Rubik);
@@ -312,7 +489,7 @@
                 }
             }
         }
-        .calculator__btn {
+        .calculator__btn_calc {
             width: 100%;
             height: 48px;
         }
@@ -320,9 +497,9 @@
 }
 @media screen and (min-width: 768px) {
     .calculator__container {
-        max-width: 1728px;
+        max-width: 1280px;
         margin: 0 auto;
-        padding: 0 16px;
+        padding: 0 32px;
 
         .calculator__breadcrumbs {
             margin-top: 32px;
@@ -351,18 +528,24 @@
                 flex-direction: column;
                 gap: 24px;
                 margin-top: 16px;
+                padding: 0;
                 .test__cable {
                     width: 100%;
                     height: fit-content;
                     background: #f3f3f3;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
+                    justify-content: space-between;
                     border-radius: 2px;
+                    gap: 31px;
                     padding: 16px;
                     .test__cable__header {
+                        min-width: 206px;
                         display: flex;
                         justify-content: space-between;
-                        margin-bottom: 16px;
+                        align-items: center;
+                        gap: 24px;
+                        margin-bottom: 0px;
                         h1 {
                             font-family: var(--font-family-Roboto);
                             font-weight: 500;
@@ -374,14 +557,19 @@
                             color: #2b2d33;
                         }
                         button {
+                            width: 119px;
+                            height: 32px;
+                            border: 1px solid #2b2d33;
                             span {
-                                display: none;
+                                display: flex;
                             }
                         }
                     }
                     .test__cable__characteristics {
+                        width: 100%;
                         .product-characteristics {
                             list-style: none;
+
                             li {
                                 display: flex;
 
@@ -415,10 +603,16 @@
                 }
                 .test__calculator {
                     width: 100%;
-
                     margin: 32px 0;
+                    margin-bottom: 0;
+
+                    border: 1px solid#F3F3F3;
                     .test__calculator__header {
-                        margin-bottom: 32px;
+                        margin-bottom: 0px;
+                        padding: 24px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
                         h1 {
                             font-family: var(--font-family-Roboto);
                             font-weight: 500;
@@ -433,17 +627,18 @@
                     .test__calculator__preview {
                         width: 100%;
                         height: 200px;
-                        background-image: url("/public/assets/calculatorCable_768_1024.svg");
-                        background-size: cover;
-                        background-position: center;
+
+                        background-image: url("/public/assets/calculator__768.png");
+                        background-size: 100% 100%;
                         background-repeat: no-repeat;
                     }
                     .test__calculator__charact {
+                        width: 100%;
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         justify-items: center;
-                        gap: 24px;
-                        margin-top: 32px;
+                        gap: 0;
+                        margin-top: 0px;
                         row-gap: 32px;
 
                         .left__side,
@@ -451,9 +646,13 @@
                             width: 100%;
                             display: flex;
                             flex-direction: column;
-                            padding: 16px;
+                            padding: 24px;
+                            gap: 16px;
 
-                            gap: 32px;
+                            .test__calculator__info {
+                                display: block;
+                                padding: 0;
+                            }
                             h1 {
                                 font-family: var(--font-family-Roboto);
                                 font-weight: 500;
@@ -463,10 +662,31 @@
                                 line-height: 100%;
                                 letter-spacing: 0%;
                                 color: #2b2d33;
+                                margin-bottom: 8px;
+                            }
+                            .counters {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 16px;
+                                .counter__container {
+                                    .counter {
+                                        width: 144px;
+                                    }
+                                }
+                            }
+                            .swithers {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                gap: 16px;
+                                .checkbox__container {
+                                    width: 144px;
+                                }
                             }
                         }
                     }
                     .test__calculator__info {
+                        display: none;
                         padding: 0 24px;
                         p {
                             font-family: var(--font-family-Rubik);
@@ -498,6 +718,167 @@
                             color: #9f9f9f;
                         }
                     }
+                    .test__calculator__params {
+                        padding-top: 40px;
+                        border-top: 1px solid #f3f3f3;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 0px;
+                        .leftSide,
+                        .rightSide {
+                            padding: 24px;
+                            width: 100%;
+                            .leftSide__data {
+                                width: 100%;
+                                display: grid !important;
+                                grid-template-columns: repeat(2, 1fr);
+                                grid-template-rows: repeat(2, 1fr);
+                                row-gap: 16px;
+                                margin-top: 32px;
+                                :nth-child(1) {
+                                    grid-area: 1/1/2/2;
+                                }
+                                :nth-child(2) {
+                                    grid-area: 2 / 1 / 3 / 3;
+                                }
+                                :nth-child(3) {
+                                    grid-area: 1 / 2 / 2 / 3;
+                                }
+                                .counter__container {
+                                    width: 100%;
+                                    .counter {
+                                        width: 100%;
+                                    }
+                                }
+                                label {
+                                    font-family: var(--font-family-Rubik);
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 145%;
+                                    letter-spacing: 0%;
+                                    margin-bottom: 4px;
+                                    color: #3a3d42;
+                                }
+                                .input__wrapper {
+                                    width: 100%;
+                                    position: relative;
+                                    input[type="text"] {
+                                        width: 100%;
+                                        height: 40px;
+                                        border: 1px solid rgba(196, 196, 196, 1);
+                                        border-radius: 2px;
+                                        padding: 0 16px;
+                                        background: rgba(243, 243, 243, 1);
+                                        font-family: var(--font-family-Rubik);
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 145%;
+                                        letter-spacing: 0%;
+                                        color: rgba(90, 90, 90, 1);
+                                        outline: none;
+
+                                        &:hover {
+                                            border-color: rgba(255, 111, 57, 1);
+                                        }
+                                        &:focus::placeholder {
+                                            opacity: 0;
+                                        }
+                                        &:active {
+                                            border-color: rgba(255, 111, 57, 1);
+                                        }
+                                        &:focus ~ i.ph-x {
+                                            opacity: 1;
+                                        }
+                                        &::placeholder {
+                                            color: rgba(159, 159, 159, 1);
+                                        }
+                                    }
+                                    i.ph-x {
+                                        opacity: 0;
+                                        font-size: 20px;
+                                        position: absolute;
+                                        right: 10px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                            .rightSide__data {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                gap: 16px;
+                                margin-top: 32px;
+                                .counter__container {
+                                    width: 100%;
+                                    .counter {
+                                        width: 100%;
+                                    }
+                                }
+                                label {
+                                    font-family: var(--font-family-Rubik);
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 145%;
+                                    letter-spacing: 0%;
+                                    margin-bottom: 4px;
+                                    color: #3a3d42;
+                                }
+                                .input__wrapper {
+                                    width: 100%;
+                                    position: relative;
+                                    input[type="text"] {
+                                        width: 100%;
+                                        height: 40px;
+                                        border: 1px solid rgba(196, 196, 196, 1);
+                                        border-radius: 2px;
+                                        padding: 0 16px;
+                                        background: rgba(243, 243, 243, 1);
+                                        font-family: var(--font-family-Rubik);
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 145%;
+                                        letter-spacing: 0%;
+                                        color: rgba(90, 90, 90, 1);
+                                        outline: none;
+
+                                        &:hover {
+                                            border-color: rgba(255, 111, 57, 1);
+                                        }
+                                        &:focus::placeholder {
+                                            opacity: 0;
+                                        }
+                                        &:active {
+                                            border-color: rgba(255, 111, 57, 1);
+                                        }
+                                        &:focus ~ i.ph-x {
+                                            opacity: 1;
+                                        }
+                                        &::placeholder {
+                                            color: rgba(159, 159, 159, 1);
+                                        }
+                                    }
+                                    i.ph-x {
+                                        opacity: 0;
+                                        font-size: 20px;
+                                        position: absolute;
+                                        right: 10px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    h1 {
+                        font-family: var(--font-family-Roboto);
+                        font-weight: 500;
+                        font-style: Medium;
+                        font-size: 18px;
+                        leading-trim: NONE;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                    }
                 }
             }
         }
@@ -521,57 +902,62 @@
                 color: #2b2d33;
             }
 
-            .form__field {
-                label {
-                    font-family: var(--font-family-Rubik);
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 145%;
-                    letter-spacing: 0%;
-                    margin-bottom: 4px;
-                    color: #3a3d42;
-                }
-                .input__wrapper {
-                    width: 100%;
-                    position: relative;
-                    input[type="text"] {
-                        width: 100%;
-                        height: 40px;
-                        border: 1px solid rgba(196, 196, 196, 1);
-                        border-radius: 2px;
-                        padding: 0 16px;
-                        background: rgba(243, 243, 243, 1);
+            .form__data {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                .form__field {
+                    label {
                         font-family: var(--font-family-Rubik);
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 145%;
                         letter-spacing: 0%;
-                        color: rgba(90, 90, 90, 1);
-                        outline: none;
-
-                        &:hover {
-                            border-color: rgba(255, 111, 57, 1);
-                        }
-                        &:focus::placeholder {
-                            opacity: 0;
-                        }
-                        &:active {
-                            border-color: rgba(255, 111, 57, 1);
-                        }
-                        &:focus ~ i.ph-x {
-                            opacity: 1;
-                        }
-                        &::placeholder {
-                            color: rgba(159, 159, 159, 1);
-                        }
+                        margin-bottom: 4px;
+                        color: #3a3d42;
                     }
-                    i.ph-x {
-                        opacity: 0;
-                        font-size: 20px;
-                        position: absolute;
-                        right: 10px;
-                        top: 50%;
-                        transform: translateY(-50%);
+                    .input__wrapper {
+                        width: 100%;
+                        position: relative;
+                        input[type="text"] {
+                            width: 100%;
+                            height: 40px;
+                            border: 1px solid rgba(196, 196, 196, 1);
+                            border-radius: 2px;
+                            padding: 0 16px;
+                            background: rgba(243, 243, 243, 1);
+                            font-family: var(--font-family-Rubik);
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 145%;
+                            letter-spacing: 0%;
+                            color: rgba(90, 90, 90, 1);
+                            outline: none;
+
+                            &:hover {
+                                border-color: rgba(255, 111, 57, 1);
+                            }
+                            &:focus::placeholder {
+                                opacity: 0;
+                            }
+                            &:active {
+                                border-color: rgba(255, 111, 57, 1);
+                            }
+                            &:focus ~ i.ph-x {
+                                opacity: 1;
+                            }
+                            &::placeholder {
+                                color: rgba(159, 159, 159, 1);
+                            }
+                        }
+                        i.ph-x {
+                            opacity: 0;
+                            font-size: 20px;
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
                     }
                 }
             }
@@ -634,9 +1020,9 @@
 }
 @media screen and (min-width: 1024px) {
     .calculator__container {
-        max-width: 1728px;
+        max-width: 1280px;
         margin: 0 auto;
-        padding: 0 48px;
+        padding: 0 32px;
 
         .calculator__breadcrumbs {
             margin-top: 32px;
@@ -667,19 +1053,21 @@
                 margin-top: 16px;
                 .test__cable {
                     width: 100%;
-                    height: 136px;
+                    height: fit-content;
                     background: #f3f3f3;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    align-items: center;
                     border-radius: 2px;
+                    gap: 31px;
                     padding: 16px;
                     .test__cable__header {
+                        min-width: 206px;
                         display: flex;
+                        justify-content: space-between;
                         align-items: center;
                         gap: 24px;
-                        margin-bottom: 16px;
+                        margin-bottom: 0px;
                         h1 {
                             font-family: var(--font-family-Roboto);
                             font-weight: 500;
@@ -693,20 +1081,20 @@
                         button {
                             width: 119px;
                             height: 32px;
-                            border: 1.5px solid #2b2d33;
+                            border: 1px solid #2b2d33;
                             span {
                                 display: flex;
                             }
                         }
                     }
                     .test__cable__characteristics {
+                        width: 100%;
                         .product-characteristics {
-                            -webkit-columns: 2;
-                            -moz-columns: 2;
-                            gap: 32px;
                             list-style: none;
+                            -webkit-columns: 2;
                             li {
                                 display: flex;
+
                                 .dots {
                                     flex-grow: 1;
                                     margin: 0 8px;
@@ -737,11 +1125,16 @@
                 }
                 .test__calculator {
                     width: 100%;
-
                     margin: 32px 0;
+                    margin-bottom: 0;
 
+                    border: 1px solid#F3F3F3;
                     .test__calculator__header {
-                        margin-bottom: 32px;
+                        margin-bottom: 0px;
+                        padding: 24px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
                         h1 {
                             font-family: var(--font-family-Roboto);
                             font-weight: 500;
@@ -756,17 +1149,17 @@
                     .test__calculator__preview {
                         width: 100%;
                         height: 200px;
-                        background-image: url("/public/assets/calculatorCable_768_1024.svg");
-                        background-size: cover;
-                        background-position: center;
+
+                        background-image: url("/public/assets//calculator__1024.png");
+                        background-size: 100% 100%;
                         background-repeat: no-repeat;
                     }
                     .test__calculator__charact {
                         display: grid;
                         grid-template-columns: repeat(2, 1fr);
                         justify-items: center;
-                        gap: 24px;
-                        margin-top: 32px;
+                        gap: 0;
+                        margin-top: 0px;
                         row-gap: 32px;
 
                         .left__side,
@@ -774,9 +1167,9 @@
                             width: 100%;
                             display: flex;
                             flex-direction: column;
-                            padding: 16px;
-
-                            gap: 32px;
+                            padding: 24px;
+                            gap: 16px;
+                            border: 1px solid #f3f3f3;
                             h1 {
                                 font-family: var(--font-family-Roboto);
                                 font-weight: 500;
@@ -786,6 +1179,26 @@
                                 line-height: 100%;
                                 letter-spacing: 0%;
                                 color: #2b2d33;
+                                margin-bottom: 8px;
+                            }
+                            .counters {
+                                display: flex;
+
+                                gap: 16px;
+                                .counter__container {
+                                    width: 100%;
+                                    .counter {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .swithers {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                gap: 16px;
+                                .checkbox__container {
+                                    width: 100%;
+                                }
                             }
                         }
                     }
@@ -828,8 +1241,7 @@
         }
         .calculator__form {
             padding: 32px 16px;
-            display: flex;
-            flex-direction: column;
+
             gap: 32px;
             border: 1px solid #f3f3f3;
             margin-top: 8px;
@@ -843,12 +1255,10 @@
                 letter-spacing: 0%;
                 color: #2b2d33;
             }
+
             .form__data {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 16px;
-                row-gap: 24px;
-
                 .form__field {
                     label {
                         font-family: var(--font-family-Rubik);
@@ -903,6 +1313,7 @@
                         }
                     }
                 }
+
                 label {
                     display: flex;
                     align-items: center;
@@ -956,10 +1367,6 @@
                         }
                     }
                 }
-            }
-            .calculator__btn {
-                width: 100%;
-                height: 48px;
             }
         }
     }

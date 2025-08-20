@@ -60,7 +60,7 @@ $production = [
                             </li>
                             @endforeach
                         </ul>
-                        <x-secondary-button secondaryBtnText="До конфігуратора" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnConfigurator" />
+                        <x-secondary-button secondaryBtnText="До конфігуратора" secondaryBtnIconRightSide="ph ph-caret-right" secondaryClass="btnConfigurator" route="page.calculator" />
                     </div>
                 </div>
             </div>

@@ -57,17 +57,7 @@ $chooseProduct = $chooseProduct->first();
                     @endif
                     <div class="productPrice__actions">
                         <div class="actions__up">
-                            <div class="product__quantity">
-                                <i class="ph ph-minus"></i>
-                                <input
-                                    type="number"
-                                    name="count"
-                                    class="quantity-input"
-                                    value="{{ $chooseProduct['countInPackage'] }}"
-                                    min="{{ $chooseProduct['countInPackage'] }}"
-                                    readonly>
-                                <i class="ph ph-plus"></i>
-                            </div>
+                            <x-counter.counter value="100" step="100" />
                         </div>
                         <form action="{{ route('addToCart') }}" method="POST">
                             @csrf

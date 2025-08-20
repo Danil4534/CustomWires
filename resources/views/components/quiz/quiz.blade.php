@@ -47,7 +47,7 @@ $questions = [
     <div class="quiz__content">
         <ul id="answersList" class="quiz__questions">
             @foreach($questions as $qIndex => $question)
-            <li data-index="{{ $qIndex }}">
+            <li data-index="{{ $qIndex }}" class="question">
                 <details>
                     <summary class="quiz__question">
                         <div class="question__content">
@@ -77,10 +77,10 @@ $questions = [
                         </ul>
                     </div>
                     <div class="quiz__controls">
-                        <x-secondary-button secondaryBtnText="пропустити" class="skipBtn" data-q="{{ $qIndex }}" />
+                        <x-secondary-button secondaryBtnText="пропустити" secondaryClass="skipBtn" data-q="{{ $qIndex }}" />
                         <div class="quiz__nav">
-                            <x-secondary-button secondaryBtnText="назад" secondaryBtnIconLeftSide="ph ph-caret-left" class="skipBtn" data-q="{{ $qIndex }}" />
-                            <x-primary-button primaryBtnText="далі" primaryBtnIconRightSide="ph ph-caret-right" class="nextBtn" data-q="{{ $qIndex }}" disabled />
+                            <x-secondary-button secondaryBtnText="назад" secondaryBtnIconLeftSide="ph ph-caret-left" secondaryClass="backBtn" data-q="{{ $qIndex }}" />
+                            <x-primary-button primaryBtnText="{{ $qIndex === 5 ? 'Фініш' : 'Далі' }}" primaryBtnIconRightSide="ph ph-caret-right" primaryClass="nextBtn" data-q="{{ $qIndex }}" />
                         </div>
                     </div>
                 </details>

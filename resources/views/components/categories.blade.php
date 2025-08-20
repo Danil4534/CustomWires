@@ -32,7 +32,7 @@ $categories =[
             <div class="swiper-pagination"></div>
             <div class="categories__nav">
                 <div class="prevBtnCategories" id="prevBtnCategories"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-left" /></div>
-                <x-secondary-button secondaryBtnText="Переглянути каталог" secondaryClass="btnToCatalog" secondaryBtnIconRightSide="ph ph-caret-right" />
+                <x-secondary-button secondaryBtnText="Переглянути каталог" secondaryClass="btnToCatalog" secondaryBtnIconRightSide="ph ph-caret-right" route="page.catalog" />
                 <div class="nextBtnCategories" id="nextBtnCategories"><x-secondary-button secondaryBtnIconLeftSide="ph-fill ph-caret-right" /></i></div>
             </div>
         </div>
