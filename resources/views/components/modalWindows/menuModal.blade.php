@@ -1,9 +1,9 @@
 @php
 $links=[
-['linkName'=>'Головна','anchor'=>''],
-['linkName'=>'Підібрати кабель','anchor'=>''],
+['linkName'=>'Головна','anchor'=>'/'],
+['linkName'=>'Підібрати кабель','anchor'=>'/quiz'],
 ['linkName'=>'FAQ','anchor'=>''],
-['linkName'=>'Калькулятор','anchor'=>''],
+['linkName'=>'Калькулятор','anchor'=>'/calculator'],
 ['linkName'=>'Контакти','anchor'=>''],
 ]
 @endphp

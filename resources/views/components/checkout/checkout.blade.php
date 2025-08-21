@@ -65,13 +65,15 @@ $chooseProducts = session()->get('chooseProducts');
                     <p>Нова пошта</p>
                 </div>
                 <div class="novaPost__methods">
-                    <x-radio.radio label="Відділення Нової пошти" name="novaPost_method" subtitle="Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти." icon="ph-garage" />
-                    <x-radio.radio label="Кур’єром Нової пошти на адресу" name="novaPost_method" subtitle="Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти." icon="ph-truck" />
+                    <x-radio.radio label="Відділення Нової пошти" name="novaPost_method" id="department" subtitle="Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти." icon="ph ph-garage" />
+                    <x-radio.radio label="Кур’єром Нової пошти на адресу" name="novaPost_method" id="courier" subtitle="Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти." icon="ph ph-truck" />
                 </div>
                 <hr>
                 <div class="form__delivery__methodsOfDelivery__info">
-                    <x-inputField.input-field label="Місто" name="city" placeholder="Вкажіть місто доставки"></x-inputField.input-field>
-                    <x-inputField.input-field label="Відділення" name="post__department" placeholder="Вкажіть відділення НП"></x-inputField.input-field>
+                    <div class="info__header">
+                        <x-inputField.input-field label="Місто" name="city" placeholder="Вкажіть місто доставки"></x-inputField.input-field>
+                        <x-inputField.input-field label="Відділення" name="post__department" placeholder="Вкажіть відділення НП"></x-inputField.input-field>
+                    </div>
                     <div class="form__delivery__courier hidden">
                         <x-inputField.input-field label="Дім" name="post__home" placeholder="Вкажіть дім"></x-inputField.input-field>
                         <x-inputField.input-field label="Корпус" name="post__frame" placeholder="Вкажіть корпус"></x-inputField.input-field>
@@ -91,11 +93,14 @@ $chooseProducts = session()->get('chooseProducts');
                         <x-inputField.input-field label="Номер телефону" name="anotherCustomer__phoneNumber" placeholder="+380 -- --- -- --"></x-inputField.input-field>
                     </div>
                     <div class="form__delivery__checkAddComment">
-                        <label>
+                        <label for="checkAddComment">
                             <input type="checkbox" name="checkAddComment" id="checkAddComment">
                             <span><i class="ph ph-check"></i></span>
                             Додати коментар до замовлення
                         </label>
+                        <div class="form__delivery__comment hidden">
+                            <textarea name="comment" id="comment" placeholder="Коментар до замовлення"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,11 +111,11 @@ $chooseProducts = session()->get('chooseProducts');
             <h1>Спосіб оплати</h1>
         </div>
         <div class="from__methodsOfPayment__content">
-            <x-radio.radio label="Оплатити при отриманні" name="novaPost_method" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." icon="ph-cardholder" />
-            <x-radio.radio label="Оплата онлайн" name="novaPost_method" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." icon="ph-credit-card" />
-            <x-radio.radio label="Оплата через Приват 24" name="novaPost_method" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." icon="ph-garage" />
-            <x-radio.radio label="Оплата через Monobank" name="novaPost_method" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." icon="ph-garage" />
-            <x-radio.radio label="Оплата через A-Bank" name="novaPost_method" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." icon="ph-garage" />
+            <x-radio.radio label="Оплатити при отриманні" name="payment_method" id="novaPost_get" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." icon="ph-fill ph-cardholder" />
+            <x-radio.radio label="Оплата онлайн" name="payment_method" id="novaPost_method__online" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." icon="ph ph-credit-card" />
+            <x-radio.radio label="Оплата через Приват 24" name="payment_method" id="novaPost_method__privat" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." img="assets/PR24.svg" />
+            <x-radio.radio label="Оплата через Monobank" name="payment_method" id="novaPost_method__Mono" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." img="assets/Mono.svg" />
+            <x-radio.radio label="Оплата через A-Bank" name="payment_method" id="novaPost_method__Abank" subtitle="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores." img="assets/aBank.svg" />
         </div>
 
     </div>
@@ -157,8 +162,25 @@ $chooseProducts = session()->get('chooseProducts');
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        const courierRadio = document.querySelector('#courier')
+        const departmentRadio = document.querySelector('#department')
+        const courierContent = document.querySelector('.form__delivery__courier')
         const anotherCustomer = document.querySelector('#checkAnotherCustomer');
         const anotherCustomerInfo = document.querySelector('.form__delivery__checkAnotherCustomer__hidden')
+        const commentCheck = document.querySelector('#checkAddComment')
+        console.log(commentCheck)
+        const commentField = document.querySelector('.form__delivery__comment')
+
+        courierRadio.addEventListener('change', () => {
+            courierContent.classList.toggle('hidden', !courierRadio.checked)
+        })
+        departmentRadio.addEventListener('change', () => {
+            courierContent.classList.toggle('hidden', departmentRadio.checked)
+        })
+        commentCheck.addEventListener('change', () => {
+            commentField.classList.toggle('hidden', !commentCheck.checked);
+        })
+
         anotherCustomer.addEventListener('change', () => {
             anotherCustomerInfo.classList.toggle('hidden', !anotherCustomer.checked);
         });

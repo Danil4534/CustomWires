@@ -2,7 +2,8 @@
     margin: 32px 0px;
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 16px;
+    align-items: start;
 
     label {
         width: calc(100% - 24px);
@@ -20,7 +21,7 @@
         .label__content {
             display: flex;
             gap: 8px;
-            margin-bottom: 16px;
+
             i {
                 width: 48px;
                 height: 48px;
@@ -31,6 +32,15 @@
                 color: #9f9f9f;
                 border-radius: 2px;
                 background: #f3f3f3;
+            }
+            .icon {
+                width: 48px;
+                height: 48px;
+                background: #f3f3f3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
             }
             p {
                 font-family: Rubik;
@@ -51,6 +61,7 @@
             vertical-align: middle;
         }
         span {
+            display: none;
             font-family: var(--font-family-Rubik);
             font-weight: 400;
             font-style: Regular;
@@ -58,9 +69,11 @@
             line-height: 145%;
             letter-spacing: 0%;
             color: #9f9f9f;
+            opacity: 0;
         }
     }
     input {
+        margin-top: 16px;
         appearance: none;
         min-width: 24px;
         height: 24px;
@@ -70,6 +83,12 @@
     input:checked {
         border: 4px solid #ff6f39;
     }
+    input:checked + label .subtitle {
+        transition: 0.3s ease;
+        display: block;
+        opacity: 1;
+    }
+
     input:hover {
         cursor: pointer;
         border: 4px solid #e65b27;
