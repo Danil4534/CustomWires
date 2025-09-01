@@ -8,7 +8,7 @@
             <div class="test__cable" data-index="{{ $index }}">
                 <div class=" test__cable__header">
                     <h1>Дріт №{{ $index + 1 }}</h1>
-                    <x-ghost-btn ghostClass="editBtn" ghostBtnText="Редагувати" ghostBtnIconLeftSide="ph-fill ph-pencil" index="{{ $index }}"></x-ghost-btn>
+                    <x-ghost-btn ghostClass="editBtn" ghostBtnText="Редагувати" ghostBtnIconLeftSide="ph-fill ph-pencil" ghostBtnIconRightSide="ph ph-caret-down" index="{{ $index }}"></x-ghost-btn>
                 </div>
                 <div class="test__cable__characteristics">
                     <ul class="product-characteristics">

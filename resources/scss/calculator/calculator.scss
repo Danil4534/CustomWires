@@ -1,9 +1,9 @@
 .calculator__container {
     max-width: 1728px;
     margin: 0 auto;
-
+    padding-top: 32px;
     .calculator__breadcrumbs {
-        margin-top: 32px;
+        padding: 0 16px;
         p {
             display: flex;
             gap: 8px;
@@ -295,7 +295,7 @@
                         flex-direction: column;
                         padding: 16px;
                         gap: 32px;
-                        border: 1px solid #f3f3f3;
+                        border: none;
                         h1 {
                             font-family: var(--font-family-Roboto);
                             font-weight: 500;

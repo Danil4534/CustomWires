@@ -11,3 +11,4 @@ import './oneClickModal';
 import './successModal';
 import "./quiz.js";
 import "./filter.js";
+import "./pagination.js"

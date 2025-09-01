@@ -28,14 +28,15 @@ $count=1
                     </select>
                 </h1>
             </div>
-            <div class="catalog__listOfProducts__wrapper">
+            <div class="catalog__listOfProducts__wrapper" id="catalog__list">
                 @foreach ($products as $product )
                 <x-product-card :product="$product" />
                 @endforeach
             </div>
             <div class="catalog__getMore">
-                <x-primary-button primaryBtnText="Показати більше" primaryBtnIconLeftSide="ph ph-arrows-clockwise"></x-primary-button>
+                <x-primary-button primaryBtnText="Показати більше" primaryBtnIconLeftSide="ph ph-arrows-clockwise" id="getMore"></x-primary-button>
             </div>
+            <div class="catalog__pagination" id="catalog__pagination"></div>
         </div>
     </div>
 </div>

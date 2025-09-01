@@ -1,5 +1,5 @@
 @php
-$filsters=[
+$filters=[
 ['title'=>'Тип обробки кінця', 'type'=>'default','variants'=>['Без обробки','Зачистка','Зачистка + скручування','Зачистка + скручування + залудження','Обтиск накінечника (XH2.54 / ZH1.5 / PH2.0)']],
 ['title'=>'Наявність', 'type'=>'default','variants'=>['В наявності','Під замовлення']],
 ['title'=>'Довжина (мм)', 'type'=>'range','variants'=>['PVC','Силікон']],
@@ -12,7 +12,7 @@ $productsForFilter = $products
 
 @endphp
 
-@foreach ($filsters as $filter)
+@foreach ($filters as $filter)
 <details open>
     <summary>{{ $filter['title'] }}</summary>
     <div class="details-content">
@@ -50,7 +50,6 @@ $productsForFilter = $products
         </label>
         @endforeach
         @else
-
         <div class="range_container">
             <div class="form_control">
                 <div class="form_control_container">

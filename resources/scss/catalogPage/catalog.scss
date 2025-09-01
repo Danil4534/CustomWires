@@ -112,6 +112,45 @@
             }
         }
     }
+    .catalog__pagination {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        button {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #2b2d33;
+            background: none;
+            font-family: var(--font-family-Roboto);
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 20px;
+            }
+            &.active {
+                background: #2b2d33;
+                color: #fff;
+            }
+            &:hover {
+                transition: background 0.3s ease;
+                cursor: pointer;
+                background: #1c1e22;
+                color: #fff;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
