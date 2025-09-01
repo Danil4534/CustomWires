@@ -43,6 +43,9 @@
                     padding: 8px;
                     flex-shrink: 0;
                     position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     h1 {
                         font-family: var(--font-family-Roboto);
                         text-transform: uppercase;
@@ -77,10 +80,9 @@
                         }
                     }
                     .viewBtn {
-                        width: 155px;
+                        width: 100%;
                         height: 40px;
-                        position: absolute;
-                        bottom: 8px;
+                        position: static;
                         display: flex;
                         justify-content: center;
                         gap: 2px;
@@ -286,21 +288,22 @@
                                 height: 155.5px;
                             }
                         }
-                        .viewBtn {
-                            width: 155px;
-                            height: 40px;
-                            position: absolute;
-                            bottom: 8px;
-                            display: flex;
-                            justify-content: center;
-                            gap: 2px;
-                            align-items: center;
-                            background: rgba(255, 111, 57, 1);
-                            span {
-                                display: block;
-                            }
-                            i {
-                                font-size: 20px;
+                        .slide__bottom {
+                            padding: 0 12px 12px 12px;
+                            .viewBtn {
+                                height: 40px;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                gap: 2px;
+                                align-items: center;
+                                background: rgba(255, 111, 57, 1);
+                                span {
+                                    display: block;
+                                }
+                                i {
+                                    font-size: 20px;
+                                }
                             }
                         }
                     }
@@ -488,10 +491,9 @@
                             }
                         }
                         .viewBtn {
-                            width: 145px;
+                            width: 100%;
                             height: 40px;
-                            position: absolute;
-                            bottom: 20px;
+
                             display: flex;
                             justify-content: center;
                             gap: 2px;
@@ -653,7 +655,7 @@
                     width: 100%;
                     .swiper-slide {
                         border: 1px solid rgba(243, 243, 243, 1);
-                        width: 256px !important;
+                        width: calc(100% / 5) !important;
                         height: 440px;
                         padding: 8px;
                         flex-shrink: 0;
@@ -698,9 +700,9 @@
                             }
                         }
                         .viewBtn {
-                            width: 216px;
+                            width: 100%;
                             height: 40px;
-                            position: absolute;
+
                             bottom: 20px;
                             display: flex;
                             justify-content: center;
@@ -920,8 +922,7 @@
                         .viewBtn {
                             width: 305px;
                             height: 40px;
-                            position: absolute;
-                            bottom: 20px;
+
                             display: flex;
                             justify-content: center;
                             gap: 2px;

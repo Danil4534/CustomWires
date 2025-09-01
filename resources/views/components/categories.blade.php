@@ -21,11 +21,16 @@ $categories =[
             <div class="swiper-wrapper">
                 @foreach ($categories as $category )
                 <div class="swiper-slide">
-                    <x-picture-tag src="{{  asset('assets/'. $category['img'] )}}" />
-                    <hr>
-                    <h1>{{ $category['title'] }}</h1>
-                    <p>{{ $category['subtitle'] }}</p>
-                    <x-primary-button primaryBtnText="Переглянути" primaryBtnIconLeftSide="ph ph-plus" primaryClass="viewBtn" />
+                    <div class="slide__header">
+                        <x-picture-tag src="{{  asset('assets/'. $category['img'] )}}" />
+                        <hr>
+                        <h1>{{ $category['title'] }}</h1>
+                        <p>{{ $category['subtitle'] }}</p>
+                    </div>
+                    <div class="slide__bottom">
+
+                        <x-primary-button primaryBtnText="Переглянути" primaryBtnIconLeftSide="ph ph-plus" primaryClass="viewBtn" />
+                    </div>
                 </div>
                 @endforeach
             </div>
