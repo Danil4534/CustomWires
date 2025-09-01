@@ -168,7 +168,12 @@
                 border-radius: 2px;
                 font-size: 20px;
                 padding: 0;
-                background: rgba(255, 111, 57, 1);
+                background: var(--primary-main-orange);
+                &:hover {
+                    transition: background 0.3s ease;
+                    cursor: pointer;
+                    background: var(--primary-main-orange-hover);
+                }
             }
         }
     }
@@ -349,7 +354,12 @@
                     border-radius: 2px;
                     font-size: 24px;
                     padding: 0;
-                    background: rgba(255, 111, 57, 1);
+                    background: var(--primary-main-orange);
+                    &:hover {
+                        transition: background 0.3s ease;
+                        cursor: pointer;
+                        background: var(--primary-main-orange-hover);
+                    }
                     span {
                         display: none;
                     }
@@ -537,7 +547,12 @@
                     border-radius: 2px;
                     font-size: 24px;
                     padding: 0;
-                    background: rgba(255, 111, 57, 1);
+                    background: var(--primary-main-orange);
+                    &:hover {
+                        transition: background 0.3s ease;
+                        cursor: pointer;
+                        background: var(--primary-main-orange-hover);
+                    }
                 }
             }
         }
@@ -714,7 +729,12 @@
                     border-radius: 2px;
                     font-size: 24px;
                     padding: 0;
-                    background: rgba(255, 111, 57, 1);
+                    background: var(--primary-main-orange);
+                    &:hover {
+                        transition: background 0.3s ease;
+                        cursor: pointer;
+                        background: var(--primary-main-orange-hover);
+                    }
                 }
             }
         }
@@ -916,7 +936,12 @@
                     border-radius: 2px;
                     font-size: 24px;
                     padding: 0;
-                    background: rgba(255, 111, 57, 1);
+                    background: var(--primary-main-orange);
+                    &:hover {
+                        transition: background 0.3s ease;
+                        cursor: pointer;
+                        background: var(--primary-main-orange-hover);
+                    }
                 }
             }
         }
