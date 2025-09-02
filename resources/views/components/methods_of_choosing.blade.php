@@ -18,7 +18,7 @@
             <p class="categories__tz__subtitle">
                 Введи свої параметри, щоб одразу отримати вартість і термін виготовлення
             </p>
-            <x-primary-button primaryBtnText="Почати" primaryBtnIconLeftSide="ph-fill ph-arrow-right" primaryClass="categories__tz__btn" />
+            <x-primary-button primaryBtnText="Почати" primaryBtnIconLeftSide="ph-fill ph-arrow-right" primaryClass="categories__tz__btn" route="page.calculator" />
         </div>
 
     </div>

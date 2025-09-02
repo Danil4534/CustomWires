@@ -168,7 +168,6 @@ $chooseProducts = session()->get('chooseProducts');
         const anotherCustomer = document.querySelector('#checkAnotherCustomer');
         const anotherCustomerInfo = document.querySelector('.form__delivery__checkAnotherCustomer__hidden')
         const commentCheck = document.querySelector('#checkAddComment')
-        console.log(commentCheck)
         const commentField = document.querySelector('.form__delivery__comment')
 
         courierRadio.addEventListener('change', () => {
