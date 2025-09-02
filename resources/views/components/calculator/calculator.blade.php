@@ -188,8 +188,10 @@
             <span><i class="ph ph-check"></i></span>
             Даю згоду на обробку персональної інформації
         </label>
-        <x-primary-button primaryBtnText="Розрахувати" primaryClass="calculator__btn_calc" />
     </form>
+    <div class="calc__container__btn">
+        <x-primary-button primaryBtnText="Розрахувати" primaryClass="calculator__btn_calc" />
+    </div>
 </div>
 
 <script>

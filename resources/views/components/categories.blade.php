@@ -28,7 +28,6 @@ $categories =[
                         <p>{{ $category['subtitle'] }}</p>
                     </div>
                     <div class="slide__bottom">
-
                         <x-primary-button primaryBtnText="Переглянути" primaryBtnIconLeftSide="ph ph-plus" primaryClass="viewBtn" />
                     </div>
                 </div>
