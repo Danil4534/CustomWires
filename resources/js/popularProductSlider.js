@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         },
         breakpoints:{
             1920:{
-                slidesPerView: 'auto'
+                slidesPerView: 6
             },
             1440:{
-                 slidesPerView: 'auto'
+                 slidesPerView: 5
             }
         }
         
