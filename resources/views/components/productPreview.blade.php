@@ -7,18 +7,30 @@ $chooseProduct = $chooseProduct->first();
         <h1><a href="{{ route('page.Home') }}">Головна</a>/<a href="{{ route('page.catalog') }}">Каталог</a>/<span>{{ $chooseProduct['name'] }}</span></h1>
     </div>
     <div class="productPreview__wrapper">
-        <div class="swiper productPreview__slider">
-            <div class="swiper-wrapper">
-                @foreach ((array) $chooseProduct['img'] as $chooseProductImg )
-                <div class="swiper-slide">
-                    <x-picture-tag src="{{ asset('assets/'. $chooseProductImg)  }}" />
+        <div class="slider__wrapper">
+            <div class="swiper productPreview__slider">
+                <div class="swiper-wrapper">
+                    @foreach ((array) $chooseProduct['img'] as $chooseProductImg )
+                    <div class="swiper-slide">
+                        <x-picture-tag src="{{ asset('assets/'. $chooseProductImg)  }}" />
+                    </div>
+                    @endforeach
                 </div>
-                @endforeach
+                <div class="productPreview__prev" id="productPreview__prev"><x-secondary-button secondaryBtnIconRightSide="ph-fill ph-caret-left" /></div>
+                <div class="productPreview__next" id="productPreview__next"><x-secondary-button secondaryBtnIconRightSide="ph-fill ph-caret-right" /></div>
+                <div class="productPreview__pagination"></div>
             </div>
-            <div class="productPreview__prev" id="productPreview__prev"><x-secondary-button secondaryBtnIconRightSide="ph-fill ph-caret-left" /></div>
-            <div class="productPreview__next" id="productPreview__next"><x-secondary-button secondaryBtnIconRightSide="ph-fill ph-caret-right" /></div>
-            <div class="productPreview__pagination"></div>
+            <div class="swiper productPreview__vertical__slider">
+                <div class="swiper-wrapper">
+                    @foreach ((array) $chooseProduct['img'] as $chooseProductImg )
+                    <div class="swiper-slide">
+                        <x-picture-tag src="{{ asset('assets/'. $chooseProductImg)  }}" />
+                    </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
+
         <div class="productPreview__content">
             <div class="productContent_wrapper">
                 <h1 class="product__title">{{ $chooseProduct['name'] }}</h1>
@@ -51,7 +63,7 @@ $chooseProduct = $chooseProduct->first();
                         <p>250,00</p>
                     </div>
                     <div class="priceBlock">
-                        <h2>000{{ $chooseProduct['price'] }},00 <span>грн</span><span class="priceBlock_package"> / {{ $chooseProduct['countInPackage'] }}шт</span></h2>
+                        <h2>000{{ $chooseProduct['price'] }},00<span> грн </span><span class="priceBlock_package"> / {{ $chooseProduct['countInPackage'] }}шт</span></h2>
                         <p>{{ $chooseProduct['countInPackage'] }}шт</p>
                     </div>
                     @endif

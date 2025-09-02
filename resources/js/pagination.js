@@ -2,11 +2,11 @@
     document.addEventListener("DOMContentLoaded", function() {
         const products = Array.from(document.querySelectorAll("#catalog__list > *"));
         const getMore = document.querySelector('#getMore')
-        console.log(getMore)
+    
         let pageSize = 10;
         let currentPage = 1;
         let visibleCount = pageSize;
-        getMore.addEventListener('click', () => {
+        getMore?.addEventListener('click', () => {
             pageSize += 20;
             showPage()
         })
@@ -19,9 +19,11 @@
             products.forEach((el, i) => {
                 el.style.display = (i >= start && i < end) ? "block" : "none";
             });
+            if(getMore){
 
-            if (visibleCount >= products.length) {
-                getMore.style.display = "none";
+                if (visibleCount >= products.length) {
+                    getMore.style.display = "none";
+                }
             }
             renderPagination();
         }
@@ -29,7 +31,10 @@
         function renderPagination() {
             const totalPages = Math.ceil(products.length / pageSize);
             const pagination = document.getElementById("catalog__pagination");
-            pagination.innerHTML = "";
+           if(pagination){
+
+               pagination.innerHTML = "";
+           }
 
             if (currentPage > 1) {
                 const prev = document.createElement("button");

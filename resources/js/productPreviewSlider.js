@@ -1,10 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.querySelector('.productPreview__slider')) {
-        new Swiper('.productPreview__slider', {
+
+  
+       let slider = new Swiper('.productPreview__slider', {
             slidesPerView: 'auto',
             spaceBetween: 0,
             loop: true,
             centeredSlides: false,
+      
             keyboard: {
                 enabled: true
             },
@@ -36,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         el: '.productPreview__pagination',
                         type: 'fraction',
                         clickable: true
-                    }
+                    },
+                   
+
                 },
                 1920: {
                     slidesPerView: 'auto',
@@ -48,5 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-    }
-});
+       let slider2 = new Swiper('.productPreview__vertical__slider',{
+            slidesPerView: 'auto',
+            direction:'vertical',
+            clickable:true,
+            watchSlidesProgress: true,  freeMode: true,
+            thumbs:{
+                swiper:slider
+            }
+        })
+    

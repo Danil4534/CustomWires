@@ -5,7 +5,7 @@
     <div class="counter">
         <i class="ph ph-minus"></i>
         <input
-            type="number"
+            type="text"
             name="{{ $name }}"
             class="quantity-input"
             value="{{ $value }}"
