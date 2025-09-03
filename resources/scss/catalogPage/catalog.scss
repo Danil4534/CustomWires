@@ -857,7 +857,7 @@
                 position: sticky;
                 top: 88px;
                 .catalog__filter-content {
-                    height: 100%;
+                    max-height: 80vh;
                     overflow-y: auto;
                 }
                 .catalog__filter-content::-webkit-scrollbar-track {
