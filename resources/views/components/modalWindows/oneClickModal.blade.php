@@ -1,5 +1,6 @@
 @php
 $chooseProduct = $chooseProduct->first();
+
 @endphp
 
 <div class="oneClickModal__container">
@@ -8,16 +9,22 @@ $chooseProduct = $chooseProduct->first();
         <h1 class="oneClickModal__title">
             Замовити в один клік
         </h1>
-        <form action="" method="POST">
+        <form action="{{ route('orderProduct') }}" method="POST">
             @csrf
-            <div class="form__wrapper">
 
+            <div class="form__wrapper">
                 <div class="form__name">
                     <label for="name">Ім'я</label>
                     <div class="input__wrapper">
-                        <input type="text" placeholder="Введіть ваше ім'я" name="name">
+                        <input type="text" placeholder="Введіть ваше ім'я" name="username">
                         <i class="ph ph-x" id="clearIconField"></i>
                     </div>
+                    @error('username')
+                    <div class="error">
+                        <span><i class="ph-fill ph-warning-circle"></i></span>
+                        <h4>{{ $message }}</h4>
+                    </div>
+                    @enderror
                 </div>
                 <div class="form__phoneNumber">
                     <label for="phoneNumber">Номер телефону</label>
@@ -25,6 +32,12 @@ $chooseProduct = $chooseProduct->first();
                         <input type="text" placeholder="+380 -- --- -- --" name="phoneNumber">
                         <i class="ph ph-x" id="clearIconField"></i>
                     </div>
+                    @error('phoneNumber')
+                    <div class="error">
+                        <span><i class="ph-fill ph-warning-circle"></i></span>
+                        <h4>{{ $message }}</h4>
+                    </div>
+                    @enderror
                 </div>
             </div>
             @if($chooseProduct)
@@ -55,10 +68,7 @@ $chooseProduct = $chooseProduct->first();
                 </div>
             </div>
             @endif
-
-
             <div class="form__bottom">
-
                 <div class="form__check">
                     <label>
                         <input type="checkbox" name="check" checked>

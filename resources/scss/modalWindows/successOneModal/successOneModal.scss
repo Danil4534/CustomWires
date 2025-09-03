@@ -1,0 +1,368 @@
+.successOneModal__container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    background: rgba(0, 0, 0, 0.16);
+    z-index: 999;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease;
+    &.active {
+        height: 100%;
+        visibility: visible;
+        transition: 0.3s ease;
+        opacity: 1;
+    }
+
+    .successOneModal__Body {
+        width: 100%;
+        height: 100vh;
+        background: rgba(253, 253, 253, 1);
+        padding: 32px 16px;
+        position: relative;
+        visibility: hidden;
+        transition: 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .successOneModal__header {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 96px;
+            padding-bottom: 64px;
+            h1 {
+                font-family: var(--font-family-Roboto);
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 28px;
+                leading-trim: NONE;
+                line-height: 125%;
+                letter-spacing: 0%;
+                text-align: center;
+            }
+            p {
+                font-family: Rubik;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 18px;
+                leading-trim: NONE;
+                line-height: 150%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: #9f9f9f;
+            }
+        }
+        button {
+            width: 100%;
+            height: 40px;
+        }
+        &.active {
+            visibility: visible;
+            height: 100%;
+            transition: 0.3s ease;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .successOneModal__container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: #000;
+        background: rgba(0, 0, 0, 0.16);
+        z-index: 999;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.3s ease;
+        &.active {
+            height: 100%;
+            visibility: visible;
+            transition: 0.3s ease;
+            opacity: 1;
+        }
+
+        .successOneModal__Body {
+            width: 704px;
+            height: 100vh;
+            background: rgba(253, 253, 253, 1);
+            padding: 24px;
+            position: relative;
+            visibility: hidden;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 140px;
+            .successOneModal__header {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 48px 0px;
+                h1 {
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 28px;
+                    leading-trim: NONE;
+                    line-height: 125%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                }
+                p {
+                    max-width: 350px;
+                    font-family: Rubik;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    leading-trim: NONE;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: #9f9f9f;
+                }
+            }
+            button {
+                width: 100%;
+                height: 40px;
+            }
+            &.active {
+                visibility: visible;
+                height: 301px;
+                transition: 0.3s ease;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .successOneModal__container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: #000;
+        background: rgba(0, 0, 0, 0.16);
+        z-index: 999;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.3s ease;
+        &.active {
+            height: 100%;
+            visibility: visible;
+            transition: 0.3s ease;
+            opacity: 1;
+        }
+
+        .successOneModal__Body {
+            width: 714px;
+            height: 100vh;
+            background: rgba(253, 253, 253, 1);
+            padding: 24px;
+            position: relative;
+            visibility: hidden;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 140px;
+            .successOneModal__header {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 48px 0px;
+                h1 {
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 28px;
+                    leading-trim: NONE;
+                    line-height: 125%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                }
+                p {
+                    max-width: 350px;
+                    font-family: Rubik;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    leading-trim: NONE;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: #9f9f9f;
+                }
+            }
+            button {
+                width: 100%;
+                height: 40px;
+            }
+            &.active {
+                visibility: visible;
+                height: 301px;
+                transition: 0.3s ease;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1440px) {
+    .successOneModal__container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: #000;
+        background: rgba(0, 0, 0, 0.16);
+        z-index: 999;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.3s ease;
+        &.active {
+            height: 100%;
+            visibility: visible;
+            transition: 0.3s ease;
+            opacity: 1;
+        }
+
+        .successOneModal__Body {
+            width: 628px;
+            height: 100vh;
+            background: rgba(253, 253, 253, 1);
+            padding: 24px;
+            position: relative;
+            visibility: hidden;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 100px;
+            .successOneModal__header {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 48px 0px;
+                h1 {
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 28px;
+                    leading-trim: NONE;
+                    line-height: 125%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                }
+                p {
+                    max-width: 350px;
+                    font-family: Rubik;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    leading-trim: NONE;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: #9f9f9f;
+                }
+            }
+            button {
+                width: 100%;
+                height: 40px;
+            }
+            &.active {
+                visibility: visible;
+                height: 301px;
+                transition: 0.3s ease;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1920px) {
+    .successOneModal__container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: #000;
+        background: rgba(0, 0, 0, 0.16);
+        z-index: 999;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.3s ease;
+        &.active {
+            height: 100%;
+            visibility: visible;
+            transition: 0.3s ease;
+            opacity: 1;
+        }
+
+        .successOneModal__Body {
+            width: 848px;
+            height: 100vh;
+            background: rgba(253, 253, 253, 1);
+            padding: 32px;
+            position: relative;
+            visibility: hidden;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 100px;
+            .successOneModal__header {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 48px 0px;
+                h1 {
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 28px;
+                    leading-trim: NONE;
+                    line-height: 125%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                }
+                p {
+                    max-width: 350px;
+                    font-family: Rubik;
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 16px;
+                    leading-trim: NONE;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    color: #9f9f9f;
+                }
+            }
+            button {
+                width: 100%;
+                height: 40px;
+            }
+            &.active {
+                visibility: visible;
+                height: 301px;
+                transition: 0.3s ease;
+            }
+        }
+    }
+}

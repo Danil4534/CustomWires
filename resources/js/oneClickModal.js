@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const oneClickModalContainer= document.querySelector('.oneClickModal__container')
     const oneClickModalBody= document.querySelector('.oneClickModal__body')
     const oneClickModalCloseBtn= document.querySelector('#closeOneClickModalBtn')
+ 
   
     oneClickModalOpenBtn?.addEventListener('click', ()=>{
         document.body.style.overflowY='hidden'

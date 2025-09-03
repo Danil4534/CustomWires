@@ -68,6 +68,26 @@
                     margin-bottom: 4px;
                     color: #3a3d42;
                 }
+                .error {
+                    display: flex;
+                    gap: 8px;
+                    font-family: var(--font-family-Rubik);
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 12px;
+                    leading-trim: NONE;
+                    line-height: 130%;
+                    letter-spacing: 0%;
+                    margin-top: 8px;
+                    align-items: center;
+                    i {
+                        font-size: 16px;
+                        color: #e53935;
+                    }
+                    h4 {
+                        color: #5a5a5a;
+                    }
+                }
             }
             .form__wrapper {
                 display: flex;

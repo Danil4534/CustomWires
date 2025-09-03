@@ -1,8 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const successOneModalOpenBtn = document.querySelector('#oneClickBtn')
-    const successOneModalContainer= document.querySelector('.oneClickModal__container')
-    const successOneModalBody= document.querySelector('.oneClickModal__body')
+    const successOneModalContainer= document.querySelector('.successOneModal__container')
+    const successOneModalBody= document.querySelector('.successOneModal__Body')
     const successOneModalCloseBtn= document.querySelector('#closeOneClickModalBtn')
   
  successOneModalOpenBtn?.addEventListener('click', ()=>{

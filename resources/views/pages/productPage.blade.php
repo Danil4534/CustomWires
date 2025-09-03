@@ -46,10 +46,15 @@ $productBenefits = [
 @include('components.modalWindows.menuModal')
 @include('components.modalWindows.cartModal')
 @include('components.modalWindows.oneClickModal')
+@include('components.modalWindows.successModal')
+
+
 
 </html>
 
+
 @if (session('oneClickModalProduct'))
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const modalContainer = document.querySelector('.oneClickModal__container');
@@ -59,6 +64,21 @@ $productBenefits = [
             document.body.style.overflowY = 'hidden';
             modalContainer.classList.add('active');
             modalBody.classList.add('active');
+        }
+    });
+</script>
+@endif
+
+@if (session('success')===true)
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const successOneModalContainer = document.querySelector('.successOneModal__container')
+        const successOneModalBody = document.querySelector('.successOneModal__Body')
+
+        if (successOneModalBody && successOneModalContainer) {
+            document.body.style.overflowY = 'hidden';
+            successOneModalContainer.classList.add('active')
+            successOneModalBody.classList.add('active')
         }
     });
 </script>

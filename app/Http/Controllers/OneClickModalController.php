@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class OneClickModalController extends Controller
 {
@@ -24,8 +25,12 @@ class OneClickModalController extends Controller
 
     public function orderProduct(Request $request)
     {
+
+
         $request->validate(
+
             [
+
                 'username' => 'required|string',
                 "phoneNumber" => 'required|regex:/^\+380\d{9}$/',
             ],
@@ -35,9 +40,13 @@ class OneClickModalController extends Controller
                 'phoneNumber.regex' => 'Неправильний формат телефону'
             ]
         );
+
         $data = [
             'userName' => $request->username,
-            'phoneNumber' => $request->phoneNum,
+            'phoneNumber' => $request->phoneNumber,
         ];
+        session(['oneClickModalProduct' => null]);
+        session(['success' => true]);
+        return redirect()->back();
     }
 }
