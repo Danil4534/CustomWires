@@ -119,6 +119,29 @@
         align-items: center;
         gap: 8px;
         margin-top: 16px;
+        span {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #2b2d33;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Roboto Condensed;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: #2b2d33;
+            &:hover {
+                transition: background 0.3s ease;
+                cursor: pointer;
+                background: #1c1e22;
+                color: #fff;
+            }
+        }
         button {
             width: 40px;
             height: 40px;
@@ -471,7 +494,6 @@
                         display: flex;
                         align-items: center;
                         cursor: pointer;
-                        list-style: initial;
                     }
 
                     .details-content {
@@ -562,7 +584,7 @@
                     summary {
                         padding-top: 16px;
                         padding-bottom: 20px;
-                        list-style: auto;
+
                         -webkit-appearance: auto;
                     }
 
@@ -958,8 +980,6 @@
                     summary {
                         padding-top: 16px;
                         padding-bottom: 20px;
-                        list-style: auto;
-                        -webkit-appearance: auto;
                     }
 
                     .details-content {

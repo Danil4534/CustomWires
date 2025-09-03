@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const quizList = document.querySelector("#answersList"); 
     const questions = document.querySelectorAll(".question");
-    let currentIndex = 0;
     let finished = false;
-function showQuestion(index) {
+    let currentIndex =0;
+  questions.forEach((q, i) => {
+        q.style.display = (i === 0) ? 'block' : 'none';
+    });
+  showQuestion(0);
+    function showQuestion(index) {
     if (!finished) {
         const q = questions[index];
         if (!q) return;
@@ -29,18 +33,20 @@ function showQuestion(index) {
     }
 }
 
-    questions.forEach((q, i) => {
-        q.style.display = (i === 0) ? 'block' : 'none';
-    });
-    showQuestion(0);
+  
+  
 
     questions.forEach((q, idx) => {
         const nextBtn = q.querySelector('.nextBtn');
         const skipBtn = q.querySelector('.skipBtn');
         const backBtn = q.querySelector('.backBtn');
         const editBtn = q.querySelector('.ph-pencil')
-
+    
         editBtn.addEventListener('click', ()=>{
+              questions.forEach((q=>{
+                q.classList.remove('active')
+                q.querySelector("details").open=false
+              }))
               q.querySelector("details").open=true
               q.classList.add('active')
         })
@@ -54,6 +60,7 @@ function showQuestion(index) {
             } else {
              
                 finished = true;
+                 editBtn.style.display='block'
                 showQuestion(0);
             }
         }
