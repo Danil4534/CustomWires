@@ -3,7 +3,7 @@
         const products = Array.from(document.querySelectorAll("#catalog__list > *"));
         const getMore = document.querySelector('#getMore')
     
-        let pageSize = 10;
+        let pageSize = 20;
         let currentPage = 1;
         let visibleCount = pageSize;
         getMore?.addEventListener('click', () => {

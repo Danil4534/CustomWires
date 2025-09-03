@@ -456,8 +456,8 @@
             gap: 24px;
             .catalog__filter {
                 min-width: 302px;
-                padding: 16px;
-                padding-bottom: 0px;
+                padding: 0 16px;
+
                 border: 1px solid rgba(243, 243, 243, 1);
                 height: calc(100vh - 140px);
                 display: flex;
@@ -849,10 +849,9 @@
             gap: 24px;
             .catalog__filter {
                 min-width: 408px;
-                padding: 16px;
-                padding-bottom: 0px;
+                padding: 0 16px;
                 border: 1px solid rgba(243, 243, 243, 1);
-                height: calc(100vh - 160px);
+                height: fit-content;
                 display: flex;
                 flex-direction: column;
                 position: sticky;
