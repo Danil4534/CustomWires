@@ -224,7 +224,7 @@
             font-family: var(--font-family-Roboto);
             font-weight: 500;
             font-style: Medium;
-            font-size: 40px;
+            font-size: 40px !important;
             line-height: 125%;
             letter-spacing: 0%;
             text-transform: uppercase;
@@ -421,7 +421,7 @@
             font-family: var(--font-family-Roboto);
             font-weight: 500;
             font-style: Medium;
-            font-size: 40px;
+            font-size: 40px !important;
             line-height: 125%;
             letter-spacing: 0%;
             text-transform: uppercase;
@@ -627,7 +627,7 @@
                 font-family: var(--font-family-Roboto);
                 font-weight: 500;
                 font-style: Medium;
-                font-size: 56px;
+                font-size: 56px !important;
                 line-height: 125%;
                 letter-spacing: 0%;
                 text-transform: uppercase;
@@ -833,6 +833,9 @@
                 }
             }
         }
+    }
+    .productMethods {
+        padding: 0 80px 72px;
     }
 }
 @media screen and (min-width: 1920px) {
@@ -1047,5 +1050,8 @@
                 }
             }
         }
+    }
+    .productMethods {
+        padding: 0;
     }
 }

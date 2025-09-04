@@ -9,7 +9,7 @@ $categories =[
 
 @endphp
 
-<div class="categories__container">
+<div class="categories__container {{ Route::currentRouteName() !="page.Home"?"productMethods":"" }}">
     <div class="categories__header {{ Route::currentRouteName() !== 'page.Home'? "hidden":'' }}">
         <h1 class="categories__title">Категорії кабелю</h1>
         <p class="categories__subtitle">

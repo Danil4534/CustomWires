@@ -363,6 +363,7 @@ footer {
                 display: flex;
                 margin-top: 0px;
                 .contactInfo_socialLinks {
+                    min-width: 187px;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
