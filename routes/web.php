@@ -15,3 +15,4 @@ Route::get('/quiz', [NavController::class, 'getQuizPage'])->name('page.Quiz');
 Route::get('/checkout', [NavController::class, 'getCheckoutPage'])->name('page.checkout');
 Route::get('/calculator', [NavController::class, 'getCalculatorPage'])->name('page.calculator');
 Route::post('/oneClickSuccess', [OneClickModalController::class, 'orderProduct'])->name('orderProduct');
+Route::get("/page-list", [NavController::class, 'getPageList'])->name("page.List");

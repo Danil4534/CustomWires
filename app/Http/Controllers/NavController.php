@@ -80,6 +80,10 @@ class NavController extends Controller
         $products = $this->products;
         return view("pages.homePage", compact("products"));
     }
+    public function getPageList()
+    {
+        return view('pages.pageList');
+    }
     public function getProductPage($productId)
     {
         $products = $this->products;
