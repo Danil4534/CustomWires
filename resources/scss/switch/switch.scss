@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
+
     p {
         font-family: Rubik;
         font-weight: 400;
@@ -68,15 +69,48 @@
 
         input:checked + .slider {
             background-color: #ff6f39;
+            border-color: #ff6f39;
         }
-
-        input:focus + .slider {
-            border: 1px solid #ff6f39;
+        input:hover + .slider {
+            border-color: #ff6f39;
         }
-
+        input:hover + .slider:before {
+            background: #ff6f39;
+        }
+        input:checked + .slider:hover {
+            background: #e65b27;
+        }
         input:checked + .slider:before {
             transform: translateY(-50%) translateX(36px);
             background-color: #fff;
+        }
+    }
+    .checkbox:has(input:checked) p:first-child {
+        color: #9f9f9f;
+    }
+
+    .checkbox:has(input:checked) p:last-child {
+        color: #3a3d42;
+    }
+
+    .checkbox:not(:has(input:checked)) p:first-child {
+        color: #3a3d42;
+    }
+
+    .checkbox:not(:has(input:checked)) p:last-child {
+        color: #9f9f9f;
+    }
+}
+.disabled {
+    pointer-events: none;
+
+    .checkbox {
+        input + .slider {
+            background: #f3f3f3;
+            border-color: #f3f3f3;
+        }
+        input + .slider:before {
+            background: #c4c4c4;
         }
     }
 }

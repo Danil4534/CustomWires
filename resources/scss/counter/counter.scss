@@ -35,6 +35,10 @@
             &:focus {
                 border-color: #ff6f39;
             }
+            &:hover {
+                border-color: #ff6f39;
+                cursor: pointer;
+            }
         }
         .ph-minus {
             position: absolute;
@@ -43,7 +47,11 @@
             transform: translateY(-50%);
             font-size: 20px;
             color: #2b2d33;
+            &:hover {
+                cursor: pointer;
+            }
         }
+
         .ph-plus {
             position: absolute;
             right: 8px;
@@ -51,6 +59,13 @@
             transform: translateY(-50%);
             font-size: 20px;
             color: #2b2d33;
+            &:hover {
+                cursor: pointer;
+            }
         }
+    }
+    .counter:has(.ph-plus:hover) input,
+    .counter:has(.ph-minus:hover) input {
+        border-color: #ff6f39;
     }
 }

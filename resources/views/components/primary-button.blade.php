@@ -1,5 +1,8 @@
+@props(['disabled'])
 <button class="primaryBtn {{ $primaryClass }}" id="{{ $id ?? '' }}" type="{{ $type ??'' }}" @if(!empty($route))
-    onclick="window.location.href='{{ route($route) }}'" @endif>
+    onclick="window.location.href='{{ route($route) }}'" @endif @if(!empty($disabled))
+    disabled
+    @endif>
     @if(!empty($primaryBtnIconLeftSide))
     <i class="{{ $primaryBtnIconLeftSide }}"></i>
     @endif

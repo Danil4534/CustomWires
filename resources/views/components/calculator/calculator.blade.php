@@ -33,9 +33,9 @@
                             <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
                         </div>
                         <div class="swithers">
-                            <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                            <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
-                            <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
+                            <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так" :disabled="true"></x-switch.switch>
+                            <x-switch.switch title="Залудження А" leftAnswer="Ні" rightAnswer="Так" :disabled="true"></x-switch.switch>
+                            <x-switch.switch title="Клімпування А" leftAnswer="Ні" rightAnswer="Так" :disabled="true"></x-switch.switch>
                         </div>
                         <div class="test__calculator__info">
                             <p><i class="ph-fill ph-info"></i>Інструкція:</p>

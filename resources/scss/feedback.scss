@@ -32,6 +32,9 @@
                 letter-spacing: 0%;
                 margin-bottom: 4px;
                 color: rgba(58, 61, 66, 1);
+                span {
+                    color: red;
+                }
             }
             textarea {
                 resize: none;
@@ -294,6 +297,10 @@
             letter-spacing: 0%;
             margin-bottom: 16px;
             color: rgba(255, 111, 57, 1);
+            &:hover {
+                color: #e65b27;
+                cursor: pointer;
+            }
         }
     }
     .feedback__socialLinks {
@@ -307,8 +314,11 @@
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            color: rgba(255, 111, 57, 1);
+            color: #ff6f39;
             font-size: 28px;
+            &:hover {
+                color: #e65b27;
+            }
         }
     }
 }
@@ -613,6 +623,10 @@
                 letter-spacing: 0%;
                 margin-bottom: 16px;
                 color: rgba(255, 111, 57, 1);
+                &:hover {
+                    color: #e65b27;
+                    cursor: pointer;
+                }
             }
         }
         .feedback__socialLinks {
@@ -626,8 +640,11 @@
                 justify-content: center;
                 align-items: center;
                 text-decoration: none;
-                color: rgba(255, 111, 57, 1);
+                color: #ff6f39;
                 font-size: 28px;
+                &:hover {
+                    color: #e65b27;
+                }
             }
         }
     }
@@ -930,6 +947,10 @@
                 letter-spacing: 0%;
                 margin-bottom: 16px;
                 color: rgba(255, 111, 57, 1);
+                &:hover {
+                    color: #e65b27;
+                    cursor: pointer;
+                }
             }
         }
         .feedback__socialLinks {
@@ -945,6 +966,9 @@
                 text-decoration: none;
                 color: rgba(255, 111, 57, 1);
                 font-size: 28px;
+                &:hover {
+                    color: #e65b27;
+                }
             }
         }
     }
@@ -1253,6 +1277,10 @@
                 letter-spacing: 0%;
                 margin-bottom: 16px;
                 color: rgba(255, 111, 57, 1);
+                &:hover {
+                    color: #e65b27;
+                    cursor: pointer;
+                }
             }
         }
         .feedback__socialLinks {
@@ -1268,6 +1296,9 @@
                 text-decoration: none;
                 color: rgba(255, 111, 57, 1);
                 font-size: 28px;
+                &:hover {
+                    color: #e65b27;
+                }
             }
         }
     }
@@ -1579,6 +1610,9 @@
                 letter-spacing: 0%;
                 margin-bottom: 16px;
                 color: rgba(255, 111, 57, 1);
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
         .feedback__socialLinks {
@@ -1594,6 +1628,9 @@
                 text-decoration: none;
                 color: rgba(255, 111, 57, 1);
                 font-size: 28px;
+                &:hover {
+                    color: #e65b27;
+                }
             }
         }
     }

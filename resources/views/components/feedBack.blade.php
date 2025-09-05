@@ -11,21 +11,21 @@ $socialLinks = [
     <form action="" class="feedback__form">
         <h1 class="feedback__title">Зворотній зв'язок</h1>
         <div class="form__name">
-            <label for="name">Ім'я</label>
+            <label for="name">Ім'я <span>*</span></label>
             <div class="input__wrapper">
                 <input type="text" placeholder="Введіть ваше ім'я" name="name">
                 <i class="ph ph-x" id="clearIconField"></i>
             </div>
         </div>
         <div class="form__phoneNumber">
-            <label for="phoneNumber">Номер телефону</label>
+            <label for="phoneNumber">Номер телефону<span>*</span></label>
             <div class="input__wrapper">
                 <input type="text" placeholder="+380 -- --- -- --" name="phoneNumber">
                 <i class="ph ph-x" id="clearIconField"></i>
             </div>
         </div>
         <div class="form__comment">
-            <label for="comment">Коментар</label>
+            <label for="comment">Коментар<span>*</span></label>
             <textarea name="comment" id="usercomment" placeholder="Не обов’язково"></textarea>
         </div>
         <div class="feedback__drop">
@@ -52,7 +52,7 @@ $socialLinks = [
                 Я ознайомився та погоджуюсь з політикою конфіденційності
             </label>
         </div>
-        <x-primary-button primaryBtnText="Надіслати" type="submit" primaryClass="form__btn" />
+        <x-primary-button primaryBtnText="Надіслати" type="submit" primaryClass="form__btn" disabled />
     </form>
     <div class="feedback__details">
 

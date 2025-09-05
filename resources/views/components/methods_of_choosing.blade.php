@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="categories__tz categoryBox">
-        <x-picture-tag src="{{ asset('assets/tzLogo.svg') }}" alt="quizLogo" :lazy="true" class="categoryLogo" />
+        <x-picture-tag src="{{ asset('assets/tzLogo.png') }}" alt="quizLogo" :lazy="true" class="categoryLogoTZ" />
         <div class="categories__content">
 
             <h2 class="categories__tz__title">Є готове ТЗ?</h2>

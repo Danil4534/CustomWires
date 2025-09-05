@@ -491,9 +491,9 @@
                     overflow: hidden;
                     padding: 8px 0px;
                     summary {
-                        display: flex;
                         align-items: center;
                         cursor: pointer;
+                        -webkit-appearance: none !important;
                     }
 
                     .details-content {
@@ -542,6 +542,15 @@
                                 cursor: pointer;
                                 position: relative;
                                 transition: all 0.2s ease;
+                            }
+                            &:hover {
+                                input {
+                                    background-color: #e65b27;
+                                    border: none;
+                                    & + span i {
+                                        display: block;
+                                    }
+                                }
                             }
 
                             span {
@@ -880,9 +889,9 @@
                     border-top: 1px solid #f3f3f3;
                     border-bottom: 1px solid #f3f3f3;
                     summary {
-                        display: flex;
                         align-items: center;
                         cursor: pointer;
+                        -webkit-appearance: none;
                     }
 
                     .details-content {

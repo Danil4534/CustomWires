@@ -89,10 +89,10 @@
             padding: 16px 0px;
             border-top: 1px solid #f3f3f3;
             summary {
-                display: flex;
                 align-items: center;
                 cursor: pointer;
                 list-style: initial;
+                -webkit-appearance: none;
             }
 
             .details-content {
@@ -159,7 +159,12 @@
                             display: none;
                         }
                     }
-
+                    input:hover {
+                        background-color: #e65b27;
+                        & + span i {
+                            display: block;
+                        }
+                    }
                     input:checked {
                         background: rgba(255, 111, 57, 1);
                         border-color: rgba(255, 111, 57, 1);

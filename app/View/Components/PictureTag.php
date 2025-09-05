@@ -23,7 +23,9 @@ class PictureTag extends Component
 
     public function webpSrc()
     {
-        return preg_replace('/\.(jpg|jpeg|png)$/i', '.webp', $this->src);
+        $webp = preg_replace('/\.(jpg|jpeg|png)$/i', '.webp', $this->src);
+
+        return file_exists(public_path($webp)) ? $webp : $this->src;
     }
 
     public function render(): View|Closure|string

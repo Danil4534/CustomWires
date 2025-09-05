@@ -90,6 +90,9 @@ footer {
                         line-height: 145%;
                         letter-spacing: 0%;
                         vertical-align: middle;
+                        &:hover {
+                            color: #e65b27;
+                        }
                     }
                 }
             }
@@ -241,6 +244,9 @@ footer {
                                 line-height: 145%;
                                 letter-spacing: 0%;
                                 vertical-align: middle;
+                                &:hover {
+                                    color: #e65b27;
+                                }
                             }
                         }
                     }
@@ -381,6 +387,9 @@ footer {
                             justify-content: center;
                             align-items: center;
                             text-decoration: none;
+                            &:hover {
+                                color: #e65b27;
+                            }
                             i {
                                 color: var(--primary-main-orange);
                                 font-size: 20px;
@@ -489,6 +498,13 @@ footer {
                 :first-child {
                     display: flex;
                     gap: 24px;
+                    p {
+                        transition: 0.3s ease;
+                        &:hover {
+                            color: #e65b27;
+                            cursor: pointer;
+                        }
+                    }
                 }
 
                 p {
@@ -672,6 +688,9 @@ footer {
                                     line-height: 145%;
                                     letter-spacing: 0%;
                                     vertical-align: middle;
+                                    &:hover {
+                                        color: #e65b27;
+                                    }
                                 }
                             }
                         }
@@ -893,6 +912,11 @@ footer {
                                 line-height: 145%;
                                 letter-spacing: 0%;
                                 vertical-align: middle;
+                                transition: 0.3s ease;
+                                &:hover {
+                                    transition: 0.3s ease;
+                                    color: #ff6f39;
+                                }
                             }
                         }
                     }

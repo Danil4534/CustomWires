@@ -39,7 +39,7 @@ $sliderContent = [
                 <hr />
                 <div class="prodCard_content_bottomBox">
                     <p>190.00 ГРН / <span>100шт.</span> </p>
-                    <a href="">Переглянути<i class="ph ph-plus"></i></a>
+                    <a href="/product/1">Переглянути<i class="ph ph-plus"></i></a>
                 </div>
             </div>
         </div>

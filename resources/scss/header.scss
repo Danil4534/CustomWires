@@ -309,6 +309,9 @@ header {
                                     line-height: 150%;
                                     letter-spacing: 0%;
                                     color: rgba(28, 30, 34, 1);
+                                    &:hover {
+                                        color: #ff6f39;
+                                    }
                                 }
                             }
                         }
@@ -440,6 +443,9 @@ header {
                                     line-height: 150%;
                                     letter-spacing: 0%;
                                     color: rgba(28, 30, 34, 1);
+                                    &:hover {
+                                        color: #ff6f39;
+                                    }
                                 }
                             }
                         }

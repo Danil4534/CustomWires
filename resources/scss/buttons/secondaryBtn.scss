@@ -30,10 +30,10 @@
         background: var(--primary-soft);
         border-color: transparent;
     }
-    &:hover {
-        cursor: pointer;
-        transition: background 0.3s ease;
-        background: var(--primary-main-orange-hover);
-        color: var(--primary-soft);
-    }
+}
+.secondaryBtn:not(:disabled):hover {
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background: var(--primary-main-orange-hover);
+    color: var(--primary-soft);
 }
