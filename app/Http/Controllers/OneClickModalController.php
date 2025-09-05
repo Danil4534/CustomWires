@@ -11,9 +11,8 @@ class OneClickModalController extends Controller
     public function addProduct(Request $request)
     {
         if ($request->input('action') === "oneClickOrder") {
-            $product = json_decode(base64_decode($request->input('product')), true);
+            $product = json_decode(base64_decode($request->input(key: 'product')), true);
             session(['oneClickModalProduct' => $product]);
-            return redirect()->back()->with('oneClickOrder', true);
         }
     }
     public function removeProduct()
@@ -25,12 +24,8 @@ class OneClickModalController extends Controller
 
     public function orderProduct(Request $request)
     {
-
-
         $request->validate(
-
             [
-
                 'username' => 'required|string',
                 "phoneNumber" => 'required|regex:/^\+380\d{9}$/',
             ],
@@ -40,13 +35,11 @@ class OneClickModalController extends Controller
                 'phoneNumber.regex' => 'Неправильний формат телефону'
             ]
         );
-
         $data = [
             'userName' => $request->username,
             'phoneNumber' => $request->phoneNumber,
         ];
         session(['oneClickModalProduct' => null]);
         session(['success' => true]);
-        return redirect()->back();
     }
 }

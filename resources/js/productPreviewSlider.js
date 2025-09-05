@@ -1,63 +1,48 @@
+let slider = new Swiper('.productPreview__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: false,
 
-  
-       let slider = new Swiper('.productPreview__slider', {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            loop: true,
-            centeredSlides: false,
-      
-            keyboard: {
-                enabled: true
-            },
+    keyboard: {
+        enabled: true
+    },
 
-            navigation: {
-                nextEl: "#productPreview__next",
-                prevEl: "#productPreview__prev"
-            },
-            pagination: {
-                el: '.productPreview__pagination',
-                type: 'bullets',
-                clickable: true
-            },
+    navigation: {
+        nextEl: "#productPreview__next",
+        prevEl: "#productPreview__prev"
+    },
 
-            breakpoints: {
-                375:{
-                    slidesPerView:'auto',
-                      pagination: {
-                        el: '.productPreview__pagination',
-                        type: 'bullets',
-                        clickable: true
-                    }
-                },
+    pagination: {
+        el: '.productPreview__pagination',
+        type: 'bullets',
+        clickable: true
+    }
+});
 
+let slider2 = new Swiper('.productPreview__vertical__slider', {
+    slidesPerView: 'auto',
+    direction: 'vertical',
+    clickable: true,
+    watchSlidesProgress: true,
+    freeMode: true,
+    thumbs: {
+        swiper: slider
+    }
+});
 
-                1440: {
-                    slidesPerView: 'auto',
-                    pagination: {
-                        el: '.productPreview__pagination',
-                        type: 'fraction',
-                        clickable: true
-                    },
-                   
+function updatePagination() {
+    if (window.innerWidth >= 1440) {
+        slider.params.pagination.type = 'fraction';
+    } else {
+        slider.params.pagination.type = 'bullets';
+    }
 
-                },
-                1920: {
-                    slidesPerView: 'auto',
-                    centeredSlides: true,  pagination: {
-                        el: '.productPreview__pagination',
-                        type: 'fraction',
-                        clickable: true
-                    }
-                }
-            }
-        });
-       let slider2 = new Swiper('.productPreview__vertical__slider',{
-            slidesPerView: 'auto',
-            direction:'vertical',
-            clickable:true,
-            watchSlidesProgress: true,  freeMode: true,
-            thumbs:{
-                swiper:slider
-            }
-        })
-    
+    slider.pagination.destroy();
+    slider.pagination.init();
+    slider.pagination.render();
+    slider.pagination.update();
+}
+
+updatePagination();
+window.addEventListener('resize', updatePagination);

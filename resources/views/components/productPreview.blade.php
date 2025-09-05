@@ -51,7 +51,7 @@ $chooseProduct = $chooseProduct->first();
                         </ul>
                     </div>
                 </div>
-                <hr>
+
             </div>
             <div class="productPrice__wrapper">
                 <div class="productPrice__content">
@@ -83,11 +83,13 @@ $chooseProduct = $chooseProduct->first();
                         <x-secondary-button secondaryBtnIconLeftSide="ph ph-plus" secondaryBtnText="Замовити в один клік" secondaryClass="btnOneClick" id="oneClickBtn" name="action" value="oneClickOrder" />
                     </form>
                 </div>
+                <hr class="separator">
                 <div class="product_methodsOfpayment">
                     @include('components.methods_of_payment')
+                    <hr class="methods__separator">
                 </div>
             </div>
-            <hr>
+
             <div class="product__description">
                 <h2>опис</h2>
                 <p>{{ $chooseProduct['description'] }}</p>

@@ -130,6 +130,9 @@
             flex-direction: column;
             gap: 16px;
             border: 1px solid rgba(243, 243, 243, 1);
+            .productContent_wrapper {
+                border-bottom: 1px solid #f3f3f3;
+            }
             .product__title {
                 font-family: var(--font-family-Roboto);
                 font-weight: 500;
@@ -169,7 +172,7 @@
             hr {
                 height: 1px;
                 border: none;
-                margin-bottom: 16px;
+                margin: 16px 0;
                 background: rgba(243, 243, 243, 1);
             }
             .product__characteristics {
@@ -383,6 +386,9 @@
             }
             .product_methodsOfpayment {
                 margin-top: 16px;
+                .methods__separator {
+                    margin-bottom: 0;
+                }
                 .footer_methods_payment {
                     ul {
                         display: flex;
@@ -410,6 +416,9 @@
                     }
                 }
             }
+        }
+        .separator {
+            display: none;
         }
     }
     .product__description {
@@ -1045,6 +1054,7 @@
                     border: none;
                     background: rgba(243, 243, 243, 1);
                 }
+
                 .product__characteristics {
                     display: flex;
                     flex-direction: column;
@@ -2111,7 +2121,7 @@
                             width: 100%;
                             button {
                                 width: 100%;
-                                height: 40px;
+                                height: 48px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -2126,45 +2136,13 @@
                             display: flex;
                             align-items: center;
                             gap: 8px;
-                            .product__quantity {
-                                width: 124px;
-                                height: 40px;
-                                display: flex;
-                                align-items: center;
-                                position: relative;
-                                button {
-                                    width: 32px;
-                                    height: 32px;
-                                    background: transparent;
-                                    border: none;
-                                    z-index: 90;
-                                    i {
-                                        font-size: 20px;
+                            .counter__container {
+                                height: 48px;
+                                .counter {
+                                    height: 48px;
+                                    input {
+                                        height: 48px;
                                     }
-                                }
-                                .minus {
-                                    position: absolute;
-                                    left: 8px;
-                                }
-                                .plus {
-                                    position: absolute;
-                                    right: 8px;
-                                }
-                                input {
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 100%;
-                                    text-align: center;
-                                    font-family: var(--font-family-Rubik);
-                                    font-weight: 400;
-                                    font-size: 14px;
-                                    line-height: 145%;
-                                    letter-spacing: 0%;
-                                    text-align: center;
-                                    color: rgba(90, 90, 90, 1);
-                                    background: rgba(243, 243, 243, 1);
-                                    border: 1px solid rgba(196, 196, 196, 1);
-                                    border-radius: 2px;
                                 }
                             }
                         }
@@ -2173,7 +2151,7 @@
                         width: 100%;
                         display: flex;
                         align-items: center;
-                        height: 40px;
+                        height: 48px;
                     }
                 }
                 .product__description {

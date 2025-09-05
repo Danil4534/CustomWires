@@ -51,35 +51,3 @@ $productBenefits = [
 
 
 </html>
-
-
-@if (session('oneClickModalProduct'))
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const modalContainer = document.querySelector('.oneClickModal__container');
-        const modalBody = document.querySelector('.oneClickModal__body');
-
-        if (modalContainer && modalBody) {
-            document.body.style.overflowY = 'hidden';
-            modalContainer.classList.add('active');
-            modalBody.classList.add('active');
-        }
-    });
-</script>
-@endif
-
-@if (session('success')===true)
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const successOneModalContainer = document.querySelector('.successOneModal__container')
-        const successOneModalBody = document.querySelector('.successOneModal__Body')
-
-        if (successOneModalBody && successOneModalContainer) {
-            document.body.style.overflowY = 'hidden';
-            successOneModalContainer.classList.add('active')
-            successOneModalBody.classList.add('active')
-        }
-    });
-</script>
-@endif
