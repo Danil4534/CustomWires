@@ -2,68 +2,87 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizList = document.querySelector("#answersList"); 
     const questions = document.querySelectorAll(".question");
     let finished = false;
-    let currentIndex =0;
-  questions.forEach((q, i) => {
+    let currentIndex = 0;
+
+    questions.forEach((q, i) => {
         q.style.display = (i === 0) ? 'block' : 'none';
     });
-  showQuestion(0);
+
+    showQuestion(0);
+
     function showQuestion(index) {
-    if (!finished) {
-        const q = questions[index];
-        if (!q) return;
-        const backBtn = q.querySelector('.backBtn');
-        const editBtn = q.querySelector('.ph-pencil')
-        quizList.insertBefore(q, quizList.firstChild);
-        editBtn.style.display='none'
-        if (backBtn) backBtn.disabled = (index === 0);
+        if (!finished) {
+            const q = questions[index];
+            if (!q) return;
+            const backBtn = q.querySelector('.backBtn');
+            const editBtn = q.querySelector('.ph-pencil');
+            const nextBtn = q.querySelector('.nextBtn'); 
+            quizList.insertBefore(q, quizList.firstChild);
+            editBtn.style.display = 'none';
+            if (backBtn) backBtn.disabled = (index === 0);
+            q.style.display = 'block';
+            q.classList.add('active');
+            const details = q.querySelector("details");
+            if (details) details.open = true;
+            if (nextBtn) {
+             
+                const checked = q.querySelector('input[type="radio"]:checked');
+                nextBtn.disabled = !checked;
 
-        q.style.display = 'block';
-        q.classList.add('active');
-        const details = q.querySelector("details");
-        if (details) details.open = true;
+                const radios = q.querySelectorAll('input[type="radio"]');
+                radios.forEach(radio => {
+                    radio.addEventListener('change', () => {
+                        nextBtn.disabled = false;
 
-        currentIndex = index;
-    } else {
-        questions.forEach(item => {
-            item.style.display = 'block';
-            item.classList.remove('active');
-            const details = item.querySelector("details");
-            if (details) details.open = false;
-        });
+                    });
+                });
+            }
+            currentIndex = index;
+        } else {
+            questions.forEach(item => {
+                item.style.display = 'block';
+                item.classList.remove('active');
+                const details = item.querySelector("details");
+                if (details) details.open = false;
+            });
+        }
     }
-}
-
-  
-  
 
     questions.forEach((q, idx) => {
         const nextBtn = q.querySelector('.nextBtn');
         const skipBtn = q.querySelector('.skipBtn');
         const backBtn = q.querySelector('.backBtn');
-        const editBtn = q.querySelector('.ph-pencil')
-    
-        editBtn.addEventListener('click', ()=>{
-              questions.forEach((q=>{
-                q.classList.remove('active')
-                q.querySelector("details").open=false
-              }))
-              q.querySelector("details").open=true
-              q.classList.add('active')
-        })
+        const editBtn = q.querySelector('.ph-pencil');
 
-        function goNext() {
-            if (idx + 1 < questions.length) {
-                editBtn.style.display='block'
-                q.classList.remove('active')
-                q.querySelector("details").open=false
-                showQuestion(idx + 1);
-            } else {
-             
-                finished = true;
-                 editBtn.style.display='block'
-                showQuestion(0);
-            }
+        editBtn.addEventListener('click', () => {
+            questions.forEach((q => {
+                q.classList.remove('active');
+                q.querySelector("details").open = false;
+            }));
+            q.querySelector("details").open = true;
+            q.classList.add('active');
+        });
+
+      function goNext() {
+    const checked = q.querySelector('input[type="radio"]:checked');
+    if (checked) {
+        const answerSpan = q.querySelector('.selected-answer');
+        if (answerSpan) {
+            answerSpan.textContent = `: ${checked.value}`;
         }
+    }
+
+    if (idx + 1 < questions.length) {
+        editBtn.style.display = 'block';
+        q.classList.remove('active');
+        q.querySelector("details").open = false;
+        showQuestion(idx + 1);
+    } else {
+        finished = true;
+        editBtn.style.display = 'block';
+        showQuestion(0);
+    }
+}
 
         if (nextBtn) nextBtn.addEventListener('click', goNext);
         if (skipBtn) skipBtn.addEventListener('click', goNext);
@@ -71,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (backBtn) {
             backBtn.addEventListener('click', () => {
                 if (idx > 0) {
-                      q.classList.remove('active')
-                q.querySelector("details").open=false
+                    q.classList.remove('active');
+                    q.querySelector("details").open = false;
                     showQuestion(idx - 1);
                 }
             });

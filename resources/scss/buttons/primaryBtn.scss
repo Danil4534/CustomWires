@@ -57,7 +57,11 @@
         color: var(--gray);
         background: var(--primary-soft);
     }
-    :not(:disabled):hover {
+    &:disabled:hover {
+        cursor: not-allowed;
+        background: var(--primary-soft);
+    }
+    &:hover {
         cursor: pointer;
         transition: background 0.3s ease;
         background: var(--primary-main-orange-hover);

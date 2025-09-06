@@ -53,7 +53,7 @@ $questions = [
                         <div class="question__content">
                             <h1>
                                 <span>Запитання {{ $qIndex+1 }}:</span>
-                                {{ $question['question'] }}
+                                {{ $question['question'] }}<span class="selected-answer"></span>
                             </h1>
                             <x-ghost-btn ghostBtnIconLeftSide="ph-fill ph-pencil"></x-ghost-btn>
                         </div>

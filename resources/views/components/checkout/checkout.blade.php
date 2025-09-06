@@ -32,7 +32,7 @@ $chooseProducts = session()->get('chooseProducts');
                         </h4>
                     </div>
                     <div>
-                        <p>Вартість:</p>
+                        <p> Всього:</p>
                         <h4>
                             200<span>грн</span>
                         </h4>
@@ -172,6 +172,7 @@ $chooseProducts = session()->get('chooseProducts');
 
         courierRadio.addEventListener('change', () => {
             courierContent.classList.toggle('hidden', !courierRadio.checked)
+
         })
         departmentRadio.addEventListener('change', () => {
             courierContent.classList.toggle('hidden', departmentRadio.checked)

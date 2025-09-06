@@ -29,7 +29,14 @@
             flex-direction: column;
             list-style: none;
             gap: 16px;
-
+            .question:has(details[open]) summary {
+                background: #fff2ec;
+                h1 {
+                    span:not(.selected-answer) {
+                        color: #ff6f39 !important;
+                    }
+                }
+            }
             li:not(:has(.active)) {
                 display: block;
                 .quiz__question {
@@ -68,10 +75,23 @@
                                 letter-spacing: 0%;
                                 color: #9f9f9f;
                             }
+                            .selected-answer {
+                                width: 100%;
+                                height: fit-content;
+                                padding-right: 0px;
+                                color: #9f9f9f;
+                                font-family: var(--font-family-Rubik);
+                                font-weight: 400;
+                                font-style: Regular;
+                                font-size: 14px;
+                                line-height: 145%;
+                                letter-spacing: 0%;
+                            }
                         }
                     }
                 }
             }
+
             li.active {
                 display: block;
                 .quiz__question {
