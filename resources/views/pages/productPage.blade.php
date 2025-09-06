@@ -46,7 +46,7 @@ $productBenefits = [
 @include('components.modalWindows.menuModal')
 @include('components.modalWindows.cartModal')
 @include('components.modalWindows.oneClickModal')
-@include('components.modalWindows.successModal')
+<!-- @include('components.modalWindows.successModal') -->
 
 
 

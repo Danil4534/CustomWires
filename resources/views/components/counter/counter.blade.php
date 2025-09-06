@@ -10,7 +10,6 @@
             class="quantity-input"
             value="{{ $value }}"
             min="0"
-            readonly
             data-step="{{ $step }}">
         <i class="ph ph-plus"></i>
     </div>

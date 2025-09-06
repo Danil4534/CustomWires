@@ -8,7 +8,10 @@
             <div class="test__cable" data-index="{{ $index }}">
                 <div class=" test__cable__header">
                     <h1>Дріт №{{ $index + 1 }}</h1>
-                    <x-ghost-btn ghostClass="editBtn" ghostBtnText="Редагувати" ghostBtnIconLeftSide="ph-fill ph-pencil" ghostBtnIconRightSide="ph ph-caret-down" index="{{ $index }}"></x-ghost-btn>
+                    <div class="cable__nav">
+                        <x-ghost-btn ghostClass="editBtn" ghostBtnText="Редагувати" ghostBtnIconLeftSide="ph-fill ph-pencil" index="{{ $index }}"></x-ghost-btn>
+                        <x-ghost-btn ghostClass="caret" ghostBtnIconRightSide="ph ph-caret-down" index="{{ $index }}"></x-ghost-btn>
+                    </div>
                 </div>
                 <div class="test__cable__characteristics">
                     <ul class="product-characteristics">
@@ -190,7 +193,7 @@
         </label>
     </form>
     <div class="calc__container__btn">
-        <x-primary-button primaryBtnText="Розрахувати" primaryClass="calculator__btn_calc" />
+        <x-primary-button primaryBtnText="Надіслати" primaryClass="calculator__btn_calc" />
     </div>
 </div>
 
@@ -213,6 +216,23 @@
                             inputs[i].value = li.querySelector('.value').textContent.trim();
                         }
                     });
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const openDetailsBtns = document.querySelectorAll('.caret');
+
+        openDetailsBtns.forEach(item => {
+            item.addEventListener('click', () => {
+                const index = item.dataset.index;
+                const target = document.querySelector(`.test__cable[data-index="${index}"] .test__cable__characteristics`);
+
+                if (target) {
+                    target.classList.toggle('active');
                 }
             });
         });

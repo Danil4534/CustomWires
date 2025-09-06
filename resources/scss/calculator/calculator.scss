@@ -50,10 +50,15 @@
                 flex-direction: column;
                 border-radius: 2px;
                 padding: 16px;
+                padding-right: 8px;
                 .test__cable__header {
                     display: flex;
                     justify-content: space-between;
-                    margin-bottom: 16px;
+                    align-items: center;
+                    margin-bottom: 0;
+                    .cable__nav {
+                        display: flex;
+                    }
                     h1 {
                         font-family: var(--font-family-Roboto);
                         font-weight: 500;
@@ -65,12 +70,19 @@
                         color: #2b2d33;
                     }
                     button {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        gap: 20px;
                         span {
                             display: none;
                         }
                     }
                 }
                 .test__cable__characteristics {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.4s ease, padding 0.3s ease;
                     .product-characteristics {
                         list-style: none;
                         li {
@@ -100,6 +112,11 @@
                                 letter-spacing: 0%;
                             }
                         }
+                    }
+                    &.active {
+                        display: block;
+                        margin-top: 16px;
+                        max-height: 500px;
                     }
                 }
             }
@@ -568,12 +585,16 @@
                             width: 119px;
                             height: 32px;
                             border: 1px solid #2b2d33;
+                            gap: 4px;
                             .ph-caret-down {
                                 display: none;
                             }
                             span {
                                 display: flex;
                             }
+                        }
+                        .caret {
+                            display: none;
                         }
                     }
                     .test__cable__characteristics {
