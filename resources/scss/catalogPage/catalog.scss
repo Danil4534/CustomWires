@@ -477,6 +477,47 @@
                     background: white;
                     padding-top: 8px;
                 }
+                .slider__wrapper {
+                    height: 20px;
+                    width: 100%;
+                    margin-top: 0;
+                    padding: 0;
+                    #slider {
+                        height: 2px;
+                        border: none;
+                        .noUi-base {
+                            height: 2px;
+                            .noUi-handle {
+                                width: 32px;
+                                height: 32px;
+                                box-shadow: none;
+                                background: #ff6f39;
+                                border: none;
+                                border-radius: 999px;
+                                &::after {
+                                    display: none;
+                                }
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                            .noUi-connects {
+                                width: 100%;
+                                background: #c4c4c4;
+                            }
+                            .noUi-connect {
+                                background: #ff6f39;
+                                width: 100%;
+                            }
+                            .noUi-handle {
+                                top: -15px;
+                            }
+                        }
+
+                        .noUi-touch-area {
+                        }
+                    }
+                }
                 details {
                     width: 100%;
                     height: fit-content;
@@ -615,12 +656,6 @@
                                 line-height: 145%;
                                 letter-spacing: 0%;
                             }
-                            .conent_up_separator {
-                                min-width: 16px;
-                                height: 2px;
-                                background: rgba(106, 109, 94, 1);
-                                border-radius: 999px;
-                            }
                         }
 
                         .range_container {
@@ -661,7 +696,7 @@
                                 }
                                 .form_control_separator {
                                     height: 2px;
-                                    width: 16px;
+                                    min-width: 16px;
                                     border-radius: 1px;
                                     background: #6a6d5e;
                                 }
