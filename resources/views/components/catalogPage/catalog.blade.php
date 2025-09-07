@@ -26,6 +26,7 @@ $count=1
                         <option value="" default>Від дешевих до дорогих</option>
                         <option value="" default>Від дорогих до дешевих</option>
                     </select>
+                    <i class="ph-fill ph-caret-down"></i>
                 </h1>
             </div>
             <div class="catalog__listOfProducts__wrapper" id="catalog__list">

@@ -10,5 +10,6 @@ import './filterModal';
 import './oneClickModal';
 import './successModal';
 import "./quiz.js";
-import "./filter.js";
-import "./pagination.js"
+import "./noUISlider.js"
+import "./pagination.js";
+import "./feedback.js"

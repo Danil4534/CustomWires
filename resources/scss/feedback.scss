@@ -84,6 +84,7 @@
                     right: 10px;
                     top: 50%;
                     transform: translateY(-50%);
+                    cursor: pointer;
                 }
             }
         }
@@ -199,6 +200,10 @@
             }
             .ph-trash {
                 font-size: 20px;
+                &:hover {
+                    color: #1c1e22;
+                }
+                cursor: pointer;
             }
         }
         .form__check {

@@ -161,10 +161,11 @@
             width: 100%;
             height: 341px;
             padding: 24px;
-            background: rgba(233, 234, 229, 1);
-            .categoryLogo {
-                width: 138px;
-                margin-bottom: 32px;
+            background: #e9eae5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .category__logo {
                 mix-blend-mode: darken;
             }
             .categories__tz__title,
@@ -359,13 +360,7 @@
                 height: 341px;
                 padding: 24px;
                 background: rgba(233, 234, 229, 1);
-                .categoryLogo {
-                    height: 124px;
-                    margin-bottom: 32px;
-                }
-                .categoryLogoTZ {
-                    mix-blend-mode: darken;
-                }
+
                 .categories__tz__title,
                 .categories__quiz__title {
                     font-family: var(--font-family-Roboto);
@@ -561,9 +556,7 @@
                 padding: 24px;
                 position: relative;
                 background: rgba(233, 234, 229, 1);
-                .categoryLogo {
-                    margin-bottom: 32px;
-                }
+
                 .categories__tz__title,
                 .categories__quiz__title {
                     font-family: var(--font-family-Roboto);
@@ -573,10 +566,7 @@
                     line-height: 100%;
                     letter-spacing: 0%;
                 }
-                .categoryLogoTZ {
-                    mix-blend-mode: darken;
-                    margin-bottom: 32px;
-                }
+
                 .categories__tz__subtitle,
                 .categories__quiz__subtitle {
                     font-family: var(--font-family-Rubik);
@@ -590,14 +580,10 @@
                 .categories__quiz__btn {
                     width: 124px;
                     height: 40px;
-                    position: absolute;
-                    bottom: 24px;
                 }
                 .categories__tz__btn {
                     width: 110px;
                     height: 40px;
-                    bottom: 24px;
-                    position: absolute;
                 }
                 .categories__quiz__btn,
                 .categories__tz__btn {
@@ -771,8 +757,9 @@
             align-items: center;
             .categoryBox {
                 width: 100%;
-                height: fit-content;
+                height: 320px;
                 display: flex;
+                flex-direction: row;
                 padding: 32px;
                 gap: 32px;
                 background: rgba(233, 234, 229, 1);
@@ -781,16 +768,23 @@
                     flex-direction: column;
                     justify-content: center;
                 }
-                .categoryLogo {
-                    width: 256px;
-                }
-                .categoryLogo,
-                .categoryLogoTZ {
-                    margin-bottom: 0px;
-
-                    height: 256px;
+                .category__logo {
+                    min-width: 285px;
                     display: flex;
+                    padding: 0 15px;
+                    align-items: center;
                     justify-content: center;
+                    picture {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .categoryLogoTZ {
+                        width: 200px;
+                    }
                 }
                 .categories__tz__title,
                 .categories__quiz__title {
@@ -825,7 +819,7 @@
                 .categories__quiz__btn,
                 .categories__tz__btn {
                     padding: 10px 12px;
-                    margin-top: 26px;
+                    margin-top: 0;
                     display: flex;
                     align-items: center;
                     flex-direction: row;
@@ -1003,14 +997,34 @@
             align-items: center;
             .categoryBox {
                 width: 100%;
-                height: fit-content;
+                height: 320px;
+                display: flex;
+                flex-direction: row;
                 padding: 32px;
+                gap: 32px;
                 background: rgba(233, 234, 229, 1);
-                .categoryLogo {
-                    margin-bottom: 0px;
-                    width: 376px;
-                    height: 256px;
-                    padding: 0px 60px;
+                .categories__content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .category__logo {
+                    min-width: 376px;
+                    display: flex;
+                    padding: 0 15px;
+                    align-items: center;
+                    justify-content: center;
+                    picture {
+                        width: 256px;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .categoryLogoTZ {
+                        width: 200px;
+                    }
                 }
                 .categories__tz__title,
                 .categories__quiz__title {
@@ -1029,20 +1043,23 @@
                     line-height: 145%;
                     letter-spacing: 0%;
                     margin-top: 10px;
+                    margin-bottom: 26px;
                     color: rgba(90, 90, 90, 1);
                 }
                 .categories__quiz__btn {
                     width: 124px;
                     height: 40px;
+                    position: relative;
                 }
                 .categories__tz__btn {
                     width: 110px;
                     height: 40px;
+                    position: relative;
                 }
                 .categories__quiz__btn,
                 .categories__tz__btn {
                     padding: 10px 12px;
-                    margin-top: 26px;
+                    margin-top: 0;
                     display: flex;
                     align-items: center;
                     flex-direction: row;

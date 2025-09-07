@@ -37,6 +37,7 @@
         }
         .catalog__getMore {
             padding: 16px 0px;
+
             button {
                 width: 100%;
                 height: 48px;
@@ -91,8 +92,6 @@
             summary {
                 align-items: center;
                 cursor: pointer;
-                list-style: initial;
-                -webkit-appearance: none;
             }
 
             .details-content {
@@ -187,8 +186,6 @@
             summary {
                 padding-top: 16px;
                 padding-bottom: 20px;
-                list-style: auto;
-                -webkit-appearance: auto;
             }
 
             .details-content {
@@ -210,12 +207,6 @@
                         line-height: 145%;
                         letter-spacing: 0%;
                     }
-                    .conent_up_separator {
-                        min-width: 16px;
-                        height: 2px;
-                        background: rgba(106, 109, 94, 1);
-                        border-radius: 999px;
-                    }
                 }
 
                 .range_container {
@@ -234,7 +225,7 @@
                         align-items: center;
                         gap: 16px;
                         flex-direction: row;
-                        margin-bottom: 40px;
+
                         font-size: 24px;
                         color: #635a5a;
                         .form_control_container {
@@ -261,59 +252,34 @@
                             background: #6a6d5e;
                         }
                     }
-
-                    input[type="range"]::-webkit-slider-thumb {
-                        -webkit-appearance: none;
-                        pointer-events: all;
-                        width: 32px;
-                        height: 32px;
-                        background-color: #ff6f39;
-                        border-radius: 50%;
-
-                        cursor: pointer;
-                    }
-
-                    input[type="range"]::-moz-range-thumb {
-                        -webkit-appearance: none;
-                        pointer-events: all;
-                        width: 24px;
-                        height: 24px;
-                        background-color: #fff;
-                        border-radius: 50%;
-                        box-shadow: 0 0 0 1px #c6c6c6;
-                        cursor: pointer;
-                    }
-
-                    input[type="range"]::-webkit-slider-thumb:hover {
-                        background: #ff6f39;
-                    }
-
-                    input[type="number"] {
-                        color: #8a8383;
-                        width: 50px;
-                        height: 30px;
-                        font-size: 20px;
-                        border: none;
-                    }
-
-                    input[type="number"]::-webkit-inner-spin-button,
-                    input[type="number"]::-webkit-outer-spin-button {
-                        opacity: 1;
-                    }
-
-                    input[type="range"] {
-                        -webkit-appearance: none;
-                        appearance: none;
-                        height: 2px;
+                    .slider__wrapper {
+                        height: 40px;
                         width: 100%;
-                        position: absolute;
-                        background-color: #c6c6c6;
-                        pointer-events: none;
-                    }
+                        #slider {
+                            .noUi-base {
+                                height: 2px;
+                                .noUi-handle {
+                                    width: 32px;
+                                    height: 32px;
+                                    box-shadow: none;
+                                    background: #ff6f39;
+                                    border: none;
+                                    border-radius: 999px;
+                                    &::after {
+                                        display: none;
+                                    }
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+                                .noUi-connect {
+                                    background: #ff6f39;
+                                }
+                            }
 
-                    #fromSlider {
-                        height: 0;
-                        z-index: 1;
+                            .noUi-touch-area {
+                            }
+                        }
                     }
                 }
 

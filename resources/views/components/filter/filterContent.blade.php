@@ -53,19 +53,21 @@ $productsForFilter = $products
         <div class="range_container">
             <div class="form_control">
                 <div class="form_control_container">
-                    <input class="form_control_container__time__input fromInput" type="text" value="5" min="0" max="100" />
+                    <input class="form_control_container__time__input fromInput" type="text" value="5" />
                 </div>
                 <div class="form_control_separator"></div>
                 <div class="form_control_container">
-                    <input class="form_control_container__time__input toInput" type="text" value="100" min="0" max="100" />
+                    <input class="form_control_container__time__input toInput" type="text" value="100" />
                 </div>
             </div>
-            <div class="sliders_control">
-                <input class="fromSlider" type="range" value="5" min="0" max="100" />
-                <input class="toSlider" type="range" value="100" min="0" max="100" />
+            <div class="slider__wrapper">
+
+                <div id="slider"></div>
             </div>
         </div>
         @endif
     </div>
 </details>
 @endforeach
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>

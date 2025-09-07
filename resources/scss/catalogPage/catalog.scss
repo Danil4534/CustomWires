@@ -666,60 +666,6 @@
                                     background: #6a6d5e;
                                 }
                             }
-
-                            input[type="range"]::-webkit-slider-thumb {
-                                -webkit-appearance: none;
-                                pointer-events: all;
-                                width: 32px;
-                                height: 32px;
-                                background-color: #ff6f39;
-                                border-radius: 50%;
-
-                                cursor: pointer;
-                            }
-
-                            input[type="range"]::-moz-range-thumb {
-                                -webkit-appearance: none;
-                                pointer-events: all;
-                                width: 24px;
-                                height: 24px;
-                                background-color: #fff;
-                                border-radius: 50%;
-                                box-shadow: 0 0 0 1px #c6c6c6;
-                                cursor: pointer;
-                            }
-
-                            input[type="range"]::-webkit-slider-thumb:hover {
-                                background: #ff6f39;
-                            }
-
-                            input[type="number"] {
-                                color: #8a8383;
-                                width: 50px;
-                                height: 30px;
-                                font-size: 20px;
-                                border: none;
-                            }
-
-                            input[type="number"]::-webkit-inner-spin-button,
-                            input[type="number"]::-webkit-outer-spin-button {
-                                opacity: 1;
-                            }
-
-                            input[type="range"] {
-                                -webkit-appearance: none;
-                                appearance: none;
-                                height: 2px;
-                                width: 100%;
-                                position: absolute;
-                                background-color: #c6c6c6;
-                                pointer-events: none;
-                            }
-
-                            #fromSlider {
-                                height: 0;
-                                z-index: 1;
-                            }
                         }
 
                         p {
@@ -747,6 +693,48 @@
                 justify-content: space-between;
                 padding: 16px;
                 margin-bottom: 24px;
+
+                .catalog__sort {
+                    width: fit-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    position: relative;
+                    font-family: var(--font-family-Roboto);
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #2b2d33;
+
+                    select {
+                        border: none;
+                        appearance: none;
+                        font-family: var(--font-family-Rubik);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: #9f9f9f;
+                        outline: none;
+                        background: transparent;
+                        cursor: pointer;
+                        padding-right: 28px;
+
+                        option {
+                            border: none;
+                            appearance: none;
+                            border-radius: 20px;
+                            background: var(--neutral-white);
+                        }
+                    }
+
+                    .ph-caret-down {
+                        position: absolute;
+                        right: 8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: transform 0.3s ease;
+                        pointer-events: none;
+                    }
+                }
                 .catalog__CountOfProducts {
                     font-family: var(--font-family-Roboto);
                     font-weight: 500;
@@ -1051,6 +1039,10 @@
                                         letter-spacing: 0%;
                                         border: 1px solid #c4c4c4;
                                         border-radius: 2px;
+                                        outline: none;
+                                        &:focus {
+                                            border-color: #ff6f39;
+                                        }
                                     }
                                 }
                                 .form_control_separator {
@@ -1059,60 +1051,6 @@
                                     border-radius: 1px;
                                     background: #6a6d5e;
                                 }
-                            }
-
-                            input[type="range"]::-webkit-slider-thumb {
-                                -webkit-appearance: none;
-                                pointer-events: all;
-                                width: 32px;
-                                height: 32px;
-                                background-color: #ff6f39;
-                                border-radius: 50%;
-
-                                cursor: pointer;
-                            }
-
-                            input[type="range"]::-moz-range-thumb {
-                                -webkit-appearance: none;
-                                pointer-events: all;
-                                width: 24px;
-                                height: 24px;
-                                background-color: #fff;
-                                border-radius: 50%;
-                                box-shadow: 0 0 0 1px #c6c6c6;
-                                cursor: pointer;
-                            }
-
-                            input[type="range"]::-webkit-slider-thumb:hover {
-                                background: #ff6f39;
-                            }
-
-                            input[type="number"] {
-                                color: #8a8383;
-                                width: 50px;
-                                height: 30px;
-                                font-size: 20px;
-                                border: none;
-                            }
-
-                            input[type="number"]::-webkit-inner-spin-button,
-                            input[type="number"]::-webkit-outer-spin-button {
-                                opacity: 1;
-                            }
-
-                            input[type="range"] {
-                                -webkit-appearance: none;
-                                appearance: none;
-                                height: 2px;
-                                width: 100%;
-                                position: absolute;
-                                background-color: #c6c6c6;
-                                pointer-events: none;
-                            }
-
-                            #fromSlider {
-                                height: 0;
-                                z-index: 1;
                             }
                         }
 
@@ -1167,6 +1105,33 @@
                 }
                 .catalog__sort {
                     display: flex;
+                    gap: 8px;
+                    position: relative;
+                    select {
+                        appearance: none;
+                        font-family: var(--font-family-Rubik);
+                        font-weight: 400;
+                        font-style: Regular;
+                        font-size: 16px;
+                        leading-trim: NONE;
+                        line-height: 150%;
+                        letter-spacing: 0%;
+                        color: #9f9f9f;
+                        outline: none;
+                        background: transparent;
+                        cursor: pointer;
+                        option {
+                            appearance: none;
+                            border-radius: 20px;
+                            background: var(--neutral-white);
+                        }
+                    }
+                    .ph-caret-down {
+                        position: absolute;
+                        right: 0px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
                 }
             }
             .catalog__listOfProducts__wrapper {
