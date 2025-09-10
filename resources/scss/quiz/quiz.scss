@@ -128,8 +128,6 @@
                 }
             }
 
-            .quiz__question {
-            }
             .question__answers {
                 margin-top: 16px;
                 ul {
@@ -191,6 +189,14 @@
                     }
                 }
             }
+        }
+        hr {
+            display: none;
+            margin-top: 24px;
+            height: 1px;
+            width: 100%;
+            border: none;
+            background: #f3f3f3;
         }
         .quiz__controls {
             display: flex;
@@ -392,6 +398,14 @@
                         }
                     }
                 }
+            }
+            hr {
+                display: flex;
+                margin-top: 24px;
+                height: 1px;
+                width: 100%;
+                border: none;
+                background: #f3f3f3;
             }
             .quiz__controls {
                 display: flex;

@@ -29,18 +29,18 @@ $chooseProducts = session()->get('chooseProducts');
                     <div class="result">
                         <div class="result__orderPrice">
                             <p>Вартість замовлення</p>
-                            <p><span>0</span>грн</p>
+                            <p><span>{{ number_format(0,2,',') }}</span> <span class="unit">грн</span></p>
                         </div>
                         <div class="result__discount">
                             <p>Знижка:</p>
-                            <p><span>0</span>грн</p>
+                            <p><span>{{ number_format(0,2,',') }}</span> <span class="unit">грн</span></p>
                         </div>
                         <div class="result__payable">
                             <p>До сплати:</p>
-                            <p><span>0</span>грн</p>
+                            <p><span class="total">{{ number_format(0,2,',') }}</span> <span class="unit">грн</span></p>
                         </div>
                     </div>
-                    <x-secondary-button secondaryBtnText="Продовжити покупки" />
+                    <x-secondary-button secondaryBtnText="Продовжити покупки" secondaryClass="continueBtn" />
                     <x-primary-button primaryBtnText="Підтвердити замовлення" route="page.checkout" />
                 </div>
             </div>

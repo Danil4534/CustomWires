@@ -95,6 +95,15 @@
                     block-size: auto;
                 }
             }
+            details[open] summary .ph-plus {
+                display: none;
+            }
+            details[open] summary {
+                padding-bottom: 16px;
+            }
+            details[open] summary .ph-minus {
+                display: inline-block;
+            }
         }
     }
 }
@@ -147,7 +156,7 @@
                         font-size: 18px;
                         text-transform: uppercase;
                         line-height: 100%;
-                        padding: 37px 0;
+                        padding: 25px 0;
 
                         .icon {
                             position: absolute;
@@ -158,14 +167,14 @@
 
                         .ph-plus {
                             display: inline-block;
-                            font-size: 32px;
+                            font-size: 24px;
                             color: rgba(255, 111, 57, 1);
                             transition: opacity 0.3s ease;
                         }
 
                         .ph-minus {
                             display: none;
-                            font-size: 32px;
+                            font-size: 24px;
                             color: rgba(255, 111, 57, 1);
                             transition: opacity 0.3s ease;
                         }
@@ -178,7 +187,7 @@
                         font-family: var(--font-family-Rubik);
                         font-weight: 400;
                         font-style: Regular;
-                        font-size: 14px;
+                        font-size: 16px;
                         leading-trim: NONE;
                         line-height: 145%;
                         letter-spacing: 0%;
@@ -198,6 +207,15 @@
                         opacity: 1;
                         block-size: auto;
                     }
+                }
+                details[open] summary .ph-plus {
+                    display: none;
+                }
+                details[open] summary {
+                    padding-bottom: 16px;
+                }
+                details[open] summary .ph-minus {
+                    display: inline-block;
                 }
             }
         }
@@ -251,7 +269,7 @@
                         font-size: 18px;
                         text-transform: uppercase;
                         line-height: 100%;
-                        padding: 37px 0;
+                        padding: 25px 0;
 
                         .icon {
                             position: absolute;
@@ -262,14 +280,14 @@
 
                         .ph-plus {
                             display: inline-block;
-                            font-size: 32px;
+                            font-size: 24px;
                             color: rgba(255, 111, 57, 1);
                             transition: opacity 0.3s ease;
                         }
 
                         .ph-minus {
                             display: none;
-                            font-size: 32px;
+                            font-size: 24px;
                             color: rgba(255, 111, 57, 1);
                             transition: opacity 0.3s ease;
                         }
@@ -302,6 +320,15 @@
                         opacity: 1;
                         block-size: auto;
                     }
+                }
+                details[open] summary .ph-plus {
+                    display: none;
+                }
+                details[open] summary {
+                    padding-bottom: 16px;
+                }
+                details[open] summary .ph-minus {
+                    display: inline-block;
                 }
             }
         }
@@ -353,10 +380,10 @@
 
                         font-family: var(--font-family-Roboto);
                         font-weight: 500;
-                        font-size: 18px;
+                        font-size: 22px;
                         text-transform: uppercase;
                         line-height: 100%;
-                        padding: 37px 0;
+                        padding: 33px 0;
 
                         .icon {
                             position: absolute;
@@ -387,7 +414,7 @@
                         font-family: var(--font-family-Rubik);
                         font-weight: 400;
                         font-style: Regular;
-                        font-size: 14px;
+                        font-size: 16px;
                         leading-trim: NONE;
                         line-height: 145%;
                         letter-spacing: 0%;
@@ -407,6 +434,16 @@
                         opacity: 1;
                         block-size: auto;
                     }
+                }
+                details[open] summary {
+                    padding-bottom: 16px;
+                }
+                details[open] summary .ph-plus {
+                    display: none;
+                }
+
+                details[open] summary .ph-minus {
+                    display: inline-block;
                 }
             }
         }
@@ -457,10 +494,10 @@
 
                         font-family: var(--font-family-Roboto);
                         font-weight: 500;
-                        font-size: 18px;
+                        font-size: 28px;
                         text-transform: uppercase;
                         line-height: 100%;
-                        padding: 37px 0;
+                        padding: 38px 0;
 
                         .icon {
                             position: absolute;
@@ -471,14 +508,14 @@
 
                         .ph-plus {
                             display: inline-block;
-                            font-size: 32px;
+                            font-size: 48px;
                             color: rgba(255, 111, 57, 1);
                             transition: opacity 0.3s ease;
                         }
 
                         .ph-minus {
                             display: none;
-                            font-size: 32px;
+                            font-size: 48px;
                             color: rgba(255, 111, 57, 1);
                             transition: opacity 0.3s ease;
                         }
@@ -496,7 +533,7 @@
                         line-height: 145%;
                         letter-spacing: 0%;
                         color: #5a5a5a;
-                        padding-bottom: 30px;
+                        padding-bottom: 40px;
                     }
 
                     &::details-content {
@@ -511,6 +548,15 @@
                         opacity: 1;
                         block-size: auto;
                     }
+                }
+                details[open] summary .ph-plus {
+                    display: none;
+                }
+                details[open] summary {
+                    padding-bottom: 16px;
+                }
+                details[open] summary .ph-minus {
+                    display: inline-block;
                 }
             }
         }

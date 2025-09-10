@@ -76,11 +76,19 @@ $questions = [
                             @endforeach
                         </ul>
                     </div>
+                    <hr />
                     <div class="quiz__controls">
                         <x-secondary-button secondaryBtnText="пропустити" secondaryClass="skipBtn" data-q="{{ $qIndex }}" />
+
                         <div class="quiz__nav">
                             <x-secondary-button secondaryBtnText="назад" secondaryBtnIconLeftSide="ph ph-caret-left" secondaryClass="backBtn" data-q="{{ $qIndex }}" />
-                            <x-primary-button primaryBtnText="{{ $qIndex === 5 ? 'Фініш' : 'Далі' }}" primaryBtnIconRightSide="ph ph-caret-right" primaryClass="nextBtn" data-q="{{ $qIndex }}" @if($qIndex===5) route="page.catalog" @endif />
+                            <x-primary-button
+                                primaryBtnText="{{$qIndex === 5 ? 'Фініш' : 'Далі'}}"
+                                primaryBtnIconRightSide="ph ph-caret-right"
+                                primaryClass="nextBtn"
+                                data-q="{{$qIndex}}"
+
+                                route="{{$qIndex === 5 ? 'page.catalog' : ''}}" />
                         </div>
                     </div>
                 </details>

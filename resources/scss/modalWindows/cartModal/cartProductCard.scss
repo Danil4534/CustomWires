@@ -1,6 +1,6 @@
 .card__container {
     width: 100%;
-    height: 236px;
+    height: fit-content;
     border: 1px solid rgba(243, 243, 243, 1);
     padding: 8px;
     display: flex;
@@ -8,7 +8,9 @@
     gap: 16px;
     position: relative;
     border-radius: 2px;
-
+    .card__separator {
+        display: none;
+    }
     form {
         position: absolute;
         right: 8px;
@@ -31,6 +33,7 @@
         .card__header__content {
             display: flex;
             gap: 8px;
+            height: 148px;
         }
         .actions__up {
             display: flex;
@@ -38,45 +41,10 @@
             gap: 16px;
             padding-top: 16px;
             border-top: 1px solid rgba(243, 243, 243, 1);
-            .product__quantity {
-                min-width: 151px;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                position: relative;
-                button {
-                    width: 32px;
-                    height: 32px;
-                    background: transparent;
-                    border: none;
-                    z-index: 90;
-                    i {
-                        font-size: 20px;
-                    }
-                }
-                .minus {
-                    position: absolute;
-                    left: 8px;
-                }
-                .plus {
-                    position: absolute;
-                    right: 8px;
-                }
-                input {
-                    position: absolute;
+            .counter__container {
+                min-width: 154px;
+                .counter {
                     width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    font-family: var(--font-family-Rubik);
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 145%;
-                    letter-spacing: 0%;
-                    text-align: center;
-                    color: rgba(90, 90, 90, 1);
-                    background: rgba(243, 243, 243, 1);
-                    border: 1px solid rgba(196, 196, 196, 1);
-                    border-radius: 2px;
                 }
             }
             .product__totalPrice {
@@ -125,6 +93,7 @@
                 letter-spacing: 0%;
             }
             .priceBlock {
+                margin-top: 4px;
                 h2 {
                     font-family: var(--font-family-Roboto);
                     font-weight: 500;
@@ -162,6 +131,7 @@
                 display: flex;
                 flex-direction: row;
                 gap: 4px;
+
                 span {
                     width: 32px;
                     height: 18px;

@@ -513,9 +513,6 @@
                                 top: -15px;
                             }
                         }
-
-                        .noUi-touch-area {
-                        }
                     }
                 }
                 details {
@@ -614,7 +611,9 @@
                             input:checked {
                                 background: rgba(255, 111, 57, 1);
                                 border-color: rgba(255, 111, 57, 1);
-
+                                &:hover {
+                                    background-color: #e65b27;
+                                }
                                 & + span i {
                                     display: block;
                                 }
@@ -662,6 +661,7 @@
                             width: 100%;
                             display: flex;
                             flex-direction: column;
+                            padding: 0 16px;
 
                             .sliders_control {
                                 position: relative;
