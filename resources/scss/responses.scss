@@ -107,17 +107,19 @@
                     letter-spacing: 0%;
                     color: rgba(255, 111, 57, 1);
                 }
+
                 p {
                     height: 160px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 8;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     font-family: var(--font-family-Rubik);
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 145%;
-                    letter-spacing: 0%;
-                    overflow: hidden;
-                    -webkit-line-clamp: 8;
-                    -webkit-box-orient: vertical;
-                    text-overflow: ellipsis;
+                    letter-spacing: 0;
                     color: rgba(159, 159, 159, 1);
                 }
             }
@@ -274,7 +276,7 @@
                     gap: 4px;
                     margin-top: 12px;
 
-                    span {
+                    span:not(.response_content_more) {
                         font-family: var(--font-family-Inter);
                         font-weight: 500;
                         font-style: Medium;
@@ -451,7 +453,7 @@
                     gap: 4px;
                     margin-top: 12px;
 
-                    span {
+                    span:not(.response_content_more) {
                         font-family: var(--font-family-Inter);
                         font-weight: 500;
                         font-style: Medium;
@@ -472,6 +474,18 @@
                         -webkit-box-orient: vertical;
                         text-overflow: ellipsis;
                         color: rgba(159, 159, 159, 1);
+                        &::after {
+                            content: "Більше";
+                            font-family: var(--font-family-Rubik);
+                            font-weight: 400;
+                            font-style: Regular;
+                            font-size: 14px;
+                            leading-trim: NONE;
+                            line-height: 145%;
+                            letter-spacing: 0%;
+                            color: #2f80ed;
+                            cursor: pointer;
+                        }
                     }
                 }
                 .responseCard_user {
@@ -627,7 +641,7 @@
                     gap: 4px;
                     margin-top: 12px;
 
-                    span {
+                    span:not(.response_content_more) {
                         font-family: var(--font-family-Inter);
                         font-weight: 500;
                         font-style: Medium;
@@ -648,6 +662,17 @@
                         -webkit-box-orient: vertical;
                         text-overflow: ellipsis;
                         color: rgba(159, 159, 159, 1);
+                        &::after {
+                            content: "Більше";
+                            font-family: var(--font-family-Rubik);
+                            font-weight: 400;
+                            font-style: Regular;
+                            font-size: 14px;
+                            leading-trim: NONE;
+                            line-height: 145%;
+                            letter-spacing: 0%;
+                            color: #2f80ed;
+                        }
                     }
                 }
                 .responseCard_user {
@@ -803,7 +828,7 @@
                     gap: 4px;
                     margin-top: 12px;
 
-                    span {
+                    span:not(.response_content_more) {
                         font-family: var(--font-family-Inter);
                         font-weight: 500;
                         font-style: Medium;
@@ -824,6 +849,18 @@
                         -webkit-box-orient: vertical;
                         text-overflow: ellipsis;
                         color: rgba(159, 159, 159, 1);
+                        &::after {
+                            content: "Більше";
+                            font-family: var(--font-family-Rubik);
+                            font-weight: 400;
+                            font-style: Regular;
+                            font-size: 14px;
+                            leading-trim: NONE;
+                            line-height: 145%;
+                            letter-spacing: 0%;
+                            color: #2f80ed;
+                            cursor: pointer;
+                        }
                     }
                 }
                 .responseCard_user {

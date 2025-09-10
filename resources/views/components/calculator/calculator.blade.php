@@ -225,12 +225,10 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const openDetailsBtns = document.querySelectorAll('.caret');
-
         openDetailsBtns.forEach(item => {
             item.addEventListener('click', () => {
                 const index = item.dataset.index;
                 const target = document.querySelector(`.test__cable[data-index="${index}"] .test__cable__characteristics`);
-
                 if (target) {
                     target.classList.toggle('active');
                 }
