@@ -159,12 +159,7 @@
                             display: none;
                         }
                     }
-                    input:hover {
-                        background-color: #e65b27;
-                        & + span i {
-                            display: block;
-                        }
-                    }
+
                     input:checked {
                         background: rgba(255, 111, 57, 1);
                         border-color: rgba(255, 111, 57, 1);
@@ -482,12 +477,7 @@
                                 display: none;
                             }
                         }
-                        input:hover {
-                            background-color: #e65b27;
-                            & + span i {
-                                display: block;
-                            }
-                        }
+
                         input:checked {
                             background: rgba(255, 111, 57, 1);
                             border-color: rgba(255, 111, 57, 1);
@@ -801,12 +791,7 @@
                                 display: none;
                             }
                         }
-                        input:hover {
-                            background-color: #e65b27;
-                            & + span i {
-                                display: block;
-                            }
-                        }
+
                         input:checked {
                             background: rgba(255, 111, 57, 1);
                             border-color: rgba(255, 111, 57, 1);

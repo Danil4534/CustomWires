@@ -92,6 +92,7 @@ $chooseProducts = session()->get('chooseProducts');
                         <x-inputField.input-field label="По батькові" name="anotherCustomer__lastName" placeholder="Вкажіть"></x-inputField.input-field>
                         <x-inputField.input-field label="Номер телефону" name="anotherCustomer__phoneNumber" placeholder="+380 -- --- -- --"></x-inputField.input-field>
                     </div>
+                    <hr>
                     <div class="form__delivery__checkAddComment">
                         <label for="checkAddComment">
                             <input type="checkbox" name="checkAddComment" id="checkAddComment">
@@ -127,11 +128,11 @@ $chooseProducts = session()->get('chooseProducts');
             <div class="result">
                 <div class="result__orderPrice">
                     <p>Вартість замовлення</p>
-                    <p><span>0</span>грн</p>
+                    <p><span>{{ number_format(0,2,',') }}</span><span class="unit">грн</span></p>
                 </div>
                 <div class="result__discount">
                     <p>Знижка:</p>
-                    <p><span>0</span>грн</p>
+                    <p><span>{{ number_format(0,2,',') }}</span><span class="unit">грн</span></p>
                 </div>
                 <div class="result__delivery">
                     <p>Доставка:</p>
@@ -139,7 +140,7 @@ $chooseProducts = session()->get('chooseProducts');
                 </div>
                 <div class="result__payable">
                     <p>До сплати:</p>
-                    <p><span>0</span>грн</p>
+                    <p><span class="total">{{ number_format(0,2,',') }}</span><span class="unit">грн</span></p>
                 </div>
 
             </div>
@@ -169,7 +170,26 @@ $chooseProducts = session()->get('chooseProducts');
         const anotherCustomerInfo = document.querySelector('.form__delivery__checkAnotherCustomer__hidden')
         const commentCheck = document.querySelector('#checkAddComment')
         const commentField = document.querySelector('.form__delivery__comment')
+        const form = document.querySelector('.form__customer__content');
+        const phoneInput = form?.querySelector('input[name="phoneNumber"]');
+        phoneInput?.addEventListener("focus", () => {
+            if (!phoneInput.value.startsWith("+380")) {
+                phoneInput.value = "+380 ";
+            }
+        });
 
+        phoneInput?.addEventListener("blur", () => {
+            if (phoneInput.value.trim() === "+380") {
+                phoneInput.value = "";
+            }
+        });
+
+        phoneInput?.addEventListener("keydown", (e) => {
+            const start = phoneInput.selectionStart;
+            if (start <= 5 && (e.key === "Backspace" || e.key === "Delete")) {
+                e.preventDefault();
+            }
+        });
         courierRadio.addEventListener('change', () => {
             courierContent.classList.toggle('hidden', !courierRadio.checked)
 

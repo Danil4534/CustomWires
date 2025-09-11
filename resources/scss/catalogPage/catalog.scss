@@ -581,15 +581,6 @@
                                 position: relative;
                                 transition: all 0.2s ease;
                             }
-                            &:hover {
-                                input {
-                                    background-color: #e65b27;
-                                    border: none;
-                                    & + span i {
-                                        display: block;
-                                    }
-                                }
-                            }
 
                             span {
                                 position: absolute;
