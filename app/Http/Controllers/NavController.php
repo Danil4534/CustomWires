@@ -77,6 +77,7 @@ class NavController extends Controller
 
     public function getHomePage()
     {
+        session(['success' => []]);
         $products = $this->products;
         return view("pages.homePage", compact("products"));
     }

@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Validator;
 
 class OneClickModalController extends Controller
 {
-    public function addProduct(Request $request)
+    public function addProductOneClick(Request $request)
     {
-        if ($request->input('action') === "oneClickOrder") {
-            $product = json_decode(base64_decode($request->input(key: 'product')), true);
-            session(['oneClickModalProduct' => $product]);
-        }
+        $product = json_decode(base64_decode($request->input(key: 'product')), true);
+        session(['oneClickModalProduct' => $product]);
+        session(['success' => false]);
+        return redirect()->back();
     }
     public function removeProduct()
     {
@@ -24,6 +24,7 @@ class OneClickModalController extends Controller
 
     public function orderProduct(Request $request)
     {
+
         $request->validate(
             [
                 'username' => 'required|string',
@@ -41,5 +42,6 @@ class OneClickModalController extends Controller
         ];
         session(['oneClickModalProduct' => null]);
         session(['success' => true]);
+        return redirect()->back();
     }
 }

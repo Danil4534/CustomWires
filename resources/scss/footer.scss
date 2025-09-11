@@ -31,11 +31,18 @@ footer {
                 height: 56px;
                 a {
                     text-decoration: none;
+                    &:hover {
+                        cursor: pointer;
+                        color: #e65b27;
+                    }
                     i {
                         color: var(--primary-main-orange);
                         font-size: 28px;
+                        &:hover {
+                            cursor: pointer;
+                            color: #e65b27;
+                        }
                     }
-                    cursor: pointer;
                 }
             }
         }
@@ -52,6 +59,10 @@ footer {
                 margin: 0;
                 color: var(--neutral-white);
                 cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                    color: #e65b27;
+                }
             }
             i {
                 font-size: 32px;
@@ -393,13 +404,14 @@ footer {
                             justify-content: center;
                             align-items: center;
                             text-decoration: none;
-                            &:hover {
-                                cursor: pointer;
-                                color: #e65b27;
-                            }
+
                             i {
                                 color: var(--primary-main-orange);
                                 font-size: 20px;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: #e65b27;
+                                }
                             }
                         }
                     }
@@ -417,6 +429,10 @@ footer {
                         margin: 0;
                         color: var(--neutral-white);
                         cursor: pointer;
+                        &:hover {
+                            cursor: pointer;
+                            color: #e65b27;
+                        }
                     }
                     i {
                         font-size: 16px;
@@ -600,6 +616,10 @@ footer {
                             margin: 0;
                             color: var(--neutral-white);
                             cursor: pointer;
+                            &:hover {
+                                cursor: pointer;
+                                color: #e65b27;
+                            }
                         }
                         i {
                             font-size: 32px;
@@ -628,6 +648,10 @@ footer {
                                 justify-content: center;
                                 align-items: center;
                                 text-decoration: none;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: #e65b27;
+                                }
                                 i {
                                     color: var(--primary-main-orange);
                                     font-size: 28px;
@@ -648,6 +672,10 @@ footer {
                             margin: 0;
                             color: var(--neutral-white);
                             cursor: pointer;
+                            &:hover {
+                                cursor: pointer;
+                                color: #e65b27;
+                            }
                         }
                         i {
                             font-size: 32px;
@@ -804,6 +832,10 @@ footer {
                         height: 56px;
                         a {
                             text-decoration: none;
+                            &:hover {
+                                transition: 0.3s ease;
+                                color: #ff6f39;
+                            }
                             i {
                                 color: var(--primary-main-orange);
                                 font-size: 28px;
@@ -824,9 +856,17 @@ footer {
                         margin: 0;
                         color: var(--neutral-white);
                         cursor: pointer;
+                        &:hover {
+                            cursor: pointer;
+                            color: #e65b27;
+                        }
                     }
                     i {
                         font-size: 32px;
+                        &:hover {
+                            cursor: pointer;
+                            color: #e65b27;
+                        }
                         color: var(--neutral-white);
                     }
                 }
@@ -852,9 +892,17 @@ footer {
                             justify-content: center;
                             align-items: center;
                             text-decoration: none;
+                            &:hover {
+                                transition: 0.3s ease;
+                                color: #ff6f39;
+                            }
                             i {
                                 color: var(--primary-main-orange);
                                 font-size: 28px;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: #e65b27;
+                                }
                             }
                         }
                     }
@@ -872,6 +920,10 @@ footer {
                         margin: 0;
                         color: var(--neutral-white);
                         cursor: pointer;
+                        &:hover {
+                            cursor: pointer;
+                            color: #e65b27;
+                        }
                     }
                     i {
                         font-size: 32px;

@@ -25,7 +25,7 @@ $socialLinks = [
             </div>
         </div>
         <div class="form__comment">
-            <label for="comment">Коментар<span>*</span></label>
+            <label for="comment">Коментар</label>
             <textarea name="comment" id="usercomment" placeholder="Не обов’язково" required></textarea>
         </div>
         <div class="feedback__drop">
@@ -37,6 +37,17 @@ $socialLinks = [
             <x-secondary-button secondaryBtnText="Обрати" secondaryClass="chooseBtn" type="button" />
             <input type="file" hidden id="inputFile">
         </div>
+        <div class="feedback__drop__chooseFile__anim">
+            <i class="ph ph-file"></i>
+            <div class="drop__chooseFile__anim__wrapper">
+                <div class="drop__chooseFile__info">
+                    <h1 id="chooseFile__fileName__anim"></h1>
+                    <p id="chooseFile__fileSize__anim"></p>
+                </div>
+                <div class="loader"></div>
+            </div>
+
+        </div>
         <div class="feedback__drop__chooseFile">
             <i class="ph ph-file"></i>
             <div class="drop__chooseFile__info">
@@ -45,6 +56,7 @@ $socialLinks = [
             </div>
             <i class="ph ph-trash"></i>
         </div>
+
         <div class="form__check">
             <label>
                 <input type="checkbox" name="check">
@@ -79,113 +91,3 @@ $socialLinks = [
         </div>
     </div>
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const feedBackDropBox = document.querySelector('.feedback__drop');
-        const dropInputHidden = document.querySelector('#inputFile');
-        const dropBtn = document.querySelector('.chooseBtn');
-        const chooseFileBox = document.querySelector('.feedback__drop__chooseFile');
-        const fileNameText = document.querySelector('#chooseFile__fileName');
-        const fileSizeText = document.querySelector('#chooseFile__fileSize');
-        const trashIcon = chooseFileBox.querySelector('.ph-trash');
-        const form = document.querySelector('.feedback__form');
-        const formBtn = document.querySelector('.form__btn');
-        const checkBox = form.querySelector('input[type="checkbox"]');
-        const clearIcons = document.querySelectorAll('#clearIconField');
-        const phoneInput = form.querySelector('input[name="phoneNumber"]');
-
-
-        phoneInput.addEventListener("focus", () => {
-            if (!phoneInput.value.startsWith("+380")) {
-                phoneInput.value = "+380 ";
-            }
-        });
-        phoneInput.addEventListener("blur", () => {
-            if (phoneInput.value.trim() === "+380") {
-                phoneInput.value = "";
-            }
-        });
-        phoneInput.addEventListener("keydown", (e) => {
-            const start = phoneInput.selectionStart;
-            if (start <= 5 && (e.key === "Backspace" || e.key === "Delete")) {
-                e.preventDefault();
-            }
-        });
-        clearIcons.forEach(item => {
-            item.addEventListener('click', (e) => {
-                const wrapper = e.target.closest('.input__wrapper');
-                const input = wrapper.querySelector('input');
-                if (input.name === "phoneNumber") {
-                    input.value = "+380 ";
-                    input.focus();
-                } else {
-                    input.value = "";
-                    input.focus();
-                }
-            });
-        });
-        const checkForm = () => {
-            const requiredFields = form.querySelectorAll('input[required], textarea[required]');
-            let allFilled = true;
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    allFilled = false;
-                }
-            });
-            if (!dropInputHidden.files.length) {
-                allFilled = false;
-            }
-            if (!checkBox.checked) {
-                allFilled = false;
-            }
-            formBtn.disabled = !allFilled;
-        };
-        checkForm();
-        form.addEventListener('input', checkForm);
-        dropInputHidden.addEventListener('change', checkForm);
-        checkBox.addEventListener('change', checkForm);
-        feedBackDropBox.addEventListener('click', () => {
-            dropInputHidden.click();
-        });
-        dropBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            dropInputHidden.click();
-        });
-        feedBackDropBox.addEventListener("drop", (e) => {
-            e.preventDefault();
-            feedBackDropBox.classList.remove("dragover");
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                dropInputHidden.files = files;
-                chooseFileBox.classList.add("active");
-
-                const file = files[0];
-                const fileName = file.name;
-                const fileSizeMB = (file.size / (1024 * 1024)).toFixed(2);
-
-                fileNameText.textContent = fileName;
-                fileSizeText.textContent = `${fileSizeMB} MB`;
-
-                checkForm();
-            }
-        });
-        dropInputHidden.addEventListener("change", () => {
-            if (dropInputHidden.files.length > 0) {
-                chooseFileBox.classList.add("active");
-                const file = dropInputHidden.files[0];
-                const fileName = file.name;
-                const fileSizeMB = (file.size / (1024 * 1024)).toFixed(2);
-                fileNameText.textContent = fileName;
-                fileSizeText.textContent = `${fileSizeMB} MB`;
-                checkForm();
-            }
-        });
-        trashIcon.addEventListener('click', () => {
-            dropInputHidden.value = '';
-            chooseFileBox.classList.remove('active');
-            fileNameText.textContent = '';
-            fileSizeText.textContent = '';
-            checkForm();
-        });
-    });
-</script>

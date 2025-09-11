@@ -68,6 +68,9 @@
                     font-style: Medium;
                     font-size: 18px;
                     line-height: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
                     letter-spacing: 0%;
                     color: rgba(28, 30, 34, 1);
                     span {
@@ -91,6 +94,8 @@
                 font-size: 14px;
                 line-height: 100%;
                 letter-spacing: 0%;
+                text-decoration: none;
+                color: #3a3d42;
             }
             .priceBlock {
                 margin-top: 4px;

@@ -14,9 +14,9 @@ $chooseProduct = $chooseProduct->first();
 
             <div class="form__wrapper">
                 <div class="form__name">
-                    <label for="name">Ім'я</label>
+                    <label for="name">Ім'я<span>*</span></label>
                     <div class="input__wrapper">
-                        <input type="text" placeholder="Введіть ваше ім'я" name="username">
+                        <input type="text" placeholder="Введіть ваше ім'я" name="username" class="{{ $errors->has('username') ? 'error' : '' }}">
                         <i class="ph ph-x" id="clearIconField"></i>
                     </div>
                     @error('username')
@@ -27,9 +27,9 @@ $chooseProduct = $chooseProduct->first();
                     @enderror
                 </div>
                 <div class="form__phoneNumber">
-                    <label for="phoneNumber">Номер телефону</label>
+                    <label for="phoneNumber">Номер телефону<span>*</span></label>
                     <div class="input__wrapper">
-                        <input type="text" placeholder="+380 -- --- -- --" name="phoneNumber">
+                        <input type="text" placeholder="+380 -- --- -- --" name="phoneNumber" class="{{ $errors->has('phoneNumber') ? 'error' : '' }}">
                         <i class="ph ph-x" id="clearIconField"></i>
                     </div>
                     @error('phoneNumber')

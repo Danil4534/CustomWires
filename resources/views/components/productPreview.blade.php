@@ -77,11 +77,7 @@ $chooseProduct = $chooseProduct->first();
                             <x-primary-button primaryBtnIconLeftSide="ph ph-plus" primaryBtnText="Додати" />
                         </form>
                     </div>
-                    <form action="{{ route('addProductForOneClickModal') }}" method="POST">
-                        @csrf
-                        <input type="hidden" name="product" value="{{ base64_encode(json_encode($chooseProduct)) }}">
-                        <x-secondary-button secondaryBtnIconLeftSide="ph ph-plus" secondaryBtnText="Замовити в один клік" secondaryClass="btnOneClick" id="oneClickBtn" name="action" value="oneClickOrder" />
-                    </form>
+                    <x-secondary-button secondaryBtnIconLeftSide="ph ph-plus" secondaryBtnText="Замовити в один клік" secondaryClass="btnOneClick" id="oneClickBtn" />
                 </div>
                 <hr class="separator">
                 <div class="product_methodsOfpayment">

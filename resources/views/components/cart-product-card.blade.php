@@ -10,7 +10,9 @@
         <div class="card__header__content">
             <x-picture-tag src="{{ asset('assets/'.$product['img'][0]) }}" class="productImg" />
             <div class="product__content">
-                <h1 class="product__name">{{ $product['name'] }}</h1>
+                <a href="{{ route('page.productPage', $product['id']) }}" class="product__name">
+                    {{ $product['name'] }}
+                </a>
                 <div class="product__discount">
                     <span>-{{ $product['discount'] }}%</span>
                     <p>250,00</p>

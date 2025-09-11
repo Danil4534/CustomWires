@@ -1,5 +1,6 @@
 <div class="successOneModal__container">
     <div class="successOneModal__Body">
+        <i class="ph ph-x"></i>
         <div class="successOneModal__header">
             <h1>Успішно!</h1>
             <p>Дякуємо за запит, протягом години ми зателефонуємо вам для уточнення деталей</p>

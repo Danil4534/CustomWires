@@ -30,6 +30,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        .ph-x {
+            position: absolute;
+            top: 32px;
+            right: 16px;
+            font-size: 32px;
+            color: #2b2d33;
+            cursor: pointer;
+        }
         .successOneModal__header {
             display: flex;
             flex-direction: column;
@@ -104,6 +113,13 @@
             flex-direction: column;
             justify-content: space-between;
             margin-top: 140px;
+            .ph-x {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                font-size: 32px;
+                color: #2b2d33;
+            }
             .successOneModal__header {
                 display: flex;
                 flex-direction: column;
@@ -178,6 +194,13 @@
             flex-direction: column;
             justify-content: space-between;
             margin-top: 140px;
+            .ph-x {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                font-size: 32px;
+                color: #2b2d33;
+            }
             .successOneModal__header {
                 display: flex;
                 flex-direction: column;
@@ -252,6 +275,13 @@
             flex-direction: column;
             justify-content: space-between;
             margin-top: 100px;
+            .ph-x {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                font-size: 32px;
+                color: #2b2d33;
+            }
             .successOneModal__header {
                 display: flex;
                 flex-direction: column;
@@ -326,6 +356,13 @@
             flex-direction: column;
             justify-content: space-between;
             margin-top: 100px;
+            .ph-x {
+                position: absolute;
+                top: 32px;
+                right: 32px;
+                font-size: 32px;
+                color: #2b2d33;
+            }
             .successOneModal__header {
                 display: flex;
                 flex-direction: column;

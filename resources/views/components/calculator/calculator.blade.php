@@ -32,8 +32,8 @@
                     <div class="left__side">
                         <h1>Сторона А</h1>
                         <div class="counters">
-                            <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
-                            <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
+                            <x-counter.counter title="Зачистка А (мм)" value="0" step="1"></x-counter.counter>
+                            <x-counter.counter title="Зазор А (мм)" value="0" step="1"></x-counter.counter>
                         </div>
                         <div class="swithers">
                             <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так" :disabled="true"></x-switch.switch>
@@ -51,8 +51,8 @@
                     <div class="right__side">
                         <h1>Сторона B</h1>
                         <div class="counters">
-                            <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
-                            <x-counter.counter title="Зазор B (мм)" value="0"></x-counter.counter>
+                            <x-counter.counter title="Зачистка А (мм)" value="0" step="1"></x-counter.counter>
+                            <x-counter.counter title="Зазор B (мм)" value="0" step="1"></x-counter.counter>
                         </div>
                         <div class="swithers">
                             <x-switch.switch title="Закручування B" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
@@ -79,8 +79,7 @@
                     <div class="leftSide">
                         <h1>Загальні параметри</h1>
                         <div class="leftSide__data">
-
-                            <x-counter.counter title="Довжина (мм)" value="800"></x-counter.counter>
+                            <x-counter.counter title="Довжина (мм)" value="800" step="1"></x-counter.counter>
                             <x-inputField.input-field label="Матеріал дроту" name="name" placeholder="Обрати"></x-inputField.input-field>
                             <x-inputField.input-field label="Колір" name="name" placeholder="Обрати"></x-inputField.input-field>
                         </div>
@@ -88,8 +87,8 @@
                     <div class="rightSide">
                         <h1>Упакування</h1>
                         <div class="rightSide__data">
-                            <x-counter.counter title="Кількість (шт)" value="500"></x-counter.counter>
-                            <x-counter.counter title="Фасування(шт/уп" value="100"></x-counter.counter>
+                            <x-counter.counter title="Кількість (шт)" value="500" step="100"></x-counter.counter>
+                            <x-counter.counter title="Фасування(шт/уп" value="100" step="100"></x-counter.counter>
                         </div>
                     </div>
                 </div>
@@ -107,8 +106,8 @@
                     <div class="left__side">
                         <h1>Сторона А</h1>
                         <div class="counters">
-                            <x-counter.counter title="Зачистка А (мм)" value="0"></x-counter.counter>
-                            <x-counter.counter title="Зазор А (мм)" value="0"></x-counter.counter>
+                            <x-counter.counter title="Зачистка А (мм)" value="0" step="1"></x-counter.counter>
+                            <x-counter.counter title="Зазор А (мм)" value="0" step="1"></x-counter.counter>
                         </div>
                         <div class="swithers">
                             <x-switch.switch title="Закручування А" leftAnswer="Ні" rightAnswer="Так"></x-switch.switch>
@@ -163,8 +162,8 @@
                     <div class="rightSide">
                         <h1>Упакування</h1>
                         <div class="rightSide__data">
-                            <x-counter.counter title="Кількість (шт)" value="500"></x-counter.counter>
-                            <x-counter.counter title="Фасування(шт/уп" value="100"></x-counter.counter>
+                            <x-counter.counter title="Кількість (шт)" value="500" step="100"></x-counter.counter>
+                            <x-counter.counter title="Фасування(шт/уп" value="100" step="100"></x-counter.counter>
                         </div>
                     </div>
                 </div>

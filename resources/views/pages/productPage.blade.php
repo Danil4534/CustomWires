@@ -1,3 +1,9 @@
+@php
+$success = session('success');
+
+@endphp
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,8 +52,33 @@ $productBenefits = [
 @include('components.modalWindows.menuModal')
 @include('components.modalWindows.cartModal')
 @include('components.modalWindows.oneClickModal')
-<!-- @include('components.modalWindows.successModal') -->
+@include('components.modalWindows.successModal')
 
 
+@if($success)
+<script>
+    const successOneModalContainer = document.querySelector('.successOneModal__container')
+    const successOneModalBody = document.querySelector('.successOneModal__Body')
+    const successOneModalCloseBtn = successOneModalBody.querySelector('.ph-x')
+
+    document.body.style.overflowY = 'hidden'
+    successOneModalContainer?.classList.add('active')
+    successOneModalBody?.classList.add('active')
+
+    successOneModalContainer?.addEventListener('click', () => {
+        document.body.style.overflowY = 'scroll'
+        successOneModalContainer.classList.remove('active');
+        successOneModalBody.classList.remove('active')
+    })
+
+    successOneModalCloseBtn?.addEventListener('click', () => {
+        document.body.style.overflowY = 'scroll'
+        successOneModalContainer.classList.remove('active');
+        successOneModalBody.classList.remove('active')
+    })
+
+    successOneModalBody?.addEventListener('click', (e) => e.stopPropagation())
+</script>
+@endif
 
 </html>
