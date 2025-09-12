@@ -613,9 +613,17 @@ footer {
                             height: 56px;
                             a {
                                 text-decoration: none;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: #e65b27;
+                                }
                                 i {
                                     color: var(--primary-main-orange);
                                     font-size: 28px;
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: #e65b27;
+                                    }
                                 }
                             }
                         }
@@ -672,6 +680,10 @@ footer {
                                 i {
                                     color: var(--primary-main-orange);
                                     font-size: 28px;
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: #e65b27;
+                                    }
                                 }
                             }
                         }
