@@ -199,9 +199,17 @@ footer {
                         a {
                             cursor: pointer;
                             text-decoration: none;
+                            &:hover {
+                                cursor: pointer;
+                                color: #e65b27;
+                            }
                             i {
                                 color: var(--primary-main-orange);
                                 font-size: 28px;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: #e65b27;
+                                }
                             }
                         }
                     }
@@ -219,10 +227,18 @@ footer {
                         margin: 0;
                         color: var(--neutral-white);
                         cursor: pointer;
+                        &:hover {
+                            cursor: pointer;
+                            color: #e65b27;
+                        }
                     }
                     i {
                         font-size: 32px;
                         color: var(--neutral-white);
+                        &:hover {
+                            cursor: pointer;
+                            color: #e65b27;
+                        }
                     }
                 }
             }
@@ -260,6 +276,7 @@ footer {
                                 letter-spacing: 0%;
                                 vertical-align: middle;
                                 &:hover {
+                                    cursor: pointer;
                                     color: #e65b27;
                                 }
                             }
