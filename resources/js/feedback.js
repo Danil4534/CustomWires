@@ -17,25 +17,48 @@
         const dropBoxAnimNameFile= document.querySelector('#chooseFile__fileName__anim')
         const dropBoxAnimFileSize= document.querySelector('#chooseFile__fileSize__anim')
 
+phoneInput?.addEventListener("focus", () => {
+    if (!phoneInput.value.startsWith("+380")) {
+        phoneInput.value = "+380 ";
+    }
+});
 
-        phoneInput?.addEventListener("focus", () => {
-            if (!phoneInput.value.startsWith("+380")) {
-                phoneInput.value = "+380 ";
-            }
-        });
+phoneInput?.addEventListener("blur", () => {
+    if (phoneInput.value.trim() === "+380") {
+        phoneInput.value = "";
+    }
+});
 
-        phoneInput?.addEventListener("blur", () => {
-            if (phoneInput.value.trim() === "+380") {
-                phoneInput.value = "";
-            }
-        });
+phoneInput?.addEventListener("keydown", (e) => {
+    const start = phoneInput.selectionStart;
 
-        phoneInput?.addEventListener("keydown", (e) => {
-            const start = phoneInput.selectionStart;
-            if (start <= 5 && (e.key === "Backspace" || e.key === "Delete")) {
-                e.preventDefault();
-            }
-        });
+    if (start < 5) {  
+        if (
+            e.key !== "ArrowRight" &&
+            e.key !== "ArrowLeft" &&
+            e.key !== "Tab"
+        ) {
+            e.preventDefault();
+        }
+    }
+    if (
+        !/[0-9]/.test(e.key) &&
+        e.key !== "Backspace" &&
+        e.key !== "Delete" &&
+        e.key !== "ArrowLeft" &&
+        e.key !== "ArrowRight" &&
+        e.key !== "Tab"
+    ) {
+        e.preventDefault();
+    }
+});
+
+phoneInput?.addEventListener("input", () => {
+    if (!phoneInput.value.startsWith("+380")) {
+        phoneInput.value = "+380 ";
+    }
+    phoneInput.value = "+380 " + phoneInput.value.slice(5).replace(/\D/g, "");
+});
         clearIcons.forEach(item => {
             item.addEventListener('click', (e) => {
                 const wrapper = e.target.closest('.input__wrapper');

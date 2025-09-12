@@ -470,12 +470,17 @@
                         line-height: 145%;
                         letter-spacing: 0%;
                         overflow: hidden;
-                        -webkit-line-clamp: 8;
                         -webkit-box-orient: vertical;
-                        text-overflow: ellipsis;
+                        text-overflow: unset;
+                        position: relative;
                         color: rgba(159, 159, 159, 1);
                         &::after {
                             content: "Більше";
+                            position: absolute;
+                            right: 0;
+                            background: var(--neutral-white);
+                            bottom: 0;
+
                             font-family: var(--font-family-Rubik);
                             font-weight: 400;
                             font-style: Regular;
