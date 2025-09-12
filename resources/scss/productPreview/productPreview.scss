@@ -386,6 +386,9 @@
             }
             .product_methodsOfpayment {
                 margin-top: 16px;
+                .methods__separator__up {
+                    display: none;
+                }
                 .methods__separator {
                     margin-bottom: 0;
                 }
@@ -841,6 +844,12 @@
                                 }
                             }
                         }
+                    }
+                    .methods__separator__up {
+                        display: block;
+                    }
+                    .methods__separator {
+                        display: none;
                     }
                 }
             }

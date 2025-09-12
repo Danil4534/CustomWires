@@ -81,6 +81,7 @@ $chooseProduct = $chooseProduct->first();
                 </div>
                 <hr class="separator">
                 <div class="product_methodsOfpayment">
+                    <hr class="methods__separator__up">
                     @include('components.methods_of_payment')
                     <hr class="methods__separator">
                 </div>
