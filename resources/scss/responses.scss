@@ -53,11 +53,11 @@
         margin-top: 24px;
         position: relative;
         .swiper-wrapper {
-            height: 370px;
+            min-height: 370px;
         }
         .swiper-slide {
             width: 243px !important;
-            height: 312px;
+            height: fit-content;
             background: var(--neutral-white);
             padding: 24px 16px;
             border-radius: 2px;
@@ -115,12 +115,34 @@
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    position: relative;
                     font-family: var(--font-family-Rubik);
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 145%;
-                    letter-spacing: 0;
                     color: rgba(159, 159, 159, 1);
+                    transition: max-height 0.3s ease;
+                }
+
+                p.expanded {
+                    height: fit-content;
+                    transition: height 0.3s ease;
+                    -webkit-line-clamp: unset;
+                }
+                p::after {
+                    content: "Більше";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background: var(--neutral-white);
+                    font-family: var(--font-family-Rubik);
+                    padding: 0 4px;
+                    font-size: 14px;
+                    color: #2f80ed;
+                    cursor: pointer;
+                }
+                p.expanded::after {
+                    content: "Менше";
                 }
             }
             .responseCard_user {
@@ -235,7 +257,7 @@
             }
             .swiper-slide {
                 width: 340px !important;
-                height: 312px;
+                height: fit-content;
                 background: var(--neutral-white);
                 padding: 24px 16px;
                 border-radius: 2px;
@@ -408,11 +430,11 @@
             margin-top: 48px;
             position: relative;
             .swiper-wrapper {
-                height: 344px;
+                height: fit-content;
             }
             .swiper-slide {
                 width: 293px !important;
-                height: 312px;
+                height: fit-content;
                 background: var(--neutral-white);
                 padding: 24px 16px;
                 border-radius: 2px;
@@ -477,10 +499,9 @@
                         &::after {
                             content: "Більше";
                             position: absolute;
+                            bottom: 0;
                             right: 0;
                             background: var(--neutral-white);
-                            bottom: 0;
-
                             font-family: var(--font-family-Rubik);
                             font-weight: 400;
                             font-style: Regular;
@@ -668,15 +689,7 @@
                         text-overflow: ellipsis;
                         color: rgba(159, 159, 159, 1);
                         &::after {
-                            content: "Більше";
-                            font-family: var(--font-family-Rubik);
-                            font-weight: 400;
-                            font-style: Regular;
-                            font-size: 14px;
-                            leading-trim: NONE;
-                            line-height: 145%;
-                            letter-spacing: 0%;
-                            color: #2f80ed;
+                            display: none;
                         }
                     }
                 }

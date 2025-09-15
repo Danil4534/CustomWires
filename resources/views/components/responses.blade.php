@@ -33,7 +33,6 @@ $responses = [
                 <div class="response_content">
                     <span>“</span>
                     <p>{{ $response['text'] }}</p>
-
                 </div>
                 <div class="responseCard_user">
                     <div class="user_avatar">
@@ -48,8 +47,13 @@ $responses = [
             @endforeach
         </div>
         <div class="swiper-pagination"></div>
-
     </div>
-
-
 </div>
+
+<script>
+    document.querySelectorAll('.responseCard p').forEach(p => {
+        p.addEventListener("click", () => {
+            p.classList.toggle("expanded");
+        });
+    });
+</script>
