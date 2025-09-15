@@ -274,6 +274,28 @@
                 }
             }
         }
+        .feedback__drop__error {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            &.active {
+                display: flex;
+            }
+            i {
+                color: #e53935;
+                font-size: 16px;
+            }
+            span {
+                font-family: var(--font-family-Rubik);
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 12px;
+                leading-trim: NONE;
+                line-height: 130%;
+                letter-spacing: 0%;
+                color: #5a5a5a;
+            }
+        }
 
         .form__check {
             margin-top: 24px;

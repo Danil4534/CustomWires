@@ -11,11 +11,11 @@
         const checkBox = form?.querySelector('input[type="checkbox"]');
         const clearIcons = document.querySelectorAll('#clearIconField');
         const phoneInput = form?.querySelector('input[name="phoneNumber"]');
-
-
         const dropBoxAnim = document.querySelector('.feedback__drop__chooseFile__anim')
         const dropBoxAnimNameFile= document.querySelector('#chooseFile__fileName__anim')
         const dropBoxAnimFileSize= document.querySelector('#chooseFile__fileSize__anim')
+        const feedBackError = document.querySelector('.feedback__drop__error')
+
 
 phoneInput?.addEventListener("focus", () => {
     if (!phoneInput.value.startsWith("+380")) {
@@ -132,16 +132,24 @@ const checkForm = () => {
         const file = dropInputHidden.files[0];
         const fileName = file.name;
         const fileSizeMB = (file.size / (1024 * 1024)).toFixed(2);
-        dropBoxAnim.classList.add('active');
-        dropBoxAnimFileSize.textContent = `${fileSizeMB} MB`;
-        dropBoxAnimNameFile.textContent = fileName;
-        setTimeout(() => {
-            dropBoxAnim.classList.remove('active');
-            chooseFileBox.classList.add("active");
-            fileNameText.textContent = fileName;
-            fileSizeText.textContent = `${fileSizeMB} MB`;
-            checkForm();
-        }, 2000);
+        if(fileSizeMB< 10){
+
+            dropBoxAnim.classList.add('active');
+            dropBoxAnimFileSize.textContent = `${fileSizeMB} MB`;
+            dropBoxAnimNameFile.textContent = fileName;
+            setTimeout(() => {
+                dropBoxAnim.classList.remove('active');
+                chooseFileBox.classList.add("active");
+                fileNameText.textContent = fileName;
+                fileSizeText.textContent = `${fileSizeMB} MB`;
+                checkForm();
+            }, 2000);
+        }else{
+            feedBackError.classList.add('active')
+             setTimeout(() => {
+            feedBackError.classList.remove('active');
+        }, 3000);
+        }
     }
 });
         trashIcon?.addEventListener('click', () => {

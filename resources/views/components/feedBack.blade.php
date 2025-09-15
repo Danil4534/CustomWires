@@ -46,7 +46,12 @@ $socialLinks = [
                 </div>
                 <div class="loader"></div>
             </div>
-
+        </div>
+        <div class="feedback__drop__error">
+            <i class="ph-fill ph-warning-circle"></i>
+            <span>
+                Розмір не більше 10 МБ
+            </span>
         </div>
         <div class="feedback__drop__chooseFile">
             <i class="ph ph-file"></i>
