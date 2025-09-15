@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        removeAllFiltersBtn.addEventListener('click', () => {
+        removeAllFiltersBtn?.addEventListener('click', () => {
             const allFilterItems = filterList.querySelectorAll('li');
             allFilterItems.forEach(item => item.remove());
             [...allFiltersInputCatalog, ...allFilterInputFromModal].forEach(cb => cb.checked = false);

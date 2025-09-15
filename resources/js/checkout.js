@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const anotherCustomerInfo = document.querySelector('.form__delivery__checkAnotherCustomer__hidden');
         const commentCheck = document.querySelector('#checkAddComment');
         const commentField = document.querySelector('.form__delivery__comment');
-        const departmentInput = document.querySelector('input[name="post__department"]');
         const departmentLabel = document.querySelector(`label[for="post__department"]`);
+        const selectStreet=document.querySelector('.choices__inner select[name="post__department"]');
+        
+        console.log(selectStreet)
 
         function setupPhoneInput(input) {
             if (!input) return;
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             courierContent.classList.toggle('hidden', !courierRadio.checked);
             if (courierRadio.checked) {
                 if (departmentLabel) departmentLabel.textContent = "Вулиця";
-                departmentInput.setAttribute("placeholder", "Вкажіть вулицю доставки");
+                
             }
         });
 
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             courierContent.classList.toggle('hidden', departmentRadio.checked);
             if (departmentRadio.checked) {
                 if (departmentLabel) departmentLabel.textContent = "Відділення";
-                departmentInput.setAttribute("placeholder", "Вкажіть відділення НП");
+               
             }
         });
 

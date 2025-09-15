@@ -4,13 +4,13 @@
     <label for="{{ $name }}">{{ $label }}</label>
     <div class="input__wrapper">
         @if($type === 'select')
-        <select name="{{ $name }}" id="{{ $name }}">
-            <option value="">{{ $placeholder }}</option>
+        <select name="{{ $name }}" id="{{ $name }}" required>
+            <option value="" selected hidden disabled>{{ $placeholder }}</option>
             @foreach($options as $value => $text)
             <option value="{{ $value }}">{{ $text }}</option>
             @endforeach
         </select>
-        <i class="ph-fill ph-caret-down"></i>
+
         @else
         <input type="{{ $type }}" name="{{ $name }}" placeholder="{{ $placeholder }}" id="{{ $name }}">
         <i class="ph ph-x clearIconField"></i>
@@ -21,7 +21,6 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const clearIconFields = document.querySelectorAll('.clearIconField');
-
         clearIconFields.forEach(icon => {
             icon.addEventListener('click', () => {
                 const field = icon.previousElementSibling;
@@ -34,6 +33,18 @@
                         field.focus();
                     }
                 }
+            });
+        });
+
+
+        document.querySelectorAll('select').forEach(select => {
+            new Choices(select, {
+                searchEnabled: true,
+                itemSelectText: '',
+                placeholder: true,
+                placeholderValue: select.querySelector('option[disabled]').textContent,
+                shouldSort: false,
+
             });
         });
     });
