@@ -21,7 +21,6 @@ $productsForFilter = $products
         @php
         $count = count(array_filter($productsForFilter, function ($product) use ($filter, $item) {
         $chars = $product['characteristics'];
-
         if ($filter['title'] === 'Наявність') {
         return $product['inStock'] ? 'В наявності' === $item : 'Під замовлення' === $item;
         }
@@ -42,7 +41,7 @@ $productsForFilter = $products
         @endphp
         <label>
             <div class="checkbox__item">
-                <input type="checkbox" name="check">
+                <input type="checkbox" name="{{ $item }}" value="{{ $item }}">
                 <span><i class="ph ph-check"></i></span>
                 {{ $item }}
             </div>
@@ -61,7 +60,6 @@ $productsForFilter = $products
                 </div>
             </div>
             <div class="slider__wrapper">
-
                 <div id="slider"></div>
             </div>
         </div>

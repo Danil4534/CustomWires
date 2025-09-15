@@ -4,7 +4,7 @@ $count = 1
 
 <div class="filterModal__container" id="filterModalContainer">
     <div class="filterModal__body">
-        <h1>Фільтри <span>(0)</span></h1>
+        <h1>Фільтри <span class="filterCount">(0)</span></h1>
         <i class="ph ph-x" id="closeModalFilter"></i>
         <div class="filterContent_container">
             @include('components.filter.filterContent')
