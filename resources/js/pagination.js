@@ -18,12 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
             pageSize = 25;
         }
     }
-
-
     updatePageSize();
-
     let visibleCount = pageSize;
-
     getMore?.addEventListener('click', () => {
         pageSize += 20;
         showPage(currentPage);
@@ -104,10 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // обновляем количество при ресайзе
+
     window.addEventListener("resize", () => {
         updatePageSize();
-        showPage(1); // сбрасываем на первую страницу при изменении ширины
+        showPage(1); 
     });
 
     showPage(currentPage);
