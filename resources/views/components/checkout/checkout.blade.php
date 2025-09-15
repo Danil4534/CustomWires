@@ -74,8 +74,10 @@ $chooseProducts = session()->get('chooseProducts');
                 <hr>
                 <div class="form__delivery__methodsOfDelivery__info">
                     <div class="info__header">
-                        <x-inputField.input-field label="Місто" name="city" placeholder="Вкажіть місто доставки"></x-inputField.input-field>
-                        <x-inputField.input-field label="Відділення" name="post__department" placeholder="Вкажіть відділення НП"></x-inputField.input-field>
+                        <x-inputField.input-field label="Місто" name="city" placeholder="Вкажіть місто доставки" type="select"
+                            :options="['kyiv' => 'Київ', 'lviv' => 'Львів', 'odesa' => 'Одеса']"></x-inputField.input-field>
+                        <x-inputField.input-field label="Відділення" name="post__department" placeholder="Вкажіть відділення НП" type="select"
+                            :options="['1' => 'Київ', '2' => 'Львів', '3' => 'Одеса']"></x-inputField.input-field>
                     </div>
                     <div class="form__delivery__courier hidden">
                         <x-inputField.input-field label="Дім" name="post__home" placeholder="Вкажіть дім"></x-inputField.input-field>
