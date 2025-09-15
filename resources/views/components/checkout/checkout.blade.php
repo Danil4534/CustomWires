@@ -65,7 +65,10 @@ $chooseProducts = session()->get('chooseProducts');
                     <p>Нова пошта</p>
                 </div>
                 <div class="novaPost__methods">
-                    <x-radio.radio label="Відділення Нової пошти" name="novaPost_method" id="department" subtitle="Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти." icon="ph ph-garage" />
+                    <x-radio.radio label="Відділення Нової пошти" name="novaPost_method"
+                        checked="true"
+
+                        id="department" subtitle="Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти." icon="ph ph-garage" />
                     <x-radio.radio label="Кур’єром Нової пошти на адресу" name="novaPost_method" id="courier" subtitle="Доставка товару здійснюється до вантажного відділення Нової Пошти. Послуги доставки оплачуються окремо на відділенні Нової Пошти." icon="ph ph-truck" />
                 </div>
                 <hr>
@@ -160,49 +163,3 @@ $chooseProducts = session()->get('chooseProducts');
     </div>
 </div>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const courierRadio = document.querySelector('#courier')
-        const departmentRadio = document.querySelector('#department')
-        const courierContent = document.querySelector('.form__delivery__courier')
-        const anotherCustomer = document.querySelector('#checkAnotherCustomer');
-        const anotherCustomerInfo = document.querySelector('.form__delivery__checkAnotherCustomer__hidden')
-        const commentCheck = document.querySelector('#checkAddComment')
-        const commentField = document.querySelector('.form__delivery__comment')
-        const form = document.querySelector('.form__customer__content');
-        const phoneInput = form?.querySelector('input[name="phoneNumber"]');
-        phoneInput?.addEventListener("focus", () => {
-            if (!phoneInput.value.startsWith("+380")) {
-                phoneInput.value = "+380 ";
-            }
-        });
-
-        phoneInput?.addEventListener("blur", () => {
-            if (phoneInput.value.trim() === "+380") {
-                phoneInput.value = "";
-            }
-        });
-
-        phoneInput?.addEventListener("keydown", (e) => {
-            const start = phoneInput.selectionStart;
-            if (start <= 5 && (e.key === "Backspace" || e.key === "Delete")) {
-                e.preventDefault();
-            }
-        });
-        courierRadio.addEventListener('change', () => {
-            courierContent.classList.toggle('hidden', !courierRadio.checked)
-
-        })
-        departmentRadio.addEventListener('change', () => {
-            courierContent.classList.toggle('hidden', departmentRadio.checked)
-        })
-        commentCheck.addEventListener('change', () => {
-            commentField.classList.toggle('hidden', !commentCheck.checked);
-        })
-
-        anotherCustomer.addEventListener('change', () => {
-            anotherCustomerInfo.classList.toggle('hidden', !anotherCustomer.checked);
-        });
-    })
-</script>

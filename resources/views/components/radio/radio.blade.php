@@ -1,7 +1,9 @@
-@props(['label'=>"", 'name'=>'' , 'subtitle'=>'' , 'icon'=>'', 'id' => '' , 'img'=>''])
+@props(['label'=>"", 'name'=>'' , 'subtitle'=>'' , 'icon'=>'', 'id' => '' , 'img'=>'','checked'=>''])
 
 <div class="radio__container">
-    <input type="radio" name="{{ $name }}" id="{{ $id }}" />
+    <input type="radio" name="{{ $name }}" id="{{ $id }}" @if ($checked)
+        checked
+        @endif />
     <label for="{{ $id }}">
         <div class="label__content">
             @if(!empty($icon))

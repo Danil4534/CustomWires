@@ -12,5 +12,6 @@ import './successModal';
 import "./quiz.js";
 import "./noUISlider.js"
 import "./pagination.js";
-import "./feedback.js"
-import "./counter.js"
+import "./feedback.js";
+import "./counter.js";
+import "./checkout.js";

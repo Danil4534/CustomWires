@@ -87,7 +87,7 @@
                     <div class="rightSide">
                         <h1>Упакування</h1>
                         <div class="rightSide__data">
-                            <x-counter.counter title="Кількість (шт)" value="500" step="100"></x-counter.counter>
+                            <x-counter.counter title="Кількість (шт)" value="500" step="1"></x-counter.counter>
                             <x-counter.counter title="Фасування(шт/уп" value="100" step="100"></x-counter.counter>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                     <div class="rightSide">
                         <h1>Упакування</h1>
                         <div class="rightSide__data">
-                            <x-counter.counter title="Кількість (шт)" value="500" step="100"></x-counter.counter>
+                            <x-counter.counter title="Кількість (шт)" value="0" step="1"></x-counter.counter>
                             <x-counter.counter title="Фасування(шт/уп" value="100" step="100"></x-counter.counter>
                         </div>
                     </div>
