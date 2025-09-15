@@ -15,3 +15,4 @@ import "./pagination.js";
 import "./feedback.js";
 import "./counter.js";
 import "./checkout.js";
+import "./filtersCatalog.js"

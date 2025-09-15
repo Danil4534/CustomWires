@@ -93,6 +93,7 @@
                 }
             }
             .catalog__list__filters {
+                display: none;
                 .removeAllFiltersBtn {
                     display: none;
                     span {
@@ -117,6 +118,7 @@
                         background: #fff2ec;
                         padding: 6px 8px;
                         align-items: center;
+                        border-radius: 2px;
                         span {
                             font-family: var(--font-family-Rubik);
                             font-weight: 400;
@@ -243,6 +245,7 @@
         }
         .catalog__list__wrapper {
             .catalog__list__filters {
+                display: none;
                 ul {
                     width: 100%;
                     display: flex;
@@ -523,6 +526,7 @@
                     }
                 }
                 .catalog__list__filters {
+                    display: none;
                     .removeAllFiltersBtn {
                         display: none;
                         span {
@@ -1049,7 +1053,7 @@
             }
             .catalog__list__wrapper {
                 .catalog__list__filters {
-                    display: flex;
+                    display: none;
                     flex-wrap: wrap;
                     padding: 17px 16px;
                     border: 1px solid #f3f3f3;
