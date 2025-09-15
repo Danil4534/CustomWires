@@ -327,6 +327,9 @@
                         input:checked {
                             background: rgba(255, 111, 57, 1);
                             border-color: rgba(255, 111, 57, 1);
+                            &:hover {
+                                background: #e65b27;
+                            }
                             & + span i {
                                 display: block;
                             }
