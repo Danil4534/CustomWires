@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
             li.innerHTML = `<span>${name}</span> <i class="ph ph-x"></i>`;
             li.querySelector("i").addEventListener("click", () => {
                 li.remove();
-                const cb = [...allFiltersInputCatalog, ...allFilterInputFromModal].find(c => c.value === name);
+                const cb = [...allFiltersInputCatalog].find(c => c.value === name);
+                const cl =  [...allFilterInputFromModal].find(c => c.value === name);
+                if(cl) cl.checked= false
                 if (cb) cb.checked = false;
                 const index = checkedFilters.indexOf(name);
                 if (index > -1) checkedFilters.splice(index, 1);
@@ -53,13 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
 
-        function removeFilter(name) {
-            const li = filterList.querySelector(`li[data-filter="${name}"]`);
-            if (!li) {
-                removeAllFiltersBtn.style.display = 'none';
-            }
-            if (li) li.remove();
-        }
+       function removeFilter(name) {
+    const li = filterList.querySelector(`li[data-filter="${name}"]`);
+    if (li) {
+        li.remove();
+        const index = checkedFilters.indexOf(name);
+        if (index > -1) checkedFilters.splice(index, 1);
+    }
+    toggleRemoveAllVisibility();
+}
 
         function updateCount() {
             const countSpan = document.querySelector(".filterCount");

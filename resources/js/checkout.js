@@ -7,13 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const commentCheck = document.querySelector('#checkAddComment');
         const commentField = document.querySelector('.form__delivery__comment');
         const departmentLabel = document.querySelector(`label[for="post__department"]`);
-        const selectStreet=document.querySelector('.choices__inner select[name="post__department"]');
-        
-        console.log(selectStreet)
 
         function setupPhoneInput(input) {
             if (!input) return;
-
             input.addEventListener("focus", () => {
                 if (!input.value.startsWith("+380")) {
                     input.value = "+380 ";

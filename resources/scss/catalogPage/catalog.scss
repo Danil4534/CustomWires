@@ -93,7 +93,6 @@
                 }
             }
             .catalog__list__filters {
-                display: none;
                 .removeAllFiltersBtn {
                     display: none;
                     span {
@@ -140,6 +139,9 @@
                             font-size: 20px;
                             color: #5a5a5a;
                             cursor: pointer;
+                            &:hover {
+                                color: #1c1e22;
+                            }
                         }
                     }
                 }
@@ -245,7 +247,6 @@
         }
         .catalog__list__wrapper {
             .catalog__list__filters {
-                display: none;
                 ul {
                     width: 100%;
                     display: flex;
@@ -526,7 +527,6 @@
                     }
                 }
                 .catalog__list__filters {
-                    display: none;
                     .removeAllFiltersBtn {
                         display: none;
                         span {
@@ -1053,7 +1053,6 @@
             }
             .catalog__list__wrapper {
                 .catalog__list__filters {
-                    display: none;
                     flex-wrap: wrap;
                     padding: 17px 16px;
                     border: 1px solid #f3f3f3;

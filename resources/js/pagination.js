@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (window.innerWidth <= 375) {
             pageSize = 12;
         } else if (window.innerWidth <= 768) {
-            pageSize = 12;
+            pageSize = 18;
         } else if (window.innerWidth <= 1024) {
             pageSize = 25;
         } else if (window.innerWidth <= 1440) {

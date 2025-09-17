@@ -34,6 +34,10 @@
             right: 16px;
             font-size: 24px;
             color: rgba(159, 159, 159, 1);
+            &:hover {
+                cursor: pointer;
+                color: #1c1e22;
+            }
         }
         h1 {
             font-family: var(--font-family-Roboto);

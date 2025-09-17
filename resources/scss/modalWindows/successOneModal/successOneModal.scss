@@ -37,7 +37,10 @@
             right: 16px;
             font-size: 32px;
             color: #2b2d33;
-            cursor: pointer;
+            &:hover {
+                cursor: pointer;
+                color: #1c1e22;
+            }
         }
         .successOneModal__header {
             display: flex;
